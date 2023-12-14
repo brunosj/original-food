@@ -4,6 +4,24 @@ dependencies:
   '@fontsource-variable/comfortaa':
     specifier: ^5.0.18
     version: 5.0.18
+  '@fontsource-variable/figtree':
+    specifier: ^5.0.19
+    version: 5.0.19
+  '@fontsource-variable/inter':
+    specifier: ^5.0.16
+    version: 5.0.16
+  '@fontsource-variable/noto-sans-sc':
+    specifier: ^5.0.4
+    version: 5.0.4
+  '@fontsource-variable/open-sans':
+    specifier: ^5.0.19
+    version: 5.0.19
+  '@fontsource-variable/raleway':
+    specifier: ^5.0.17
+    version: 5.0.17
+  '@fontsource-variable/rubik':
+    specifier: ^5.0.20
+    version: 5.0.20
   '@unpic/placeholder':
     specifier: ^0.1.2
     version: 0.1.2
@@ -369,6 +387,30 @@ packages:
 
   /@fontsource-variable/comfortaa@5.0.18:
     resolution: {integrity: sha512-VmnejEg618sWs5kbxzKDWlBajztDBsNFcSk4xhzZoFZ46qGQY1zqFR7MmKckVwLN3sRfl3ObdJ0yzeVT+u0jow==}
+    dev: false
+
+  /@fontsource-variable/figtree@5.0.19:
+    resolution: {integrity: sha512-4R7dcsjNJxAhamtOXDlsZgXIPYShzP2sloFFaQXOO9bUHk1thkQWElXzvlinzzI17H59iexUf987m7XTOv/zyQ==}
+    dev: false
+
+  /@fontsource-variable/inter@5.0.16:
+    resolution: {integrity: sha512-k+BUNqksTL+AN+o+OV7ILeiE9B5M5X+/jA7LWvCwjbV9ovXTqZyKRhA/x7uYv/ml8WQ0XNLBM7cRFIx4jW0/hg==}
+    dev: false
+
+  /@fontsource-variable/noto-sans-sc@5.0.4:
+    resolution: {integrity: sha512-80JYw30HU85g4m6x5SiKKmc2gpMjo/h63zCO8Io7ZORdK9ty0b4P85ucB2EeQ6ti2zFs0aFqJE4guKzOKGEjMQ==}
+    dev: false
+
+  /@fontsource-variable/open-sans@5.0.19:
+    resolution: {integrity: sha512-dq9wgiocYit93EdQuvRQUVG5FaEkeNIyk1wg9Dk7kXjQBcnrksea/dhIXU8wWNofN5nYsCPX7r+CzBcAnUqU2g==}
+    dev: false
+
+  /@fontsource-variable/raleway@5.0.17:
+    resolution: {integrity: sha512-wPkYD9UACWS1fM4GUYwKhJDGE5tD1IuVIkGcbccsuip+PmbIRApqDF7tlpkD333xXlmP4tsRZsXkAj8IBTkRrg==}
+    dev: false
+
+  /@fontsource-variable/rubik@5.0.20:
+    resolution: {integrity: sha512-sOyawsVyWVLRLpjTAHnV51FuvR/Gzuzg12TcxhRQ/t1fm1+gPj9o6MpRmbtseq23f0Wm9mLygvx+4InJwG/KdQ==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.13:

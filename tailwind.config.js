@@ -65,7 +65,7 @@ export default {
         },
       },
       fontFamily: {
-        primary: ['Myriad Pro'],
+        primary: ['Open Sans Variable'],
         secondary: ['Comfortaa Variable'],
       },
     },

@@ -3,10 +3,18 @@
   export let products: Product[];
   export let pressStatement: string;
 
+  import { fade, fly, slide } from 'svelte/transition';
+  import { cubicInOut } from 'svelte/easing';
+  import IntersectionObserver from 'svelte-intersection-observer';
+  import { background, font } from '$lib/stores/store';
   import type { Press, Product } from '$types/responseInterfaces';
   import Products from '$components/Product/Products.svelte';
   import PressCard from './PressCard.svelte';
   import Carousel from '$components/Carousel/Carousel.svelte';
+  import Underline from '$assets/svg/Underline.svelte';
+
+  let element;
+  let intersecting = false;
 
   function shuffleArray(array: Product[]) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -17,18 +25,50 @@
   }
 </script>
 
-<section class="bg-secondary sectionPy relative">
-  <div class="absolute hidden lg:block -top-[30vh] z-20">
+<section
+  class="sectionPy relative"
+  id="press"
+  style:background-color={$background}
+>
+  <div class="absolute hidden lg:block -top-[20vh] z-20">
     <Products items={shuffleArray(products)} />
   </div>
-  <div class="block lg:hidden">
-    <Carousel slides={products} type="Product" />
-  </div>
 
-  <div class="pt-[5vh] lg:pt-[15vh] pb-12 lg:pb-24 text-tertiary w-full z-20">
-    <div class="layout space-y-6 w-full lg:w-[60%]">
-      <h2>{pressStatement}</h2>
-    </div>
+  <div
+    class="pt-[0vh] lg:pt-[30vh] pb-12 lg:pb-24 text-tertiary w-full z-20"
+    bind:this={element}
+  >
+    <IntersectionObserver {element} bind:intersecting once threshold={0.2}>
+      {#if intersecting}
+        <div class="layout space-y-6 w-full lg:w-[60%]">
+          <h2
+            transition:fade={{
+              duration: 500,
+              delay: 250,
+              easing: cubicInOut,
+            }}
+            class="relative inline-block"
+          >
+            Die Spezialität aus dem Regenwald - für Viele der
+            <span class="relative inline-block">
+              <span
+                class="absolute -bottom-6"
+                transition:fly={{
+                  x: -100,
+                  y: 10,
+                  duration: 750,
+                  delay: 1000,
+                  easing: cubicInOut,
+                }}
+              >
+                <Underline width={225} color="#467080" />
+              </span>
+              beste Kaffee
+            </span> der Welt
+          </h2>
+        </div>
+      {/if}
+    </IntersectionObserver>
     <div class="sectionPt px-0 lg:px-24">
       <Carousel slides={press} type="Press" />
     </div>

@@ -15,10 +15,17 @@
 >
   <g transform="matrix(1,0,0,1,0,-3.39583)">
     <g transform="matrix(4.16667,0,0,4.16667,0,0)">
-      <path d="M0.003,18.223L0,18.223" style="fill:none;" />
+      <path
+        d="M0.003,18.223L0,18.223"
+        style="fill:{barColor};fill-rule:nonzero;
+"
+      />
     </g>
     <g transform="matrix(4.16667,0,0,4.16667,0,0)">
-      <path d="M163.774,18.223L163.772,18.223" style="fill:none;" />
+      <path
+        d="M163.774,18.223L163.772,18.223"
+        style="fill:{barColor};fill-rule:nonzero;"
+      />
     </g>
     <g transform="matrix(4.16667,0,0,4.16667,0,0)">
       <rect

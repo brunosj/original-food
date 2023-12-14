@@ -6,10 +6,10 @@
 <section
   class="hidden lg:block h-[550px] pointer-events-none box-border"
 ></section>
-<footer class="hidden lg:block bg-primary h-[550px] fixed bottom-0 w-full">
-  <div class="layout text-tertiary sectionPy lg:grid grid-cols-2">
+<footer class="hidden lg:block bg-tertiary h-[550px] fixed bottom-0 w-full">
+  <div class="layout sectionPy lg:grid grid-cols-2">
     <div class="space-y-12">
-      <Logo width="8rem" textColor="white" barColor="white" />
+      <Logo width="8rem" textColor="" barColor="rgb(181,83,34)" />
       <ul class="flex flex-col font-secondary space-y-2">
         {#each menu as item, i}
           {#key i}
@@ -62,7 +62,7 @@
         </p>
       </div>
     </div>
-    <div class="col-span-2 text-xs flex text-beige-600 pt-12">
+    <div class="col-span-2 text-xs flex text-beige-800 pt-12">
       <span class="ml-auto">
         Webentwicklung von
         <a

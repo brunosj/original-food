@@ -13,7 +13,7 @@
         loading="lazy"
         src={bild.data.attributes.url}
         alt={titel}
-        class="h-2/3 object-contain scale-100 group-hover:scale-105 duration-300"
+        class="h-2/3 object-contain scale-105 group-hover:scale-100 duration-300"
       />
     </div>
 

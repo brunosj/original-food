@@ -72,28 +72,6 @@
             </li>
           </ul>
         {/each}
-        {#each slides as slide, i (slide.id)}
-          <ul class="embla__slide">
-            <li
-              class={`${i === 0 ? 'pl-6 lg:pl-0' : ''} ${
-                i === slides.length - 1 ? 'pr-6 lg:pr-0' : ''
-              }`}
-            >
-              <PressCard item={slide} />
-            </li>
-          </ul>
-        {/each}
-        {#each slides as slide, i (slide.id)}
-          <ul class="embla__slide">
-            <li
-              class={`${i === 0 ? 'pl-6 lg:pl-0' : ''} ${
-                i === slides.length - 1 ? 'pr-6 lg:pr-0' : ''
-              }`}
-            >
-              <PressCard item={slide} />
-            </li>
-          </ul>
-        {/each}
       {/if}
       {#if type === 'Product'}
         {#each slides as slide, i (slide.id)}
@@ -115,8 +93,11 @@
   {#if type === 'Press'}
     <h3 class="px-8 lg:px-2">In der Presse</h3>
   {/if}
-  <div class="ml-auto flex h-full items-center justify-center gap-6 lg:gap-0">
-    <PrevButton {scrollPrev} enabled={prevBtnEnabled} />
-    <NextButton {scrollNext} enabled={nextBtnEnabled} />
-  </div>
+
+  {#if slides.length >= 2}
+    <div class="ml-auto flex h-full items-center justify-center gap-6 lg:gap-0">
+      <PrevButton {scrollPrev} enabled={prevBtnEnabled} />
+      <NextButton {scrollNext} enabled={nextBtnEnabled} />
+    </div>
+  {/if}
 </div>

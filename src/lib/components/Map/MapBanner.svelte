@@ -17,7 +17,7 @@
   });
 </script>
 
-<div class={`${height} w-full top-0 -z-10  relative`}>
+<section class={`${height} w-full top-0 -z-10  relative`} id="map">
   <img
     src={image}
     alt="Entlebuch Bild"
@@ -27,4 +27,4 @@
   <div class="absolute top-6 lg:top-12 right-12">
     <Map width={svgWidth} />
   </div>
-</div>
+</section>

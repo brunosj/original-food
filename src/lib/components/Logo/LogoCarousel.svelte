@@ -5,7 +5,7 @@
   import type { Logo } from '$types/responseInterfaces';
 </script>
 
-<section class="relative">
+<section class="relative" id="logo-carousel">
   <div class="relative">
     <div class="logos">
       <div class="logos-slide">
@@ -85,9 +85,9 @@
     background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
   }
 
-  .logos:hover .logos-slide {
+  /* .logos:hover .logos-slide {
     animation-play-state: paused;
-  }
+  } */
 
   .logos-slide {
     display: inline-flex;

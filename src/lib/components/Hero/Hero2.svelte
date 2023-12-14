@@ -6,7 +6,7 @@
   export let headerTitle: string = '';
 </script>
 
-<div class={`${height} w-full top-0 -z-10  relative`}>
+<div class={`${height} w-full top-0 -z-10  relative`} id="hero2">
   <img src={image} alt="Entlebuch Bild" class="object-cover h-full w-full" />
   <!-- <div class="absolute layout bottom-12 right-0 w-[65%]">
     <div class="bg-primary p-4 bg-opacity-50 rounded-xl">

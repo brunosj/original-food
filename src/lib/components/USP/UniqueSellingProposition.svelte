@@ -3,11 +3,12 @@
   export let subtitle: string;
   export let pillars: Pillar[];
 
-  import IntersectionObserver from 'svelte-intersection-observer';
+  import { uspBackground, background, font } from '$lib/stores/store';
   import type { Pillar } from '$types/responseInterfaces';
+  import { fade, fly, slide } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
-  import { fade, fly } from 'svelte/transition';
-  import { slide } from 'svelte/transition';
+  import IntersectionObserver from 'svelte-intersection-observer';
+  import PillarMobile from '$components/Pillar/PillarMobile.svelte';
 
   let expandedIndex = -1;
 
@@ -15,161 +16,183 @@
     expandedIndex = index;
   }
 
-  const colors = ['#8A6D7C', '#CACAAA', '#C8AB83'];
+  let element;
+  let intersecting = false;
+
   const titles = ['Wirtschaft', 'Ökologie', 'Soziales'];
 
-  const pillarsWithColorsAndIndex = titles.map((title, index) => {
+  const pillarsWithIndex: Pillar[] = titles.map((title, index) => {
     const pillar = pillars.find((pillar) => pillar.titel === title);
-    return {
-      ...pillar,
-      color: colors[index],
-      index: index,
-    };
+
+    if (pillar) {
+      return {
+        ...pillar,
+        index: index,
+      };
+    } else {
+      return {
+        index: index,
+        titel: '',
+        text: '',
+        bild: { data: { attributes: { url: '' } } },
+      };
+    }
   });
 
-  const wirtschaft = pillarsWithColorsAndIndex[0];
-  const ökologie = pillarsWithColorsAndIndex[1];
-  const soziales = pillarsWithColorsAndIndex[2];
+  const wirtschaft = pillarsWithIndex[0];
+  const ökologie = pillarsWithIndex[1];
+  const soziales = pillarsWithIndex[2];
 </script>
 
-<section class="bg-primary text-tertiary layout sectionPy">
-  <div class="flex space-y-6 flex-col lg:text-right">
-    <h1>{title}</h1>
-    <h3 class="ml-auto w-full lg:w-[45%]">{subtitle}</h3>
+<section
+  class="text-tertiary layout sectionPy"
+  id="usp"
+  style:background-color={$uspBackground}
+  style:color={$font}
+>
+  <div class="flex space-y-6 flex-col lg:text-right" bind:this={element}>
+    <IntersectionObserver {element} bind:intersecting once threshold={1}>
+      {#if intersecting}
+        <h1
+          transition:fade={{
+            duration: 500,
+            delay: 0,
+            easing: cubicInOut,
+          }}
+        >
+          {title}
+        </h1>
+        <h3
+          class="ml-auto w-full lg:w-[40%]"
+          transition:fade={{
+            duration: 500,
+            delay: 250,
+            easing: cubicInOut,
+          }}
+        >
+          {subtitle}
+        </h3>
+      {/if}
+    </IntersectionObserver>
   </div>
 
-  <div class="lg:grid grid-cols-2 gap-6 sectionPt space-y-6 lg:space-y-0">
+  <div
+    class="hidden lg:grid grid-cols-2 grid-rows-2 gap-x-4 sectionPy text-tertiary"
+  >
     <!-- svelte-ignore a11y-no-static-element-interactions -->
     <!-- svelte-ignore a11y-mouse-events-have-key-events -->
     <div
-      class="rounded-xl h-2/3 relative group cursor-pointer"
-      on:mouseover={() => handleMouseOver(wirtschaft?.index)}
+      class="rounded-xl row-span-2 h-[60vh] relative group cursor-pointer"
+      on:mouseover={() => handleMouseOver(wirtschaft.index)}
       on:mouseleave={() => (expandedIndex = -1)}
     >
       <div
-        class="hidden lg:block absolute bg-secondary right-0 w-[40px] group-hover:w-full h-full rounded-r-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95"
+        class="absolute bg-secondary w-full h-[5rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0"
       >
-        {#if expandedIndex === wirtschaft?.index}
+        {#if expandedIndex === wirtschaft.index}
           <h4
-            class="hidden lg:block absolute bottom-top left-0 p-8 text-tertiary"
+            class="absolute bottom-top left-0 p-8"
             in:fly={{ duration: 500, delay: 400 }}
             out:fly={{ duration: 100, delay: 0 }}
           >
-            {wirtschaft?.text}
+            {wirtschaft.text}
           </h4>
         {/if}
       </div>
       <img
-        src={wirtschaft?.bild?.data.attributes.url}
+        src={wirtschaft.bild?.data.attributes.url}
         alt=""
         class="object-cover h-40 lg:h-full w-full rounded-xl"
       />
       <div>
-        <div
-          class="block lg:hidden bg-secondary px-4 py-2 rounded-b-xl text-black"
+        <h3
+          class="absolute bottom-0 left-0 px-8 py-4 text-tertiary uppercase tracking-wider"
         >
-          <h2>
-            {wirtschaft?.titel}
-          </h2>
-        </div>
-        <h2
-          class="hidden lg:block absolute bottom-0 left-0 p-8 text-tertiary uppercase"
-        >
-          {wirtschaft?.titel}
-        </h2>
+          {wirtschaft.titel}
+        </h3>
       </div>
-    </div>
-    <div class="block lg:hidden">
-      <h4>{wirtschaft?.text}</h4>
     </div>
 
-    <div class="flex flex-col space-y-6 lg:space-y-0">
-      <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-      <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <div
+      class="w-full relative group cursor-pointer h-[29vh] row-span-1"
+      on:mouseover={() => handleMouseOver(ökologie.index)}
+      on:mouseleave={() => (expandedIndex = -1)}
+    >
       <div
-        class="w-full h-1/3 relative group cursor-pointer"
-        on:mouseover={() => handleMouseOver(ökologie?.index)}
-        on:mouseleave={() => (expandedIndex = -1)}
+        class="absolute bg-secondary w-full h-[5rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0"
       >
-        <div
-          class="hidden lg:block absolute bg-[#CACAAA] right-0 w-[40px] group-hover:w-full h-full rounded-r-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95"
+        {#if expandedIndex === ökologie.index}
+          <h4
+            class="absolute bottom-top left-0 p-8"
+            in:fly={{ duration: 500, delay: 300 }}
+            out:fly={{ duration: 100, delay: 0 }}
+          >
+            {ökologie.text}
+          </h4>
+        {/if}
+      </div>
+      <img
+        src={ökologie.bild?.data.attributes.url}
+        alt=""
+        class="object-cover h-40 lg:h-full w-full rounded-xl"
+      />
+      <div>
+        <h3
+          class="absolute bottom-0 left-0 px-8 py-4 duration-700 uppercase tracking-wider"
         >
-          {#if expandedIndex === ökologie?.index}
-            <h4
-              class="hidden lg:block absolute bottom-top left-0 p-8 text-black"
-              in:fly={{ duration: 500, delay: 300 }}
-              out:fly={{ duration: 100, delay: 0 }}
-            >
-              {ökologie?.text}
-            </h4>
-          {/if}
-        </div>
-        <img
-          src={ökologie?.bild?.data.attributes.url}
-          alt=""
-          class="object-cover h-40 lg:h-full w-full rounded-xl"
-        />
-        <div>
-          <div
-            class="block lg:hidden bg-[#CACAAA] px-4 py-2 rounded-b-xl text-black"
-          >
-            <h2>
-              {ökologie?.titel}
-            </h2>
-          </div>
-          <h2
-            class="hidden lg:block absolute bottom-0 left-0 p-8 group-hover:text-black duration-700 uppercase"
-          >
-            {ökologie?.titel}
-          </h2>
-        </div>
-      </div>
-      <div class="block lg:hidden">
-        <h4>{wirtschaft?.text}</h4>
-      </div>
-      <!-- svelte-ignore a11y-no-static-element-interactions -->
-      <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-      <div
-        class="w-full h-1/3 relative group cursor-pointer"
-        on:mouseover={() => handleMouseOver(soziales?.index)}
-        on:mouseleave={() => (expandedIndex = -1)}
-      >
-        <div
-          class="hidden lg:block absolute bg-[#C8AB83] right-0 w-[40px] group-hover:w-full h-full rounded-r-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95"
-        >
-          {#if expandedIndex === soziales?.index}
-            <h4
-              class="hidden lg:block absolute bottom-top left-0 p-8 text-black"
-              in:fly={{ duration: 500, delay: 300 }}
-              out:fly={{ duration: 100, delay: 0 }}
-            >
-              {soziales?.text}
-            </h4>
-          {/if}
-        </div>
-        <img
-          src={soziales?.bild?.data.attributes.url}
-          alt=""
-          class="object-cover h-40 lg:h-full w-full rounded-xl"
-        />
-        <div>
-          <div
-            class="block lg:hidden bg-[#C8AB83] px-4 py-2 rounded-b-xl text-black"
-          >
-            <h2>
-              {soziales?.titel}
-            </h2>
-          </div>
-          <h2
-            class="hidden lg:block absolute bottom-0 left-0 p-8 group-hover:text-black duration-700 uppercase"
-          >
-            {soziales?.titel}
-          </h2>
-        </div>
-      </div>
-      <div class="block lg:hidden">
-        <h4>{wirtschaft?.text}</h4>
+          {ökologie.titel}
+        </h3>
       </div>
     </div>
+
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+    <div
+      class="w-full h-[29vh] relative group cursor-pointer mt-auto"
+      on:mouseover={() => handleMouseOver(soziales.index)}
+      on:mouseleave={() => (expandedIndex = -1)}
+    >
+      <div
+        class="absolute bg-secondary w-full h-[5rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0"
+      >
+        {#if expandedIndex === soziales.index}
+          <h4
+            class="absolute bottom-top left-0 p-8"
+            in:fly={{ duration: 500, delay: 300 }}
+            out:fly={{ duration: 100, delay: 0 }}
+          >
+            {soziales.text}
+          </h4>
+        {/if}
+      </div>
+      <img
+        src={soziales.bild?.data.attributes.url}
+        alt=""
+        class="object-cover h-40 lg:h-full w-full rounded-xl"
+      />
+      <div>
+        <h3
+          class="absolute bottom-0 left-0 px-8 py-4 duration-700 uppercase tracking-wider"
+        >
+          {soziales.titel}
+        </h3>
+      </div>
+    </div>
+
+    <div class="sectionPb" />
   </div>
+
+  <ul class="lg:hidden sectionPt space-y-12">
+    {#each pillarsWithIndex as pillar (pillar.index)}
+      <PillarMobile item={pillar} />
+    {/each}
+  </ul>
 </section>
+
+<style>
+  section {
+    transition: all 1s cubic-bezier(0.07, 0.95, 0, 1);
+  }
+</style>

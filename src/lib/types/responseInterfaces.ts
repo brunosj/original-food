@@ -99,6 +99,7 @@ export interface Pillar {
   titel: string;
   text: string;
   bild: Picture;
+  index: number;
 }
 
 export interface Product {
