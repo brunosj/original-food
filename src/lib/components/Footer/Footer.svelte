@@ -6,7 +6,7 @@
 <section
   class="hidden lg:block h-[550px] pointer-events-none box-border"
 ></section>
-<footer class="hidden lg:block bg-ter h-[550px] fixed bottom-0 w-full">
+<footer class="hidden lg:block bg-quar h-[550px] fixed bottom-0 w-full">
   <div class="layout sectionPy lg:grid grid-cols-2">
     <div class="space-y-12">
       <Logo width="8rem" textColor="" barColor="rgb(181,83,34)" />

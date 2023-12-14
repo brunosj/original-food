@@ -90,7 +90,11 @@
       on:mouseleave={() => (expandedIndex = -1)}
     >
       <div
-        class="absolute bg-sec w-full h-[5rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0"
+        class={`absolute ${
+          $uspBackground === 'var(--color-pri)'
+            ? 'bg-ter text-black'
+            : 'bg-sec text-ter'
+        } w-full h-[4rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0`}
       >
         {#if expandedIndex === wirtschaft.index}
           <h4
@@ -109,7 +113,9 @@
       />
       <div>
         <h3
-          class="absolute bottom-0 left-0 px-8 py-4 text-ter uppercase tracking-wider"
+          class={`absolute bottom-0 left-0 px-8 py-4 ${
+            $uspBackground === 'var(--color-pri)' ? ' text-black' : ' text-ter'
+          } uppercase tracking-wider`}
         >
           {wirtschaft.titel}
         </h3>
@@ -124,7 +130,11 @@
       on:mouseleave={() => (expandedIndex = -1)}
     >
       <div
-        class="absolute bg-sec w-full h-[5rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0"
+        class={`absolute ${
+          $uspBackground === 'var(--color-pri)'
+            ? 'bg-ter text-black'
+            : 'bg-sec text-ter'
+        } w-full h-[4rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0`}
       >
         {#if expandedIndex === ökologie.index}
           <h4
@@ -143,7 +153,9 @@
       />
       <div>
         <h3
-          class="absolute bottom-0 left-0 px-8 py-4 duration-700 uppercase tracking-wider"
+          class={`absolute bottom-0 left-0 px-8 py-4 duration-700 uppercase tracking-wider ${
+            $uspBackground === 'var(--color-pri)' ? ' text-black' : ' text-ter'
+          }`}
         >
           {ökologie.titel}
         </h3>
@@ -158,7 +170,11 @@
       on:mouseleave={() => (expandedIndex = -1)}
     >
       <div
-        class="absolute bg-sec w-full h-[5rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0"
+        class={`absolute ${
+          $uspBackground === 'var(--color-pri)'
+            ? 'bg-ter text-black'
+            : 'bg-sec text-ter'
+        } w-full h-[4rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0`}
       >
         {#if expandedIndex === soziales.index}
           <h4
@@ -177,7 +193,9 @@
       />
       <div>
         <h3
-          class="absolute bottom-0 left-0 px-8 py-4 duration-700 uppercase tracking-wider"
+          class={`absolute bottom-0 left-0 px-8 py-4 duration-700 uppercase tracking-wider ${
+            $uspBackground === 'var(--color-pri)' ? ' text-black' : ' text-ter'
+          }`}
         >
           {soziales.titel}
         </h3>

@@ -9,7 +9,7 @@
 </script>
 
 <div
-  class={`bg-white text-center h-full rounded-xl parent group overflow-hidden`}
+  class={`bg-[white] text-center h-full rounded-xl parent group overflow-hidden`}
 >
   <a href={link} class="flex flex-col relative card">
     <div class="h-24 lg:h-48 lg:p-6">
@@ -41,19 +41,17 @@
     transform: translateY(0);
   }
 
-  .card::before {
+  /* .card::before {
     content: '';
     position: absolute;
     top: 0;
     left: -9rem;
-    width: 11rem;
+    width: 13rem;
     height: 4rem;
     background-color: var(--color-pri);
-    /* transform: translateY(100%); */
     transform: rotate(-45deg);
-    /* transition: transform 0.3s ease-in-out; */
     z-index: 1;
-  }
+  } */
 
   .parent:hover :global(.card::before) {
     background-color: var(--color-sec);

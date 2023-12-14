@@ -72,6 +72,28 @@
             </li>
           </ul>
         {/each}
+        {#each slides as slide, i (slide.id)}
+          <ul class="embla__slide">
+            <li
+              class={`${i === 0 ? 'pl-6 lg:pl-0' : ''} ${
+                i === slides.length - 1 ? 'pr-6 lg:pr-0' : ''
+              }`}
+            >
+              <PressCard item={slide} />
+            </li>
+          </ul>
+        {/each}
+        {#each slides as slide, i (slide.id)}
+          <ul class="embla__slide">
+            <li
+              class={`${i === 0 ? 'pl-6 lg:pl-0' : ''} ${
+                i === slides.length - 1 ? 'pr-6 lg:pr-0' : ''
+              }`}
+            >
+              <PressCard item={slide} />
+            </li>
+          </ul>
+        {/each}
       {/if}
       {#if type === 'Product'}
         {#each slides as slide, i (slide.id)}
