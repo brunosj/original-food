@@ -34,13 +34,12 @@
   // Logic
   export let data;
   let pageData: Homepage = data.page;
-
 </script>
 
 <SEO {...seoProps} />
 <Hero
   image={pageData.attributes.heroBild.data.attributes.url}
-  height="h-[40vh] lg:h-[75vh]"
+  height="h-[40svh] lg:h-[75svh]"
   headerTitle={pageData.attributes.heroText}
 />
 <Statement
@@ -50,7 +49,7 @@
 />
 <Hero2
   image={pageData.attributes.hero2Bild.data.attributes.url}
-  height="h-48 lg:h-[75vh]"
+  height="h-48 lg:h-[75svh]"
 />
 <LogoCarousel logos={pageData.attributes.logos} />
 <UniqueSellingProposition
@@ -65,5 +64,5 @@
 />
 <MapBanner
   image={pageData.attributes.karteBild.data.attributes.url}
-  height="h-[35vh] lg:h-[85vh]"
+  height="h-[45svh] lg:h-[85svh]"
 />

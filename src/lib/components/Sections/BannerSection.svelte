@@ -20,7 +20,7 @@
 >
   <div class="layout h-full">
     <div
-      class="w-full lg:w-1/2 flex flex-col ml-auto text-tertiary h-full justify-center"
+      class="w-full lg:w-1/2 flex flex-col ml-auto text-ter h-full justify-center"
       bind:this={element}
     >
       <IntersectionObserver

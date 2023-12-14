@@ -11,7 +11,7 @@
       alt=""
       class="object-cover h-40 w-full rounded-t-xl"
     />
-    <div class=" bg-secondary px-4 py-2 rounded-b-xl text-tertiary">
+    <div class=" bg-sec px-4 py-2 rounded-b-xl text-ter">
       <h3>
         {item.titel}
       </h3>

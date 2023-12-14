@@ -13,7 +13,7 @@
       ? 'bg-brown-900  duration-300 hover:bg-purple-500 ease-in-out'
       : 'bg-brown-500  duration-300 hover:bg-brown-900 ease-in-out'
   }
-		text-tertiary text-xs uppercase rounded-xl`}
+		text-ter text-xs uppercase rounded-xl`}
   aria-label={`Go to ${path}`}
 >
   <div class="flex flex-row h-8 group items-center">
@@ -31,7 +31,7 @@
       </a>
     {/if}
     <div
-      class="bg-purple-500 px-2 rounded-r-md duration-300 flex items-center h-8 text-tertiary group-hover:translate-x-1"
+      class="bg-purple-500 px-2 rounded-r-md duration-300 flex items-center h-8 text-ter group-hover:translate-x-1"
     >
       <ArrowRight />
     </div>

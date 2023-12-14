@@ -23,10 +23,10 @@
     <IntersectionObserver {element} bind:intersecting once threshold={0.5}>
       {#if intersecting}
         <div
-          class="absolute layout bottom-24 lg:bottom-[30%] lg:w-[60%] w-full"
+          class="absolute layout bottom-12 lg:bottom-[30%] lg:w-[60%] w-full"
         >
           <h1
-            class="text-tertiary font-semibold"
+            class="text-ter font-semibold"
             transition:fade={{
               duration: 500,
               delay: 250,

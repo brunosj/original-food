@@ -19,7 +19,7 @@
       fetchpriority="high"
     />
     <div class="absolute layout bottom-6 lg:bottom-12">
-      <h1 class="text-tertiary font-semibold">{headerTitle}</h1>
+      <h1 class="text-ter font-semibold">{headerTitle}</h1>
     </div>
   </div>
 </div>

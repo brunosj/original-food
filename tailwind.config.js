@@ -4,9 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#467080',
-        secondary: '#8A6D7C',
-        tertiary: '#F5F3F5',
+        pri: '#467080',
+        priPale: '#dce4e7',
+        sec: '#8A6D7C',
+        ter: '#F5F3F5',
         black: '#111111',
         beige: {
           100: '#fffefb',
@@ -65,8 +66,8 @@ export default {
         },
       },
       fontFamily: {
-        primary: ['Open Sans Variable'],
-        secondary: ['Comfortaa Variable'],
+        pri: ['Open Sans Variable'],
+        sec: ['Comfortaa Variable'],
       },
     },
   },

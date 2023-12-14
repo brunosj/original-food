@@ -6,8 +6,8 @@
   let { bild, link, titel, untertitel } = item.attributes;
 </script>
 
-<div class="bg-primary rounded-xl group cursor-pointer">
-  <a href={link} class="h-96 relative flex overflow-hidden">
+<div class="bg-pri rounded-xl group cursor-pointer">
+  <a href={link} class=" h-80 lg:h-96 relative flex overflow-hidden">
     <div class="absolute h-full -right-3 -rotate-[20deg] -top-6">
       <img
         loading="lazy"

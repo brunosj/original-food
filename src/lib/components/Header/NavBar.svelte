@@ -6,7 +6,7 @@
 </script>
 
 <nav
-  class=" flex items-center justify-between bg-transparent h-12 relative z-10 text-tertiary font-semibold font-secondary"
+  class=" flex items-center justify-between bg-transparent h-12 relative z-10 text-ter font-semibold font-sec"
 >
   <a href="/">
     <h4 class="font-bold tracking-widest textHover">ENTLEBUCH</h4>

@@ -6,9 +6,9 @@
 </script>
 
 <ul class="layout lg:grid grid-cols-4 gap-3">
-  {#each items as item, i (item.id)}
+  {#each items as item (item.id)}
     <li>
-      <ProductCard {item} {i} />
+      <ProductCard {item} />
     </li>
   {/each}
 </ul>

@@ -22,7 +22,7 @@
 <header>
   {#if animate}
     <nav
-      class="w-full lg:w-1/4 fixed bottom-0 lg:top-0 lg:bottom-[unset] rounded-br-lg shadow-lg text-white z-50"
+      class="w-full lg:w-1/4 fixed bottom-0 lg:top-0 lg:bottom-[unset] lg:rounded-br-lg shadow-lg text-white z-50"
       style:background-color={$menuBackground}
       transition:fly={{
         y: -100,
@@ -42,7 +42,7 @@
 
       {#if open}
         <div
-          class=" rounded-br-lg shadow-lg font-secondary"
+          class=" rounded-br-lg shadow-lg font-sec"
           style:background-color={$menuBackground}
           in:slide={{
             duration: 400,

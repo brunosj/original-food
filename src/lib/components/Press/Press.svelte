@@ -26,16 +26,16 @@
 </script>
 
 <section
-  class="sectionPy relative"
+  class="sectionPt relative"
   id="press"
   style:background-color={$background}
 >
-  <div class="absolute hidden lg:block -top-[20vh] z-20">
+  <div class="absolute hidden lg:block -top-[15vh] z-20">
     <Products items={shuffleArray(products)} />
   </div>
 
   <div
-    class="pt-[0vh] lg:pt-[30vh] pb-12 lg:pb-24 text-tertiary w-full z-20"
+    class="pt-[0vh] lg:pt-[25vh] pb-12 lg:pb-24 text-ter w-full z-20"
     bind:this={element}
   >
     <IntersectionObserver {element} bind:intersecting once threshold={0.2}>

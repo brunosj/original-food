@@ -91,7 +91,7 @@
 
   .logos-slide {
     display: inline-flex;
-    animation: 10s slide infinite linear;
+    animation: 15s slide infinite linear;
     flex-direction: row;
     width: 100%;
     gap: 60px;

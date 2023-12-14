@@ -25,11 +25,11 @@
 }
 
 html {
-  @apply bg-tertiary;
+  @apply bg-ter;
 }
 
 h1 {
-  @apply text-2xl font-secondary  md:text-5xl;
+  @apply text-2xl font-sec  md:text-5xl;
 }
 
 h1 {
@@ -37,7 +37,7 @@ h1 {
 }
 
 h2 {
-  @apply mt-0 text-xl font-secondary font-semibold md:text-4xl lg:mt-2;
+  @apply mt-0 text-xl font-sec font-semibold md:text-4xl lg:mt-2;
 }
 
 h2 {
@@ -45,7 +45,7 @@ h2 {
 }
 
 h3 {
-  @apply text-lg font-primary   md:text-2xl;
+  @apply text-lg font-pri   md:text-2xl;
 }
 
 h3 {
@@ -57,11 +57,11 @@ a {
 }
 
 h4 {
-  @apply text-lg font-primary  md:text-lg;
+  @apply text-lg font-pri  md:text-lg;
 }
 
 p {
-  @apply text-base md:text-lg font-primary;
+  @apply text-base md:text-lg font-pri;
 }
 
 .layout {
@@ -109,7 +109,7 @@ p {
 }
 
 .markdownFontSec p {
-  @apply font-secondary;
+  @apply font-sec;
 }
 
 .markdown a {

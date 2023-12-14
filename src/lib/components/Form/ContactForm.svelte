@@ -150,7 +150,7 @@
       <div class="mt-8 flex justify-end">
         <button
           type="submit"
-          class="bg-brown-900 duration-300 hover:bg-brown-700 ease-in-out text-tertiary flex py-3 px-4 text-sm uppercase rounded-xl"
+          class="bg-brown-900 duration-300 hover:bg-brown-700 ease-in-out text-ter flex py-3 px-4 text-sm uppercase rounded-xl"
         >
           Nachricht senden
         </button>

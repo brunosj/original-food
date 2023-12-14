@@ -31,7 +31,7 @@
       </div>
       <IntersectionObserver {element} bind:intersecting threshold={0} once>
         <div
-          class="absolute top-0 lg:translate-y-[50%] -translate-y-[50%] left-0 w-3/4 lg:w-1/2 bg-tertiary h-28 lg:h-32 p-6 lg:p-12 rounded-xl group-hover:translate-x-5 duration-500 ease-in-out"
+          class="absolute top-0 lg:translate-y-[50%] -translate-y-[50%] left-0 w-3/4 lg:w-1/2 bg-ter h-28 lg:h-32 p-6 lg:p-12 rounded-xl group-hover:translate-x-5 duration-500 ease-in-out"
         >
           <div
             class="relative flex flex-col justify-evenly h-full space-y-2 lg:space-y-3"

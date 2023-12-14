@@ -6,11 +6,11 @@
 <section
   class="hidden lg:block h-[550px] pointer-events-none box-border"
 ></section>
-<footer class="hidden lg:block bg-tertiary h-[550px] fixed bottom-0 w-full">
+<footer class="hidden lg:block bg-ter h-[550px] fixed bottom-0 w-full">
   <div class="layout sectionPy lg:grid grid-cols-2">
     <div class="space-y-12">
       <Logo width="8rem" textColor="" barColor="rgb(181,83,34)" />
-      <ul class="flex flex-col font-secondary space-y-2">
+      <ul class="flex flex-col font-sec space-y-2">
         {#each menu as item, i}
           {#key i}
             <li class="">
@@ -43,13 +43,13 @@
       </ul>
     </div>
     <div class="space-y-12">
-      <h4 class="font-secondary">
+      <h4 class="font-sec">
         ORIGINAL FOOD unterstützt seit 2003 durch ein integriertes und
         nachhaltig wirkendes Entwicklungsprojekt die Regionen Kaffa und seit
         2016 auch Sheka im Südwesten Äthiopiens.
       </h4>
       <div>
-        <p class="font-semibold mb-3 font-secondary">Original Food GmbH</p>
+        <p class="font-semibold mb-3 font-sec">Original Food GmbH</p>
         <p class="text-base">
           Kartäuserstr. 61 <br />
           79104 Freiburg <br />

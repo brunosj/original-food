@@ -45,7 +45,7 @@
 </script>
 
 <section
-  class="text-tertiary layout sectionPy"
+  class="text-ter layout sectionPy"
   id="usp"
   style:background-color={$uspBackground}
   style:color={$font}
@@ -59,6 +59,9 @@
             delay: 0,
             easing: cubicInOut,
           }}
+          class={$uspBackground === 'var(--color-pri)'
+            ? 'text-ter font-bold'
+            : 'text-sec font-bold'}
         >
           {title}
         </h1>
@@ -77,7 +80,7 @@
   </div>
 
   <div
-    class="hidden lg:grid grid-cols-2 grid-rows-2 gap-x-4 sectionPy text-tertiary"
+    class="hidden lg:grid grid-cols-2 grid-rows-2 gap-x-4 sectionPy text-ter"
   >
     <!-- svelte-ignore a11y-no-static-element-interactions -->
     <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -87,7 +90,7 @@
       on:mouseleave={() => (expandedIndex = -1)}
     >
       <div
-        class="absolute bg-secondary w-full h-[5rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0"
+        class="absolute bg-sec w-full h-[5rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0"
       >
         {#if expandedIndex === wirtschaft.index}
           <h4
@@ -106,7 +109,7 @@
       />
       <div>
         <h3
-          class="absolute bottom-0 left-0 px-8 py-4 text-tertiary uppercase tracking-wider"
+          class="absolute bottom-0 left-0 px-8 py-4 text-ter uppercase tracking-wider"
         >
           {wirtschaft.titel}
         </h3>
@@ -121,7 +124,7 @@
       on:mouseleave={() => (expandedIndex = -1)}
     >
       <div
-        class="absolute bg-secondary w-full h-[5rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0"
+        class="absolute bg-sec w-full h-[5rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0"
       >
         {#if expandedIndex === ökologie.index}
           <h4
@@ -155,7 +158,7 @@
       on:mouseleave={() => (expandedIndex = -1)}
     >
       <div
-        class="absolute bg-secondary w-full h-[5rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0"
+        class="absolute bg-sec w-full h-[5rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0"
       >
         {#if expandedIndex === soziales.index}
           <h4
@@ -184,7 +187,7 @@
     <div class="sectionPb" />
   </div>
 
-  <ul class="lg:hidden sectionPt space-y-12">
+  <ul class="lg:hidden sectionPt space-y-6">
     {#each pillarsWithIndex as pillar (pillar.index)}
       <PillarMobile item={pillar} />
     {/each}
@@ -193,6 +196,10 @@
 
 <style>
   section {
+    transition: all 1s cubic-bezier(0.07, 0.95, 0, 1);
+  }
+
+  h1 {
     transition: all 1s cubic-bezier(0.07, 0.95, 0, 1);
   }
 </style>

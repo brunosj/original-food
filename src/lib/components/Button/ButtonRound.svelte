@@ -6,7 +6,7 @@
 
 <button
   class={`
-		text-tertiary text-xs rounded-xl button-round `}
+		text-ter text-xs rounded-xl button-round `}
   aria-label={`Go to ${path}`}
 >
   <div class="flex flex-row h-8 group items-center">
@@ -40,7 +40,7 @@
     position: relative;
     z-index: 1;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
-    transition: color 0.3s cubic-bezier(0.4, 0, 0, 1);
+    transition: color 0.5s cubic-bezier(0.4, 0, 0, 1);
   }
 
   .button-round::before {
@@ -56,7 +56,7 @@
     z-index: -1;
     background-color: var(--color-sec);
     pointer-events: none;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0, 1);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1);
   }
 
   .button-round:hover::before {
