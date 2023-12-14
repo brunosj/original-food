@@ -42,13 +42,14 @@
   .hamburger {
     position: relative;
     cursor: pointer;
-    height: 1rem;
-    width: 1.5rem;
+    height: 0.8rem;
+    width: 1.3rem;
     outline: none !important;
   }
 
   .line {
     position: absolute;
+    left: 0;
     background: currentColor;
     width: 100%;
     height: var(--line-width, 2px);

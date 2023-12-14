@@ -1,52 +1,79 @@
 <script>
-	import { menu, additionalMenu } from '$data/menu';
+  import Logo from '$assets/svg/OF-Logo.svelte';
+  import { menu, additionalMenu } from '$data/menu';
 </script>
 
-<section class=" bg-brown-900">
-	<nav
-		class=" layout flex flex-col lg:flex-row lg:items-start justify-between h-full pt-6 lg:pt-12 pb-0 lg:pb-6 font-secondary text-beige-500"
-	>
-		<!-- <div class="text-center">
-		<a href="/" data-sveltekit-noscroll>
-			<span class="text-7xl lg:text-8xl font-bold tracking-[0.2em] track textHover text-brown-500"
-				>ENTLE</span
-			>
-		</a>
-	</div> -->
-		<div class="ml-auto lg:ml-0">
-			<span class="font-semibold text-sm lg:text-base"> Original Food GmbH </span>
-			<br />
-			Kartäuserstr. 61 <br />
-			79104 Freiburg <br />
-			Deutschland
-		</div>
-		<div class="flex flex-col space-y-3 pt-6 lg:pt-0">
-			{#each menu as item}
-				<a href={item.slug} class="textHover inline text-sm lg:text-base" data-sveltekit-noscroll
-					>{item.name}</a
-				>
-			{/each}
-		</div>
-		<div class="flex flex-col space-y-3 pt-3 lg:pt-0">
-			{#each additionalMenu as item}
-				<a href={item.slug} class="textHover text-sm lg:text-base" data-sveltekit-noscroll
-					>{item.name}</a
-				>
-			{/each}
-		</div>
-	</nav>
-	<div class=" text-xs flex p-6 text-beige-700">
-		<span class="ml-auto">
-			Webentwicklung von
-			<a
-				href="https://www.landozone.net/"
-				class="textHover underline"
-				data-sveltekit-noscroll
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				landozone
-			</a>
-		</span>
-	</div>
-</section>
+<section
+  class="hidden lg:block h-[550px] pointer-events-none box-border"
+></section>
+<footer class="hidden lg:block bg-primary h-[550px] fixed bottom-0 w-full">
+  <div class="layout text-tertiary sectionPy lg:grid grid-cols-2">
+    <div class="space-y-12">
+      <Logo width="8rem" textColor="white" barColor="white" />
+      <ul class="flex flex-col font-secondary space-y-2">
+        {#each menu as item, i}
+          {#key i}
+            <li class="">
+              <a
+                href={item.slug}
+                rel={item.slug.includes('http') ? 'noopener noreferrer' : ''}
+                target={item.slug.includes('http') ? '_blank' : ''}
+                class="inline-block hover:translate-x-1 duration-300 textHover"
+              >
+                {item.name}
+              </a>
+            </li>
+          {/key}
+        {/each}
+
+        {#each additionalMenu as item, i}
+          {#key i}
+            <li class="">
+              <a
+                href={item.slug}
+                rel={item.slug.includes('http') ? 'noopener noreferrer' : ''}
+                target={item.slug.includes('http') ? '_blank' : ''}
+                class="inline-block hover:translate-x-1 duration-300 textHover"
+              >
+                {item.name}
+              </a>
+            </li>
+          {/key}
+        {/each}
+      </ul>
+    </div>
+    <div class="space-y-12">
+      <h4 class="font-secondary">
+        ORIGINAL FOOD unterstützt seit 2003 durch ein integriertes und
+        nachhaltig wirkendes Entwicklungsprojekt die Regionen Kaffa und seit
+        2016 auch Sheka im Südwesten Äthiopiens.
+      </h4>
+      <div>
+        <p class="font-semibold mb-3 font-secondary">Original Food GmbH</p>
+        <p class="text-base">
+          Kartäuserstr. 61 <br />
+          79104 Freiburg <br />
+          Deutschland
+        </p>
+        <p class="mt-3 text-base">
+          Tel.: +49 (0)761 28 28 90 <br />
+          Fax: +49 (0)761 28 28 950 <br />
+          Email: post(at)originalfood.de
+        </p>
+      </div>
+    </div>
+    <div class="col-span-2 text-xs flex text-beige-600 pt-12">
+      <span class="ml-auto">
+        Webentwicklung von
+        <a
+          href="https://www.landozone.net/"
+          class="textHover underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          landozone
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>

@@ -7,6 +7,7 @@ export default {
         primary: '#467080',
         secondary: '#8A6D7C',
         tertiary: '#F5F3F5',
+        black: '#111111',
         beige: {
           100: '#fffefb',
           200: '#fffdf7',
@@ -64,7 +65,7 @@ export default {
         },
       },
       fontFamily: {
-        regular: ['Myriad Pro'],
+        primary: ['Myriad Pro'],
         secondary: ['Comfortaa Variable'],
       },
     },

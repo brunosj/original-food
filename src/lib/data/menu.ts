@@ -5,16 +5,12 @@ export const menu = [
   },
   {
     name: 'Projekte',
-    slug: '/manufaktur',
+    slug: '/projekte',
   },
   {
     name: 'Online Shop',
     slug: 'https://shop.originalfood.de',
   },
-  // {
-  // 	name: 'Mission',
-  // 	slug: '/mission'
-  // }
 ];
 
 export const additionalMenu = [

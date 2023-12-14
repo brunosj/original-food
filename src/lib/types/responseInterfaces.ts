@@ -21,12 +21,19 @@ export interface Homepage {
     slug: string;
     heroText: string;
     heroBild: Picture;
+    statementTitle: string;
     statementText: string;
-    hero2Text: string;
+    presseStatement: string;
     hero2Bild: Picture;
     karteBild: Picture;
     produkte: {
       data: Product[];
+    };
+    nachhaltigkeitSaeulen: Pillar[];
+    nachhaltigkeitSaeulenTitel: string;
+    nachhaltigkeitSaeulenUntertitel: string;
+    presse: {
+      data: Press[];
     };
     logos: Logo[];
     USP: USP[];
@@ -88,6 +95,12 @@ export interface Picture {
   };
 }
 
+export interface Pillar {
+  titel: string;
+  text: string;
+  bild: Picture;
+}
+
 export interface Product {
   attributes: {
     bild: Picture;
@@ -95,6 +108,17 @@ export interface Product {
     titel: string;
     untertitel: string;
   };
+  id: number;
+}
+
+export interface Press {
+  attributes: {
+    titel: string;
+    untertitel: string;
+    link: string;
+    bild: Picture;
+  };
+  id: number;
 }
 
 export type Section = {

@@ -23,14 +23,15 @@
 </script>
 
 {#key pathname}
-  <main
-    in:fly={transitionIn}
-    out:fly={transitionOut}
-    on:outroend={scrollToTop}
-    class="relative"
-  >
-    <Menu />
+  <Menu />
+  <!-- <main
+  in:fly={transitionIn}
+  out:fly={transitionOut}
+  on:outroend={scrollToTop}
+  class="relative z-10"
+> -->
+  <main class="relative z-10">
     <slot />
-    <Footer />
   </main>
+  <Footer />
 {/key}
