@@ -22,7 +22,7 @@
 <header>
   {#if animate}
     <nav
-      class="w-full lg:w-1/4 fixed bottom-0 lg:top-0 lg:bottom-[unset] lg:rounded-br-lg shadow-lg text-white z-50"
+      class="w-full lg:w-[28%] fixed bottom-0 lg:top-0 lg:bottom-[unset] lg:rounded-br-lg lg:shadow-lg text-white z-50 shadow-inner"
       style:background-color={$menuBackground}
       transition:fly={{
         y: -100,
@@ -42,7 +42,7 @@
 
       {#if open}
         <div
-          class=" rounded-br-lg shadow-lg font-sec"
+          class="lg:rounded-br-lg font-sec"
           style:background-color={$menuBackground}
           in:slide={{
             duration: 400,
@@ -67,7 +67,7 @@
                         ? 'noopener noreferrer'
                         : ''}
                       target={item.slug.includes('http') ? '_blank' : ''}
-                      class="inline-block text-sm hover:translate-x-1 duration-300 textHover"
+                      class="inline-block text-sm lg:text-base hover:translate-x-1 duration-300 textHover"
                       on:click={() => toggleMenu()}
                     >
                       {item.name}
@@ -90,7 +90,7 @@
                       ? 'noopener noreferrer'
                       : ''}
                     target={item.slug.includes('http') ? '_blank' : ''}
-                    class="inline-block text-sm hover:translate-x-1 duration-300 textHover"
+                    class="inline-block text-sm lg:text-base hover:translate-x-1 duration-300 textHover"
                     on:click={() => toggleMenu()}
                   >
                     <span>

@@ -18,6 +18,6 @@
     </div>
   </div>
   <div class="">
-    <h4>{item.text}</h4>
+    <p>{item.text}</p>
   </div>
 </li>

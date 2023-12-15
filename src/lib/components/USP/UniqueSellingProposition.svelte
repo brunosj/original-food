@@ -50,7 +50,10 @@
   style:background-color={$uspBackground}
   style:color={$font}
 >
-  <div class="flex space-y-6 flex-col lg:text-right" bind:this={element}>
+  <div
+    class="flex space-y-3 lg:space-y-6 flex-col lg:text-right"
+    bind:this={element}
+  >
     <IntersectionObserver {element} bind:intersecting once threshold={1}>
       {#if intersecting}
         <h1

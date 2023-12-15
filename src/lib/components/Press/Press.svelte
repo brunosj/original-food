@@ -15,14 +15,6 @@
 
   let element;
   let intersecting = false;
-
-  function shuffleArray(array: Product[]) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  }
 </script>
 
 <section
@@ -31,7 +23,7 @@
   style:background-color={$background}
 >
   <div class="absolute hidden lg:block -top-[15vh] z-20">
-    <Products items={shuffleArray(products)} />
+    <Products items={products.slice().reverse()} />
   </div>
 
   <div

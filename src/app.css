@@ -61,7 +61,7 @@ h4 {
 }
 
 p {
-  @apply text-base md:text-lg font-pri;
+  @apply text-sm md:text-base font-pri;
 }
 
 .layout {

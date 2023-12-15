@@ -6,30 +6,28 @@
 </script>
 
 <section class="relative" id="logo-carousel">
-  <div class="relative">
-    <div class="logos">
-      <div class="logos-slide">
-        {#each logos as logo (logo.link)}
-          <a href={logo.link} class="logo w-16 lg:w-32 h-auto" target="_blank">
-            <img
-              src={logo.bild.data.attributes.url}
-              alt={logo.titel}
-              class="object-contain h-full w-full"
-            />
-          </a>
-        {/each}
-      </div>
-      <div class="logos-slide">
-        {#each logos as logo (logo.link)}
-          <a href={logo.link} class="logo w-16 lg:w-32 h-auto">
-            <img
-              src={logo.bild.data.attributes.url}
-              alt={logo.titel}
-              class="object-contain h-full w-full"
-            />
-          </a>
-        {/each}
-      </div>
+  <div class="logos">
+    <div class="logos-slide">
+      {#each logos as logo (logo.link)}
+        <a href={logo.link} class="logo w-16 lg:w-24 h-auto" target="_blank">
+          <img
+            src={logo.bild.data.attributes.url}
+            alt={logo.titel}
+            class="object-contain h-full w-full"
+          />
+        </a>
+      {/each}
+    </div>
+    <div class="logos-slide">
+      {#each logos as logo (logo.link)}
+        <a href={logo.link} class="logo w-16 lg:w-24 h-auto">
+          <img
+            src={logo.bild.data.attributes.url}
+            alt={logo.titel}
+            class="object-contain h-full w-full"
+          />
+        </a>
+      {/each}
     </div>
   </div>
 </section>
@@ -100,7 +98,7 @@
   @media (min-width: 768px) {
     .logos {
       padding: 60px 0;
-      padding: 50px 100px;
+      padding: 25px 175px;
     }
 
     .logos-slide {

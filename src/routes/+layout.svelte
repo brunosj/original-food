@@ -74,7 +74,7 @@
   on:outroend={scrollToTop}
   class="relative z-10"
 > -->
-  <main class="relative z-10">
+  <main class="relative z-10 overflow-hidden">
     <slot />
   </main>
 {/key}

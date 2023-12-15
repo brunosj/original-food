@@ -9,10 +9,10 @@
 </script>
 
 <div
-  class={`bg-[white] text-center h-full rounded-xl parent group overflow-hidden`}
+  class={`bg-[white] text-center w-full rounded-xl parent group overflow-hidden self-stretch `}
 >
-  <a href={link} class="flex flex-col relative card">
-    <div class="h-24 lg:h-48 lg:p-6">
+  <a href={link} class="flex flex-col relative card h-full">
+    <div class="h-32 lg:h-48 p-3 lg:p-6">
       <img
         loading="lazy"
         src={bild.data.attributes.url}
@@ -22,11 +22,11 @@
     </div>
 
     <div
-      class=" lg:p-6 space-y-3 lg:space-y-6 flex flex-col bg-ter group-hover:bg-white duration-300 rounded-b-xl"
+      class="p-3 lg:p-6 space-y-3 lg:space-y-6 bg-ter group-hover:bg-white duration-300 rounded-b-xl h-full flex flex-col justify-around"
     >
       <div class="space-y-1">
         <h4 class="font-bold">{titel}</h4>
-        <p class="hidden lg:block text-sm">{untertitel}</p>
+        <p class=" text-sm">{untertitel}</p>
       </div>
 
       <div class="parent">
