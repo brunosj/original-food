@@ -22,7 +22,7 @@
     </div>
 
     <div
-      class="p-3 lg:p-6 space-y-3 lg:space-y-6 bg-ter group-hover:bg-white duration-300 rounded-b-xl h-full flex flex-col justify-around"
+      class="p-3 lg:p-6 space-y-3 lg:space-y-6 bg-ter group-hover:bg-white duration-500 rounded-b-xl h-full flex flex-col justify-around"
     >
       <div class="space-y-1">
         <h4 class="font-bold">{titel}</h4>

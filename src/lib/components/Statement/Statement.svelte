@@ -39,7 +39,7 @@
   <IntersectionObserver {element} bind:intersecting once threshold={0}>
     {#if intersecting}
       <div
-        class="absolute hidden lg:block -top-[5vh] lg:-top-[10vh] z-20"
+        class="absolute hidden lg:block -top-[5vh] lg:-top-[10vh] z-20 w-full"
         transition:fly={{
           y: 20,
           duration: 500,

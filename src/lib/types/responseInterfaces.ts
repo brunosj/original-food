@@ -29,13 +29,17 @@ export interface Homepage {
     produkte: {
       data: Product[];
     };
-    nachhaltigkeitSaeulen: Pillar[];
+    nachhaltigkeitSaeulen: {
+      data: Pillar[];
+    };
     nachhaltigkeitSaeulenTitel: string;
     nachhaltigkeitSaeulenUntertitel: string;
     presse: {
       data: Press[];
     };
-    logos: Logo[];
+    logos: {
+      data: Logo[];
+    };
     USP: USP[];
   };
   id: number;
@@ -82,9 +86,12 @@ export type CTA = {
 };
 
 export interface Logo {
-  bild: Picture;
-  link: string;
-  titel: string;
+  attributes: {
+    bild: Picture;
+    link: string;
+    titel: string;
+    beschreibung: string;
+  };
 }
 
 export interface Picture {
@@ -96,9 +103,12 @@ export interface Picture {
 }
 
 export interface Pillar {
-  titel: string;
-  text: string;
-  bild: Picture;
+  attributes: {
+    titel: string;
+    textKurz: string;
+    textLang: string;
+    bild: Picture;
+  };
   index: number;
 }
 

@@ -22,7 +22,7 @@
   const titles = ['Wirtschaft', 'Ökologie', 'Soziales'];
 
   const pillarsWithIndex: Pillar[] = titles.map((title, index) => {
-    const pillar = pillars.find((pillar) => pillar.titel === title);
+    const pillar = pillars.find((pillar) => pillar.attributes.titel === title);
 
     if (pillar) {
       return {
@@ -32,9 +32,12 @@
     } else {
       return {
         index: index,
-        titel: '',
-        text: '',
-        bild: { data: { attributes: { url: '' } } },
+        attributes: {
+          titel: '',
+          textKurz: '',
+          textLang: '',
+          bild: { data: { attributes: { url: '' } } },
+        },
       };
     }
   });
@@ -105,12 +108,12 @@
             in:fly={{ duration: 500, delay: 400 }}
             out:fly={{ duration: 100, delay: 0 }}
           >
-            {wirtschaft.text}
+            {wirtschaft.attributes.textKurz}
           </h4>
         {/if}
       </div>
       <img
-        src={wirtschaft.bild?.data.attributes.url}
+        src={wirtschaft.attributes.bild?.data.attributes.url}
         alt=""
         class="object-cover h-40 lg:h-full w-full rounded-xl"
       />
@@ -120,7 +123,7 @@
             $uspBackground === 'var(--color-pri)' ? ' text-black' : ' text-ter'
           } uppercase tracking-wider`}
         >
-          {wirtschaft.titel}
+          {wirtschaft.attributes.titel}
         </h3>
       </div>
     </div>
@@ -145,12 +148,12 @@
             in:fly={{ duration: 500, delay: 300 }}
             out:fly={{ duration: 100, delay: 0 }}
           >
-            {ökologie.text}
+            {ökologie.attributes.textKurz}
           </h4>
         {/if}
       </div>
       <img
-        src={ökologie.bild?.data.attributes.url}
+        src={ökologie.attributes.bild?.data.attributes.url}
         alt=""
         class="object-cover h-40 lg:h-full w-full rounded-xl"
       />
@@ -160,7 +163,7 @@
             $uspBackground === 'var(--color-pri)' ? ' text-black' : ' text-ter'
           }`}
         >
-          {ökologie.titel}
+          {ökologie.attributes.titel}
         </h3>
       </div>
     </div>
@@ -185,12 +188,12 @@
             in:fly={{ duration: 500, delay: 300 }}
             out:fly={{ duration: 100, delay: 0 }}
           >
-            {soziales.text}
+            {soziales.attributes.textKurz}
           </h4>
         {/if}
       </div>
       <img
-        src={soziales.bild?.data.attributes.url}
+        src={soziales.attributes.bild?.data.attributes.url}
         alt=""
         class="object-cover h-40 lg:h-full w-full rounded-xl"
       />
@@ -200,7 +203,7 @@
             $uspBackground === 'var(--color-pri)' ? ' text-black' : ' text-ter'
           }`}
         >
-          {soziales.titel}
+          {soziales.attributes.titel}
         </h3>
       </div>
     </div>
@@ -209,7 +212,7 @@
   </div>
 
   <ul class="lg:hidden sectionPt space-y-6">
-    {#each pillarsWithIndex as pillar (pillar.index)}
+    {#each pillarsWithIndex as pillar, i}
       <PillarMobile item={pillar} />
     {/each}
   </ul>

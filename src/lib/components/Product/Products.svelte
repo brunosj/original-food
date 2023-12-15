@@ -5,7 +5,7 @@
   import ProductCard from '$components/Product/ProductCard.svelte';
 </script>
 
-<ul class="layout lg:grid grid-cols-4 gap-3">
+<ul class="layout lg:grid grid-cols-4 gap-3 2xl:gap-6">
   {#each items as item (item.id)}
     <li>
       <ProductCard {item} />

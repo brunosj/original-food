@@ -22,7 +22,7 @@
   id="press"
   style:background-color={$background}
 >
-  <div class="absolute hidden lg:block -top-[15vh] z-20">
+  <div class="absolute hidden lg:block -top-[15vh] z-20 w-full">
     <Products items={products.slice().reverse()} />
   </div>
 

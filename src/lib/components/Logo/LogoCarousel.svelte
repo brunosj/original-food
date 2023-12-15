@@ -8,22 +8,26 @@
 <section class="relative" id="logo-carousel">
   <div class="logos">
     <div class="logos-slide">
-      {#each logos as logo (logo.link)}
-        <a href={logo.link} class="logo w-16 lg:w-24 h-auto" target="_blank">
+      {#each logos as logo, i}
+        <a
+          href={logo.attributes.link}
+          class="logo w-16 lg:w-24 h-auto"
+          target="_blank"
+        >
           <img
-            src={logo.bild.data.attributes.url}
-            alt={logo.titel}
+            src={logo.attributes.bild.data.attributes.url}
+            alt={logo.attributes.titel}
             class="object-contain h-full w-full"
           />
         </a>
       {/each}
     </div>
     <div class="logos-slide">
-      {#each logos as logo (logo.link)}
-        <a href={logo.link} class="logo w-16 lg:w-24 h-auto">
+      {#each logos as logo, i}
+        <a href={logo.attributes.link} class="logo w-16 lg:w-24 h-auto">
           <img
-            src={logo.bild.data.attributes.url}
-            alt={logo.titel}
+            src={logo.attributes.bild.data.attributes.url}
+            alt={logo.attributes.titel}
             class="object-contain h-full w-full"
           />
         </a>

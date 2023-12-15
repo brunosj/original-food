@@ -51,11 +51,11 @@
   image={pageData.attributes.hero2Bild.data.attributes.url}
   height="h-48 lg:h-[75svh]"
 />
-<LogoCarousel logos={pageData.attributes.logos} />
+<LogoCarousel logos={pageData.attributes.logos.data} />
 <UniqueSellingProposition
   title={pageData.attributes.nachhaltigkeitSaeulenTitel}
   subtitle={pageData.attributes.nachhaltigkeitSaeulenUntertitel}
-  pillars={pageData.attributes.nachhaltigkeitSaeulen}
+  pillars={pageData.attributes.nachhaltigkeitSaeulen.data}
 />
 <Press
   pressStatement={pageData.attributes.presseStatement}
