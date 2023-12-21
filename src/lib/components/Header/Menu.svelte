@@ -32,10 +32,10 @@
       }}
     >
       <div class="flex px-8 py-4 items-center justify-between">
-        <a href="/">
+        <a href="/" aria-label="Homepage">
           <Logo width="6rem" textColor="white" barColor="white" />
         </a>
-        <button class="relative" on:click={toggleMenu}>
+        <button class="relative" on:click={toggleMenu} aria-label="Menu">
           <Hamburger bind:open color="white" duoLine={false} />
         </button>
       </div>

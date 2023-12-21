@@ -11,7 +11,7 @@
 
   // SEO
   let title = '';
-  let metadescription = '';
+  let metaDescription = '';
   const breadcrumbs = [
     {
       name: 'Home',
@@ -21,7 +21,7 @@
   const seoProps = {
     breadcrumbs,
     title,
-    metadescription,
+    metaDescription,
     slug: '',
     datePublished: '2023-12-05T14:19:33.000+0100',
     lastUpdated: '2021-12-05T14:19:33.000+0100',

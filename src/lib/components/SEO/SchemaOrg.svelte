@@ -11,7 +11,7 @@
   export let entity;
   export let lastUpdated;
   export let featuredImage;
-  export let metadescription;
+  export let metaDescription;
   export let siteLanguage;
   export let siteTitle;
   export let siteTitleAlt;
@@ -113,7 +113,7 @@
     author: {
       '@id': `${siteUrl}/#/schema/person/${entityHash}`,
     },
-    description: metadescription,
+    description: metaDescription,
     breadcrumb: {
       '@id': `${url}#breadcrumb`,
     },

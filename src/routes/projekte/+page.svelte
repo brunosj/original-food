@@ -9,18 +9,22 @@
   import ProjectsPartnerSection from '$components/Partner/ProjectsPartnerSection.svelte';
 
   // SEO
-  let title = '';
-  let metadescription = '';
+  let title = 'Projekte';
+  let metaDescription = 'Unsere Projekte';
   const breadcrumbs = [
     {
       name: 'Home',
       slug: '',
     },
+    {
+      name: 'Projekte',
+      slug: '/projekte',
+    },
   ];
   const seoProps = {
     breadcrumbs,
     title,
-    metadescription,
+    metaDescription,
     slug: '',
     datePublished: '2023-12-05T14:19:33.000+0100',
     lastUpdated: '2021-12-05T14:19:33.000+0100',
