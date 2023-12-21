@@ -1,20 +1,5 @@
 // Pages
 
-export interface Team {
-  attributes: {
-    name: string;
-    text: string;
-    bild: Picture;
-  };
-}
-
-export interface USP {
-  titel: string;
-  untertitel: string;
-  pfad: string;
-  bild: Picture;
-}
-
 export interface Homepage {
   attributes: {
     titel: string;
@@ -43,6 +28,52 @@ export interface Homepage {
     USP: USP[];
   };
   id: number;
+}
+
+export interface ProjectPage {
+  attributes: {
+    titel: string;
+    text: string;
+    heroBild: Picture;
+    logos: {
+      data: Logo[];
+    };
+    zieleTop: {
+      titel: string;
+      untertitel: string;
+    };
+    untertitel: string;
+    partnerTop: {
+      titel: string;
+      untertitel: string;
+    };
+    produkte: {
+      data: Product[];
+    };
+    footerBild: Picture;
+    zieleBild: Picture;
+    sektionTopTitel: string;
+    sektionTopText: string;
+    ziele: {
+      data: Pillar[];
+    };
+    partnerBild: Picture;
+  };
+}
+
+export interface Team {
+  attributes: {
+    name: string;
+    text: string;
+    bild: Picture;
+  };
+}
+
+export interface USP {
+  titel: string;
+  untertitel: string;
+  pfad: string;
+  bild: Picture;
 }
 
 export interface Page {
@@ -106,8 +137,9 @@ export interface Pillar {
   attributes: {
     titel: string;
     textKurz: string;
-    textLang: string;
+    textLang?: string;
     bild: Picture;
+    bild2?: Picture;
   };
   index: number;
 }

@@ -32,9 +32,9 @@
       }}
     >
       <div class="flex px-8 py-4 items-center justify-between">
-        <div class="">
+        <a href="/">
           <Logo width="6rem" textColor="white" barColor="white" />
-        </div>
+        </a>
         <button class="relative" on:click={toggleMenu}>
           <Hamburger bind:open color="white" duoLine={false} />
         </button>

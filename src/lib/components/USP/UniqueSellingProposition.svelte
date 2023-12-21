@@ -90,7 +90,8 @@
   >
     <!-- svelte-ignore a11y-no-static-element-interactions -->
     <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-    <div
+    <a
+      href="/projekte"
       class="rounded-xl row-span-2 h-[60vh] relative group cursor-pointer"
       on:mouseover={() => handleMouseOver(wirtschaft.index)}
       on:mouseleave={() => (expandedIndex = -1)}
@@ -126,11 +127,12 @@
           {wirtschaft.attributes.titel}
         </h3>
       </div>
-    </div>
+    </a>
 
     <!-- svelte-ignore a11y-mouse-events-have-key-events -->
     <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <div
+    <a
+      href="/projekte"
       class="w-full relative group cursor-pointer h-[29vh] row-span-1"
       on:mouseover={() => handleMouseOver(ökologie.index)}
       on:mouseleave={() => (expandedIndex = -1)}
@@ -166,11 +168,12 @@
           {ökologie.attributes.titel}
         </h3>
       </div>
-    </div>
+    </a>
 
     <!-- svelte-ignore a11y-no-static-element-interactions -->
     <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-    <div
+    <a
+      href="/projekte"
       class="w-full h-[29vh] relative group cursor-pointer mt-auto"
       on:mouseover={() => handleMouseOver(soziales.index)}
       on:mouseleave={() => (expandedIndex = -1)}
@@ -206,7 +209,7 @@
           {soziales.attributes.titel}
         </h3>
       </div>
-    </div>
+    </a>
 
     <div class="sectionPb" />
   </div>

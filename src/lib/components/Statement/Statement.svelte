@@ -11,10 +11,6 @@
   import Products from '$components/Product/Products.svelte';
   import Tree from '$assets/svg/svg_tree.svelte';
   import Carousel from '$components/Carousel/Carousel.svelte';
-  import Wave1 from '$assets/svg/Wave1.svelte';
-  import Wave2 from '$assets/svg/Wave2.svelte';
-  import Wave from '$assets/svg/Wave.svelte';
-  import WaveSoft from '$assets/svg/WaveSoft.svelte';
 
   let element;
   let intersecting = false;
@@ -41,7 +37,7 @@
       <div
         class="absolute hidden lg:block -top-[5vh] lg:-top-[10vh] z-20 w-full"
         transition:fly={{
-          y: 20,
+          y: 50,
           duration: 500,
           delay: 500,
           easing: cubicInOut,

@@ -1,15 +1,11 @@
 <script lang="ts">
-  import { PUBLIC_SHOP_URL } from '$env/static/public';
   import type { Homepage } from '$types/responseInterfaces';
-  import { CTA } from '$components';
-  import Header from '$components/Header/Header.svelte';
   import UniqueSellingProposition from '$components/USP/UniqueSellingProposition.svelte';
   import Hero from '$components/Hero/Hero.svelte';
-  import Hero2 from '$components/Hero/Hero2.svelte';
+  import ImageHero from '$components/Hero/ImageHero.svelte';
   import SEO from '$lib/components/SEO/index.svelte';
-  import Products from '$components/Product/Products.svelte';
   import Statement from '$components/Statement/Statement.svelte';
-  import LogoCarousel from '$components/Logo/LogoCarousel.svelte';
+  import LogoCarousel from '$components/Partner/LogoCarousel.svelte';
   import MapBanner from '$components/Map/MapBanner.svelte';
   import Press from '$components/Press/Press.svelte';
 
@@ -47,7 +43,7 @@
   statementTitle={pageData.attributes.statementTitle}
   statementText={pageData.attributes.statementText}
 />
-<Hero2
+<ImageHero
   image={pageData.attributes.hero2Bild.data.attributes.url}
   height="h-48 lg:h-[75svh]"
 />

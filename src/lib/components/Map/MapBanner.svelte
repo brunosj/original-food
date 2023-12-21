@@ -2,7 +2,6 @@
   export let image: string;
   export let height: string;
 
-  import { fade } from 'svelte/transition';
   import Map from '$assets/svg/kaffa_map.svelte';
   import { onMount } from 'svelte';
 

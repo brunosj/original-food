@@ -13,9 +13,15 @@ dependencies:
   '@fontsource-variable/noto-sans-sc':
     specifier: ^5.0.4
     version: 5.0.4
+  '@fontsource-variable/nunito':
+    specifier: ^5.0.17
+    version: 5.0.17
   '@fontsource-variable/open-sans':
     specifier: ^5.0.19
     version: 5.0.19
+  '@fontsource-variable/overpass':
+    specifier: ^5.0.17
+    version: 5.0.17
   '@fontsource-variable/raleway':
     specifier: ^5.0.17
     version: 5.0.17
@@ -401,8 +407,16 @@ packages:
     resolution: {integrity: sha512-80JYw30HU85g4m6x5SiKKmc2gpMjo/h63zCO8Io7ZORdK9ty0b4P85ucB2EeQ6ti2zFs0aFqJE4guKzOKGEjMQ==}
     dev: false
 
+  /@fontsource-variable/nunito@5.0.17:
+    resolution: {integrity: sha512-e9F+nYc8610HtmVB08kKzHdythbSJBN9CyV3ODzCAs2LuoOviAndYdNfKOw6rHqOh3j99gfOSNlHpLNNF9O5OA==}
+    dev: false
+
   /@fontsource-variable/open-sans@5.0.19:
     resolution: {integrity: sha512-dq9wgiocYit93EdQuvRQUVG5FaEkeNIyk1wg9Dk7kXjQBcnrksea/dhIXU8wWNofN5nYsCPX7r+CzBcAnUqU2g==}
+    dev: false
+
+  /@fontsource-variable/overpass@5.0.17:
+    resolution: {integrity: sha512-NzrUBQPBlVpfTpMqBIYsrxIKer+ADtC07e9NyxnSgBsgV1eZwaih9cRGnuOa4H/B00kM0bBj1kN1M6XEiVeFuA==}
     dev: false
 
   /@fontsource-variable/raleway@5.0.17:

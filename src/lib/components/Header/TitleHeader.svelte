@@ -12,8 +12,8 @@
   afterUpdate(() => processMarkdownLinks(markdownRef));
 </script>
 
-<section>
-  <div class="py-32 bg-purple-500">
+<section class="bg-ter">
+  <div class="py-16 lg:py-32 bg-purple-500">
     <h1 class="text-ter layout">
       {title}
     </h1>

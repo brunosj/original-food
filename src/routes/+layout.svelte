@@ -3,9 +3,11 @@
   import '$styles/carousel.css';
   import '@fontsource-variable/comfortaa';
   import '@fontsource-variable/open-sans';
+  import '@fontsource-variable/overpass';
+  import '@fontsource-variable/nunito';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
-  import { Footer } from '$components';
+  import Footer from '$components/Footer/Footer.svelte';
   import Menu from '$components/Header/Menu.svelte';
   import { fly, fade } from 'svelte/transition';
   import {
@@ -36,6 +38,9 @@
       const statementTitle = document.getElementById('statement-title');
       const uspSection = document.getElementById('usp');
       const pressSection = document.getElementById('press');
+      const projectsSection = document.getElementById('projects');
+      const uspExpandedSection = document.getElementById('usp-expanded');
+      const partnersSection = document.getElementById('partners');
 
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
@@ -52,6 +57,15 @@
         menuBackground.set('var(--color-sec)');
         font.set('var(--color-black)');
       } else if (pressSection && isSectionAtTop(pressSection, topRange)) {
+        menuBackground.set('var(--color-pri)');
+      } else if (projectsSection && isSectionAtTop(projectsSection, topRange)) {
+        menuBackground.set('var(--color-pri)');
+      } else if (
+        uspExpandedSection &&
+        isSectionAtTop(uspExpandedSection, topRange)
+      ) {
+        menuBackground.set('var(--color-sec)');
+      } else if (partnersSection && isSectionAtTop(partnersSection, topRange)) {
         menuBackground.set('var(--color-pri)');
       }
     };

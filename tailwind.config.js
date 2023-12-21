@@ -67,7 +67,7 @@ export default {
         },
       },
       fontFamily: {
-        pri: ['Open Sans Variable'],
+        pri: ['Nunito Variable'],
         sec: ['Comfortaa Variable'],
       },
     },
