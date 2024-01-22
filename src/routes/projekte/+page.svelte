@@ -59,11 +59,13 @@
   title={pageData.attributes.zieleTop.titel}
   subtitle={pageData.attributes.zieleTop.untertitel}
   pillars={pageData.attributes.ziele.data}
+  bottomText={pageData.attributes.zieleBottom?.untertitel}
 />
 <ProjectsPartnerSection
   logos={firstHalf}
   title={pageData.attributes.partnerTop.titel}
   subtitle={pageData.attributes.partnerTop.untertitel}
+  products={pageData.attributes.produkte.data}
 />
 <ImageHero
   image={pageData.attributes.partnerBild.data.attributes.url}
@@ -74,6 +76,7 @@
   title={pageData.attributes.partnerTop.titel}
   subtitle={pageData.attributes.partnerTop.untertitel}
   displayHeader={false}
+  products={pageData.attributes.produkte.data}
 />
 <ProjectsBottomSection
   products={pageData.attributes.produkte.data}

@@ -34,6 +34,6 @@
     <Carousel slides={products} type="Product" />
   </div>
   <div>
-    <ImageHero {image} height="h-[40svh] lg:h-[75svh]" />
+    <ImageHero {image} height="h-[40svh] lg:h-[100svh]" />
   </div>
 </section>

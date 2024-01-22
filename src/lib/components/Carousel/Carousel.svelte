@@ -59,56 +59,30 @@
     use:emblaCarouselSvelte={{ options, plugins: [] }}
     on:emblaInit={onInit}
   >
-    <div class="embla__container">
+    <ul class="embla__container">
       {#if type === 'Press'}
         {#each slides as slide, i (slide.id)}
-          <ul class="embla__slide">
-            <li
+          <li class="embla__slide">
+            <div
               class={`${i === 0 ? 'pl-6 lg:pl-0' : ''} ${
                 i === slides.length - 1 ? 'pr-6 lg:pr-0' : ''
               }`}
             >
               <PressCard item={slide} />
-            </li>
-          </ul>
-        {/each}
-        {#each slides as slide, i (slide.id)}
-          <ul class="embla__slide">
-            <li
-              class={`${i === 0 ? 'pl-6 lg:pl-0' : ''} ${
-                i === slides.length - 1 ? 'pr-6 lg:pr-0' : ''
-              }`}
-            >
-              <PressCard item={slide} />
-            </li>
-          </ul>
-        {/each}
-        {#each slides as slide, i (slide.id)}
-          <ul class="embla__slide">
-            <li
-              class={`${i === 0 ? 'pl-6 lg:pl-0' : ''} ${
-                i === slides.length - 1 ? 'pr-6 lg:pr-0' : ''
-              }`}
-            >
-              <PressCard item={slide} />
-            </li>
-          </ul>
+            </div>
+          </li>
         {/each}
       {/if}
       {#if type === 'Product'}
         {#each slides as slide, i (slide.id)}
-          <ul class="embla__slide">
-            <li
-              class={`${i === 0 ? 'pl-6 lg:pl-0' : ''} ${
-                i === slides.length - 1 ? 'pr-6 lg:pr-0' : ''
-              }`}
-            >
+          <li class="embla__slide">
+            <div>
               <ProductCard item={slide} />
-            </li>
-          </ul>
+            </div>
+          </li>
         {/each}
       {/if}
-    </div>
+    </ul>
   </div>
 </div>
 <div class="flex items-center mt-3">

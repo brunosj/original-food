@@ -18,24 +18,13 @@
       class={`h-full col-span-1  ${i % 2 === 0 ? 'order-first' : 'order-last'}`}
     >
       <div class="relative h-full lg:bg-white w-48 m-auto flex">
-        <IntersectionObserver {element} bind:intersecting once threshold={0.5}>
-          {#if intersecting}
-            <div
-              class=" m-auto p-4"
-              transition:fade={{
-                duration: 500,
-                delay: 0,
-                easing: cubicInOut,
-              }}
-            >
-              <img
-                src={item.attributes.bild.data.attributes.url}
-                alt=""
-                class="object-cover h-full w-full"
-              />
-            </div>
-          {/if}
-        </IntersectionObserver>
+        <div class=" m-auto p-4">
+          <img
+            src={item.attributes.bild.data.attributes.url}
+            alt=""
+            class="object-cover h-full w-full"
+          />
+        </div>
       </div>
     </div>
     <div

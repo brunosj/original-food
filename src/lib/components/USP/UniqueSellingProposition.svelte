@@ -9,6 +9,7 @@
   import { cubicInOut } from 'svelte/easing';
   import IntersectionObserver from 'svelte-intersection-observer';
   import PillarMobile from '$components/Pillar/PillarMobile.svelte';
+  import ArrowRight from 'virtual:icons/mdi-light/arrow-right';
 
   let expandedIndex = -1;
 
@@ -104,13 +105,18 @@
         } w-full h-[4rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0`}
       >
         {#if expandedIndex === wirtschaft.index}
-          <h4
+          <div
             class="absolute bottom-top left-0 p-8"
-            in:fly={{ duration: 500, delay: 400 }}
+            in:fly={{ duration: 500, delay: 300 }}
             out:fly={{ duration: 100, delay: 0 }}
           >
-            {wirtschaft.attributes.textKurz}
-          </h4>
+            <h4>
+              {wirtschaft.attributes.textKurz}
+              <span class="hover:opacity-50 duration-300 italic">
+                &rarr; mehr erfahren</span
+              >
+            </h4>
+          </div>
         {/if}
       </div>
       <img
@@ -145,13 +151,18 @@
         } w-full h-[4rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0`}
       >
         {#if expandedIndex === ökologie.index}
-          <h4
+          <div
             class="absolute bottom-top left-0 p-8"
             in:fly={{ duration: 500, delay: 300 }}
             out:fly={{ duration: 100, delay: 0 }}
           >
-            {ökologie.attributes.textKurz}
-          </h4>
+            <h4>
+              {ökologie.attributes.textKurz}
+              <span class="hover:opacity-50 duration-300 italic">
+                &rarr; mehr erfahren</span
+              >
+            </h4>
+          </div>
         {/if}
       </div>
       <img
@@ -186,13 +197,18 @@
         } w-full h-[4rem] group-hover:h-full rounded-b-xl group-hover:rounded-xl duration-[400ms] ease-in-out overflow-hidden bg-opacity-95 bottom-0`}
       >
         {#if expandedIndex === soziales.index}
-          <h4
+          <div
             class="absolute bottom-top left-0 p-8"
             in:fly={{ duration: 500, delay: 300 }}
             out:fly={{ duration: 100, delay: 0 }}
           >
-            {soziales.attributes.textKurz}
-          </h4>
+            <h4>
+              {soziales.attributes.textKurz}
+              <span class="hover:opacity-50 duration-300 italic">
+                &rarr; mehr erfahren</span
+              >
+            </h4>
+          </div>
         {/if}
       </div>
       <img

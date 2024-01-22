@@ -27,7 +27,7 @@
   </div>
 
   <div
-    class="pt-[0vh] lg:pt-[25vh] pb-12 lg:pb-24 text-ter w-full z-20"
+    class="pt-[0vh] lg:pt-[35vh] pb-12 lg:pb-24 text-ter w-full z-20"
     bind:this={element}
   >
     <IntersectionObserver {element} bind:intersecting once threshold={0.2}>

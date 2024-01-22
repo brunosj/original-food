@@ -52,7 +52,7 @@
   </IntersectionObserver>
 
   <div
-    class="layout pt-[5vh] lg:pt-[35vh] pb-6 lg:pb-12 text-ter w-full lg:w-[55%] z-20"
+    class="layout pt-[5vh] lg:pt-[45vh] pb-6 lg:pb-12 text-ter w-full lg:w-[55%] z-20"
   >
     <div class="space-y-6 lg:space-y-12">
       <IntersectionObserver {element} bind:intersecting once threshold={0}>

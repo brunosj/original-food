@@ -9,6 +9,7 @@ export default {
         sec: '#8A6D7C',
         ter: '#F5F3F5',
         quar: '#BBC7CE',
+        orange: '#a9592f',
         black: '#111111',
         beige: {
           100: '#fffefb',

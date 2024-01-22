@@ -1,12 +1,18 @@
-<script>
+<script lang="ts">
+  export let footer: Footer;
+
+  import type { Footer } from '$types/responseInterfaces';
   import Logo from '$assets/svg/OF-Logo.svelte';
   import { menu, additionalMenu } from '$data/menu';
+  import SvelteMarkdown from 'svelte-markdown';
+
+  let { anschrift, statement, copyright } = footer.attributes;
 </script>
 
 <section
   class="hidden lg:block h-[550px] pointer-events-none box-border"
 ></section>
-<footer class="hidden lg:block bg-quar h-[550px] fixed bottom-0 w-full">
+<section class="hidden lg:block bg-quar h-[550px] fixed bottom-0 w-full">
   <div class="layout sectionPy lg:grid grid-cols-2">
     <div class="space-y-12">
       <Logo width="8rem" textColor="" barColor="rgb(181,83,34)" />
@@ -18,7 +24,7 @@
                 href={item.slug}
                 rel={item.slug.includes('http') ? 'noopener noreferrer' : ''}
                 target={item.slug.includes('http') ? '_blank' : ''}
-                class="inline-block hover:translate-x-1 duration-300 textHover"
+                class="inline-block hover:translate-x-1 duration-300 hover:text-orange"
               >
                 {item.name}
               </a>
@@ -33,7 +39,7 @@
                 href={item.slug}
                 rel={item.slug.includes('http') ? 'noopener noreferrer' : ''}
                 target={item.slug.includes('http') ? '_blank' : ''}
-                class="inline-block hover:translate-x-1 duration-300 textHover"
+                class="inline-block hover:translate-x-1 duration-300 hover:text-orange"
               >
                 {item.name}
               </a>
@@ -42,24 +48,15 @@
         {/each}
       </ul>
     </div>
-    <div class="space-y-12">
+    <div class="space-y-6">
       <h4 class="font-sec">
-        ORIGINAL FOOD unterstützt seit 2003 durch ein integriertes und
-        nachhaltig wirkendes Entwicklungsprojekt die Regionen Kaffa und seit
-        2016 auch Sheka im Südwesten Äthiopiens.
+        {statement}
       </h4>
-      <div>
-        <p class="font-semibold mb-3 font-sec">Original Food GmbH</p>
-        <p class="text-base">
-          Kartäuserstr. 61 <br />
-          79104 Freiburg <br />
-          Deutschland
-        </p>
-        <p class="mt-3 text-base">
-          Tel.: +49 (0)761 28 28 90 <br />
-          Fax: +49 (0)761 28 28 950 <br />
-          Email: post(at)originalfood.de
-        </p>
+      <div class="markdown">
+        <SvelteMarkdown source={copyright} />
+      </div>
+      <div class="markdown">
+        <SvelteMarkdown source={anschrift} />
       </div>
     </div>
     <div class="col-span-2 text-xs flex text-beige-800 pt-12">
@@ -76,4 +73,4 @@
       </span>
     </div>
   </div>
-</footer>
+</section>

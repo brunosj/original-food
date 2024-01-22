@@ -35,7 +35,7 @@
 <SEO {...seoProps} />
 <Hero
   image={pageData.attributes.heroBild.data.attributes.url}
-  height="h-[40svh] lg:h-[75svh]"
+  height="h-[30svh] lg:h-[75svh]"
   headerTitle={pageData.attributes.heroText}
 />
 <Statement

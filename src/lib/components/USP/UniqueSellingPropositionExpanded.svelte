@@ -1,9 +1,11 @@
 <script lang="ts">
   export let title: string;
   export let subtitle: string;
+  export let bottomText: string;
   export let pillars: Pillar[];
+  import Products from '$components/Product/Products.svelte';
 
-  import type { Pillar } from '$types/responseInterfaces';
+  import type { Pillar, Product } from '$types/responseInterfaces';
   import { fade, fly, slide } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
   import IntersectionObserver from 'svelte-intersection-observer';
@@ -51,6 +53,19 @@
       <PillarExpandedV2 {item} {i} />
     {/each}
   </ul>
+
+  <div class="layout pb-0 lg:pb-64 bg-pri text-ter">
+    <h3
+      class="w-full lg:w-2/3 ml-auto"
+      transition:fade={{
+        duration: 500,
+        delay: 250,
+        easing: cubicInOut,
+      }}
+    >
+      {bottomText}
+    </h3>
+  </div>
 </section>
 
 <style>

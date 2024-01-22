@@ -1,7 +1,4 @@
 <script lang="ts">
-  import { Image } from '@unpic/svelte';
-  import { fade } from 'svelte/transition';
-
   export let image: string;
   export let height: string;
   export let headerTitle: string;
@@ -9,14 +6,11 @@
 
 <div class={height}>
   <div class={`${height} w-full top-0 -z-10 absolute gradient-overlay`}>
-    <Image
+    <img
       src={image}
-      layout="fullWidth"
       alt="Entlebuch Bild"
-      priority={true}
       class="object-cover h-full w-full saturate-[1]"
       loading="eager"
-      fetchpriority="high"
     />
     <div class="absolute layout bottom-6 lg:bottom-12">
       <h1 class="text-ter font-semibold">{headerTitle}</h1>

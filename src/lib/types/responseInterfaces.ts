@@ -42,6 +42,10 @@ export interface ProjectPage {
       titel: string;
       untertitel: string;
     };
+    zieleBottom: {
+      titel: string;
+      untertitel: string;
+    };
     untertitel: string;
     partnerTop: {
       titel: string;
@@ -116,6 +120,14 @@ export type CTA = {
   };
 };
 
+export interface Footer {
+  attributes: {
+    statement: string;
+    anschrift: string;
+    copyright: string;
+  };
+}
+
 export interface Logo {
   attributes: {
     bild: Picture;
@@ -147,9 +159,13 @@ export interface Pillar {
 export interface Product {
   attributes: {
     bild: Picture;
+    hoverBild: Picture;
     link: string;
     titel: string;
     untertitel: string;
+    preis: number;
+    istNeu: boolean;
+    siegel: Picture;
   };
   id: number;
 }

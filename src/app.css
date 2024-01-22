@@ -22,6 +22,7 @@
   --color-secRGB: 138, 109, 124;
   --color-ter: #f5f3f5;
   --color-black: #111111;
+  --color-orange: #a9592f;
 }
 
 html {
@@ -37,7 +38,7 @@ h1 {
 }
 
 h2 {
-  @apply mt-0 text-lg font-sec font-semibold md:text-4xl lg:mt-2;
+  @apply mt-0 text-lg font-sec font-semibold md:text-4xl xl:mt-2;
 }
 
 h2 {
@@ -65,47 +66,47 @@ p {
 }
 
 .layout {
-  @apply px-6 lg:px-24;
+  @apply px-6 xl:px-24;
 }
 
 .layoutRight {
-  @apply pl-6 pr-6 lg:pl-6 lg:pr-24 xl:pl-20 xl:pr-48 2xl:pl-24 2xl:pr-64;
+  @apply pl-6 pr-6 xl:pl-6 xl:pr-24 xl:pl-20 xl:pr-48 2xl:pl-24 2xl:pr-64;
 }
 
 .layoutLeft {
-  @apply pl-6 pr-6 lg:pl-24 lg:pr-6 xl:pl-48 xl:pr-20 2xl:pl-64 2xl:pr-24;
+  @apply pl-6 pr-6 xl:pl-24 xl:pr-6 xl:pl-48 xl:pr-20 2xl:pl-64 2xl:pr-24;
 }
 
 .sectionPy {
-  @apply py-12 lg:py-24;
+  @apply py-12 xl:py-24;
 }
 
 .sectionPySub {
-  @apply py-6 lg:py-24;
+  @apply py-6 xl:py-24;
 }
 
 .sectionPt {
-  @apply pt-12 lg:pt-24;
+  @apply pt-12 xl:pt-24;
 }
 
 .sectionPb {
-  @apply pb-12 lg:pb-24;
+  @apply pb-12 xl:pb-24;
 }
 
 .sectionPl {
-  @apply pl-6 lg:pl-24;
+  @apply pl-6 xl:pl-24;
 }
 
 .sectionPlNone {
-  @apply pl-0 lg:pl-0;
+  @apply pl-0 xl:pl-0;
 }
 
 .sectionPr {
-  @apply pr-6 lg:pr-24;
+  @apply pr-6 xl:pr-24;
 }
 
 .sectionPrNone {
-  @apply pr-0 lg:pr-0;
+  @apply pr-0 xl:pr-0;
 }
 
 .textHover {
@@ -117,13 +118,13 @@ p {
 }
 
 .markdown a {
-  @apply duration-300 hover:text-beige-600 group-hover:text-beige-600 underline-offset-4 underline;
+  @apply duration-300 hover:text-orange group-hover:text-orange underline-offset-4 underline;
 }
 
 .projectsP p {
-  @apply text-base md:text-xl mb-3 lg:mb-6 last:mb-0;
+  @apply text-base md:text-xl mb-3 xl:mb-6 last:mb-0;
 }
 
 .markdown p {
-  @apply text-sm md:text-lg mb-3 lg:mb-6 lg:last:mb-0;
+  @apply text-sm md:text-lg mb-3 xl:mb-6 xl:last:mb-0;
 }

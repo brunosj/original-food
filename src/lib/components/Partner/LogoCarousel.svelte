@@ -7,32 +7,30 @@
 
 <section class="relative" id="logo-carousel">
   <div class="logos">
-    <div class="logos-slide">
-      {#each logos as logo, i}
-        <a
-          href={logo.attributes.link}
-          class="logo w-16 lg:w-24 h-auto"
-          target="_blank"
-        >
-          <img
-            src={logo.attributes.bild.data.attributes.url}
-            alt={logo.attributes.titel}
-            class="object-contain h-full w-full"
-          />
-        </a>
-      {/each}
-    </div>
-    <div class="logos-slide">
-      {#each logos as logo, i}
-        <a href={logo.attributes.link} class="logo w-16 lg:w-24 h-auto">
-          <img
-            src={logo.attributes.bild.data.attributes.url}
-            alt={logo.attributes.titel}
-            class="object-contain h-full w-full"
-          />
-        </a>
-      {/each}
-    </div>
+    <a href="/projekte#partners">
+      <div class="logos-slide">
+        {#each logos as logo, i}
+          <div class="logo w-16 lg:w-24 h-auto">
+            <img
+              src={logo.attributes.bild.data.attributes.url}
+              alt={logo.attributes.titel}
+              class="object-contain h-full w-full"
+            />
+          </div>
+        {/each}
+      </div>
+      <div class="logos-slide">
+        {#each logos as logo, i}
+          <a href={logo.attributes.link} class="logo w-16 lg:w-24 h-auto">
+            <img
+              src={logo.attributes.bild.data.attributes.url}
+              alt={logo.attributes.titel}
+              class="object-contain h-full w-full"
+            />
+          </a>
+        {/each}
+      </div>
+    </a>
   </div>
 </section>
 
@@ -64,7 +62,6 @@
     position: relative;
     /* width: 100%; */
     /* display: flex; */
-    padding: 25px 30px;
   }
 
   .logos:before,
@@ -96,17 +93,18 @@
     animation: 15s slide infinite linear;
     flex-direction: row;
     width: 100%;
-    gap: 60px;
+    gap: 40px;
+    padding: 0px 20px;
   }
 
   @media (min-width: 768px) {
     .logos {
-      padding: 60px 0;
-      padding: 25px 175px;
+      padding: 25px 50px;
     }
 
     .logos-slide {
       gap: 200px;
+      padding: 0px 100px;
     }
 
     .logos:before,

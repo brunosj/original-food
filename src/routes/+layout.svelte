@@ -20,6 +20,7 @@
 
   export let data;
   $: pathname = data.pathname;
+  $: footer = data.footer;
 
   const duration = 200;
   const delay = duration + 100;
@@ -92,4 +93,6 @@
     <slot />
   </main>
 {/key}
-<Footer />
+<footer in:fade={{ duration: 250, delay: 1000 }}>
+  <Footer {footer} />
+</footer>
