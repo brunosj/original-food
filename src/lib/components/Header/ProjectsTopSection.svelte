@@ -24,7 +24,7 @@
 </script>
 
 <section
-  class="sectionPy relative"
+  class="sectionPy relative min-h-[50vh]"
   id="projects"
   style:background-color="var(--color-ter)"
   bind:this={element}
@@ -55,11 +55,6 @@
         </h3>
         <div
           class="absolute bottom-12 right-12 opacity-0 lg:opacity-100 overflow-hidden"
-          transition:fade={{
-            duration: 500,
-            delay: 500,
-            easing: cubicInOut,
-          }}
         >
           <Map width={svgWidth} color="#f5f3f5" />
         </div>

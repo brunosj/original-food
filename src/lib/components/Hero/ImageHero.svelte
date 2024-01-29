@@ -1,9 +1,6 @@
 <script lang="ts">
-  import { fade } from 'svelte/transition';
-
   export let image: string;
   export let height: string;
-  export let headerTitle: string = '';
 </script>
 
 <div class={`${height} w-full top-0 -z-10  relative`} id="hero2">

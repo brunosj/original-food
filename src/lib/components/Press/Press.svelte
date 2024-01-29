@@ -33,14 +33,7 @@
     <IntersectionObserver {element} bind:intersecting once threshold={0.2}>
       {#if intersecting}
         <div class="layout space-y-6 w-full lg:w-[60%]">
-          <h2
-            transition:fade={{
-              duration: 500,
-              delay: 250,
-              easing: cubicInOut,
-            }}
-            class="relative inline-block"
-          >
+          <h2 class="relative inline-block">
             Die Spezialität aus dem Regenwald - für Viele der
             <span class="relative inline-block">
               <span

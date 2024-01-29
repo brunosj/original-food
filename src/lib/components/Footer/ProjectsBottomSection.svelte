@@ -15,21 +15,18 @@
 </script>
 
 <section class="relative" bind:this={element}>
-  <IntersectionObserver {element} bind:intersecting once threshold={0}>
-    {#if intersecting}
-      <div
-        class="absolute hidden lg:block -top-[15vh] z-20 w-full"
-        transition:fly={{
-          y: 50,
-          duration: 500,
-          delay: 250,
-          easing: cubicInOut,
-        }}
-      >
-        <Products items={products} />
-      </div>
-    {/if}
-  </IntersectionObserver>
+  <div
+    class="absolute hidden lg:block -top-[15vh] z-20 w-full"
+    transition:fly={{
+      y: 50,
+      duration: 500,
+      delay: 250,
+      easing: cubicInOut,
+    }}
+  >
+    <Products items={products} />
+  </div>
+
   <div class="block lg:hidden bg-pri pt-12 pb-6">
     <Carousel slides={products} type="Product" />
   </div>

@@ -58,32 +58,28 @@
     class="flex space-y-3 lg:space-y-6 flex-col lg:text-right"
     bind:this={element}
   >
-    <IntersectionObserver {element} bind:intersecting once threshold={1}>
-      {#if intersecting}
-        <h1
-          transition:fade={{
-            duration: 500,
-            delay: 0,
-            easing: cubicInOut,
-          }}
-          class={$uspBackground === 'var(--color-pri)'
-            ? 'text-ter font-bold'
-            : 'text-sec font-bold'}
-        >
-          {title}
-        </h1>
-        <h3
-          class="ml-auto w-full lg:w-[40%]"
-          transition:fade={{
-            duration: 500,
-            delay: 250,
-            easing: cubicInOut,
-          }}
-        >
-          {subtitle}
-        </h3>
-      {/if}
-    </IntersectionObserver>
+    <h1
+      transition:fade={{
+        duration: 500,
+        delay: 0,
+        easing: cubicInOut,
+      }}
+      class={$uspBackground === 'var(--color-pri)'
+        ? 'text-ter font-bold'
+        : 'text-sec font-bold'}
+    >
+      {title}
+    </h1>
+    <h3
+      class="ml-auto w-full lg:w-[40%]"
+      transition:fade={{
+        duration: 500,
+        delay: 250,
+        easing: cubicInOut,
+      }}
+    >
+      {subtitle}
+    </h3>
   </div>
 
   <div

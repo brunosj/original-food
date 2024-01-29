@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Optima';
-  src: url('$lib/assets/fonts/Optima-Regular-01.ttf');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Myriad Pro';
-  src: url('$lib/assets/fonts/MyriadPro-Regular.otf');
-  font-display: swap;
-}
-
 :root {
   --color-pri: #467080;
   --color-pri-pale: #dce4e7;
@@ -25,8 +13,9 @@
   --color-orange: #a9592f;
 }
 
-html {
-  @apply bg-ter;
+html,
+body {
+  @apply bg-ter  z-10;
 }
 
 h1 {

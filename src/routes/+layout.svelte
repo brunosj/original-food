@@ -2,8 +2,6 @@
   import '../app.css';
   import '$styles/carousel.css';
   import '@fontsource-variable/comfortaa';
-  import '@fontsource-variable/open-sans';
-  import '@fontsource-variable/overpass';
   import '@fontsource-variable/nunito';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';

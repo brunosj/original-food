@@ -12,7 +12,9 @@
 </script>
 
 <section class={height} id="hero" bind:this={element}>
-  <div class={`${height} w-full top-0 -z-10 absolute gradient-overlay`}>
+  <div
+    class={`${height} w-full top-0 -z-10 absolute gradient-overlay min-h-[50vh]`}
+  >
     <img
       src={image}
       alt="Entlebuch Bild"

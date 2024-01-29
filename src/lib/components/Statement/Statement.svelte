@@ -55,40 +55,36 @@
     class="layout pt-[5vh] lg:pt-[45vh] pb-6 lg:pb-12 text-ter w-full lg:w-[55%] z-20"
   >
     <div class="space-y-6 lg:space-y-12">
-      <IntersectionObserver {element} bind:intersecting once threshold={0}>
-        {#if intersecting}
-          <h1
-            class="font-bold"
-            id="statement-title"
-            transition:fade={{
-              duration: 500,
-              delay: 0,
-              easing: cubicInOut,
-            }}
-          >
-            {statementTitle}
-          </h1>
-          <h3
-            transition:fade={{
-              duration: 500,
-              delay: 250,
-              easing: cubicInOut,
-            }}
-          >
-            {statementText}
-          </h3>
-          <div
-            class="absolute bottom-0 -right-0 lg:-right-24 opacity-10 overflow-hidden"
-            transition:fade={{
-              duration: 500,
-              delay: 500,
-              easing: cubicInOut,
-            }}
-          >
-            <Tree width={svgWidth} color="#f5f3f5" />
-          </div>
-        {/if}
-      </IntersectionObserver>
+      <h1
+        class="font-bold"
+        id="statement-title"
+        transition:fade={{
+          duration: 500,
+          delay: 0,
+          easing: cubicInOut,
+        }}
+      >
+        {statementTitle}
+      </h1>
+      <h3
+        transition:fade={{
+          duration: 500,
+          delay: 250,
+          easing: cubicInOut,
+        }}
+      >
+        {statementText}
+      </h3>
+      <div
+        class="absolute bottom-0 -right-0 lg:-right-24 opacity-10 overflow-hidden"
+        transition:fade={{
+          duration: 500,
+          delay: 500,
+          easing: cubicInOut,
+        }}
+      >
+        <Tree width={svgWidth} color="#f5f3f5" />
+      </div>
     </div>
   </div>
 </section>
