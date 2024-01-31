@@ -1,4 +1,6 @@
 <script lang="ts">
+  export let data;
+
   import type { Homepage } from '$types/responseInterfaces';
   import UniqueSellingProposition from '$components/USP/UniqueSellingProposition.svelte';
   import Hero from '$components/Hero/Hero.svelte';
@@ -9,9 +11,14 @@
   import MapBanner from '$components/Map/MapBanner.svelte';
   import Press from '$components/Press/Press.svelte';
 
+  // Logic
+  let pageData: Homepage = data.page;
+
+  const title = 'Original Food';
+  const metaDescription = '';
+  const image = pageData.attributes.heroBild.data.attributes.url;
+
   // SEO
-  let title = '';
-  let metaDescription = '';
   const breadcrumbs = [
     {
       name: 'Home',
@@ -23,13 +30,8 @@
     title,
     metaDescription,
     slug: '',
-    datePublished: '2023-12-05T14:19:33.000+0100',
-    lastUpdated: '2021-12-05T14:19:33.000+0100',
+    image,
   };
-
-  // Logic
-  export let data;
-  let pageData: Homepage = data.page;
 </script>
 
 <SEO {...seoProps} />

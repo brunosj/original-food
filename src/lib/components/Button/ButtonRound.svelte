@@ -19,7 +19,7 @@
       >
         <slot>Fallback</slot>
       </a>{:else}
-      <a href={path}>
+      <a href={path} class="flex items-center px-4 leading-none">
         <slot>Fallback</slot>
       </a>
     {/if}

@@ -85,7 +85,7 @@
     list-style: none;
     height: 100%;
     display: flex;
-    animation: scrolling 10s linear infinite;
+    animation: scrolling 25s linear infinite;
   }
 
   .marquee__content li {
@@ -185,7 +185,7 @@
     }
 
     .marquee__content {
-      animation: scrolling 10s linear infinite;
+      animation: scrolling 15s linear infinite;
     }
 
     .marquee__content li {

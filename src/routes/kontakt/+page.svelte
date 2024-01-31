@@ -1,12 +1,19 @@
 <script lang="ts">
+  export let data;
+
   import type { Page } from '$types/responseInterfaces';
-  import TitleHeader from '$components/Header/TitleHeader.svelte';
+  import GenericPage from '$components/Page/GenericPage.svelte';
   import ContactForm from '$components/Form/ContactForm.svelte';
   import SEO from '$lib/components/SEO/index.svelte';
 
+  // Logic
+  let pageData: Page = data.page[0];
+
+  const title = pageData.attributes.titel;
+  const metaDescription = '';
+  const image = pageData.attributes.bild.data.attributes.url;
+
   // SEO
-  let title = 'Kontakt';
-  let metaDescription = '';
   const breadcrumbs = [
     {
       name: 'Home',
@@ -22,20 +29,14 @@
     title,
     metaDescription,
     slug: '',
-    datePublished: '2023-12-05T14:19:33.000+0100',
-    lastUpdated: '2021-12-05T14:19:33.000+0100',
+    image,
   };
-
-  // Logic
-  export let data;
-  let pageData: Page;
-
-  $: pageData = data.page[0];
 </script>
 
 <SEO {...seoProps} />
-<TitleHeader
+<GenericPage
   title={pageData.attributes.titel}
   text={pageData.attributes.text}
+  image={pageData.attributes.bild}
 />
 <!-- <ContactForm /> -->

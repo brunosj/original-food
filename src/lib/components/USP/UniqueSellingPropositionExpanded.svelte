@@ -46,7 +46,7 @@
     {/each}
   </ul>
 
-  <div class="layout pb-0 lg:pb-64 bg-pri text-ter">
+  <div class="layout pb-0 lg:pb-64 2xl:pb-54 bg-pri text-ter">
     <h3
       class="w-full lg:w-2/3 ml-auto"
       in:fade={{

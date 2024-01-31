@@ -36,7 +36,7 @@
       <ProductCarousel slides={products} />
     </div>
     <div
-      class="layout sectionPy text-ter flex space-y-3 lg:space-y-6 flex-col lg:pt-[50vh]"
+      class="layout sectionPy text-ter flex space-y-3 lg:space-y-6 flex-col lg:pt-[50vh] 2xl:pt-[35vh]"
     >
       <h1
         in:fade={{

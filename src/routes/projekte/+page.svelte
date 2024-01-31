@@ -1,6 +1,7 @@
 <script lang="ts">
-  import type { ProjectPage } from '$types/responseInterfaces';
+  export let data;
 
+  import type { ProjectPage } from '$types/responseInterfaces';
   import ImageHero from '$components/Hero/ImageHero.svelte';
   import SEO from '$lib/components/SEO/index.svelte';
   import ProjectsTopSection from '$components/Header/ProjectsTopSection.svelte';
@@ -8,9 +9,19 @@
   import ProjectsBottomSection from '$components/Footer/ProjectsBottomSection.svelte';
   import ProjectsPartnerSection from '$components/Partner/ProjectsPartnerSection.svelte';
 
-  // SEO
+  // Logic
+  let pageData: ProjectPage = data.page;
+
   let title = 'Projekte';
-  let metaDescription = 'Unsere Projekte';
+  let metaDescription = 'Original Food Projekte';
+  let image = pageData.attributes.heroBild.data.attributes.url;
+
+  const logos = pageData.attributes.logos.data;
+  const midpoint = Math.ceil(logos.length / 2);
+  const firstHalf = logos.slice(0, midpoint);
+  const secondHalf = logos.slice(midpoint);
+
+  // SEO
   const breadcrumbs = [
     {
       name: 'Home',
@@ -25,21 +36,9 @@
     breadcrumbs,
     title,
     metaDescription,
-    slug: '',
-    datePublished: '2023-12-05T14:19:33.000+0100',
-    lastUpdated: '2021-12-05T14:19:33.000+0100',
+    slug: '/projekte',
+    image,
   };
-
-  // Logic
-  export let data;
-  let pageData: ProjectPage = data.page;
-
-  const logos = pageData.attributes.logos.data;
-
-  const midpoint = Math.ceil(logos.length / 2);
-
-  const firstHalf = logos.slice(0, midpoint);
-  const secondHalf = logos.slice(midpoint);
 </script>
 
 <SEO {...seoProps} />
@@ -53,7 +52,7 @@
 />
 <ImageHero
   image={pageData.attributes.zieleBild.data.attributes.url}
-  height="h-48 lg:h-[65svh]"
+  height="h-48 lg:h-[50svh]"
 />
 <UniqueSellingPropositionExpanded
   title={pageData.attributes.zieleTop.titel}

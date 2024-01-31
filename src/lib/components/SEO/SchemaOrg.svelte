@@ -7,9 +7,7 @@
    * @type {{ name: string; slug: string }[]}
    */
   export let breadcrumbs;
-  export let datePublished;
   export let entity;
-  export let lastUpdated;
   export let featuredImage;
   export let metaDescription;
   export let siteLanguage;
@@ -108,8 +106,7 @@
     priImageOfPage: {
       '@id': `${url}#priimage`,
     },
-    datePublished,
-    dateModified: lastUpdated,
+
     author: {
       '@id': `${siteUrl}/#/schema/person/${entityHash}`,
     },

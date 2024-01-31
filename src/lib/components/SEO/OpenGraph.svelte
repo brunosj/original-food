@@ -1,6 +1,6 @@
 <script lang="ts">
-  export let image: { url: string; alt: string };
-  export let squareImage: { url: string; alt: string };
+  export let image: string;
+  export let squareImage: string;
   export let metaDescription: string;
   export let ogLanguage: string;
   export let pageTitle: string;
@@ -16,15 +16,15 @@
   <meta property="og:title" content={pageTitle} />
   <meta property="og:description" content={metaDescription} />
   {#if image}
-    <meta property="og:image" content={image.url} />
+    <meta property="og:image" content={image} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content={image.alt} />
+    <meta property="og:image:alt" content={''} />
   {/if}
   {#if squareImage}
-    <meta property="og:image" content={squareImage.url} />
+    <meta property="og:image" content={squareImage} />
     <meta property="og:image:width" content="500" />
     <meta property="og:image:height" content="500" />
-    <meta property="og:image:alt" content={squareImage.alt} />
+    <meta property="og:image:alt" content={''} />
   {/if}
 </svelte:head>

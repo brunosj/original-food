@@ -10,6 +10,7 @@
   import IntersectionObserver from 'svelte-intersection-observer';
   import PillarMobile from '$components/Pillar/PillarMobile.svelte';
   import ArrowRight from 'virtual:icons/mdi-light/arrow-right';
+  import ButtonRound from '$components/Button/ButtonRound.svelte';
 
   let expandedIndex = -1;
 
@@ -102,10 +103,14 @@
           >
             <h4>
               {wirtschaft.attributes.textKurz}
-              <span class="hover:opacity-50 duration-300 italic">
-                &rarr; mehr erfahren</span
-              >
             </h4>
+          </div>
+          <div
+            class="absolute bottom-0 right-0 pr-8 pb-4 flex flex-col"
+            in:fly={{ duration: 500, delay: 300 }}
+            out:fly={{ duration: 100, delay: 0 }}
+          >
+            <ButtonRound path="/projekte">Mehr erfahren</ButtonRound>
           </div>
         {/if}
       </div>
@@ -148,10 +153,14 @@
           >
             <h4>
               {ökologie.attributes.textKurz}
-              <span class="hover:opacity-50 duration-300 italic">
-                &rarr; mehr erfahren</span
-              >
             </h4>
+          </div>
+          <div
+            class="absolute bottom-0 right-0 pr-8 pb-4 flex flex-col"
+            in:fly={{ duration: 500, delay: 300 }}
+            out:fly={{ duration: 100, delay: 0 }}
+          >
+            <ButtonRound path="/projekte">Mehr erfahren</ButtonRound>
           </div>
         {/if}
       </div>
@@ -188,16 +197,20 @@
       >
         {#if expandedIndex === soziales.index}
           <div
-            class="absolute bottom-top left-0 p-8"
+            class="absolute bottom-top left-0 p-8 flex flex-col"
             in:fly={{ duration: 500, delay: 300 }}
             out:fly={{ duration: 100, delay: 0 }}
           >
             <h4>
               {soziales.attributes.textKurz}
-              <span class="hover:opacity-50 duration-300 italic">
-                &rarr; mehr erfahren</span
-              >
             </h4>
+          </div>
+          <div
+            class="absolute bottom-0 right-0 pr-8 pb-4 flex flex-col"
+            in:fly={{ duration: 500, delay: 300 }}
+            out:fly={{ duration: 100, delay: 0 }}
+          >
+            <ButtonRound path="/projekte">Mehr erfahren</ButtonRound>
           </div>
         {/if}
       </div>

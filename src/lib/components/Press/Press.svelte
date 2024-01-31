@@ -15,6 +15,8 @@
 
   let element;
   let intersecting = false;
+
+  console.log(press);
 </script>
 
 <section
@@ -27,7 +29,7 @@
   </div>
 
   <div
-    class="pt-[0vh] lg:pt-[40vh] pb-12 lg:pb-24 text-ter w-full z-20"
+    class="pt-[0vh] lg:pt-[40vh] 2xl:pt-[30vh] pb-12 lg:pb-24 text-ter w-full z-20"
     bind:this={element}
   >
     <IntersectionObserver {element} bind:intersecting once threshold={0.2}>
