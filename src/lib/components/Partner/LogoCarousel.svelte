@@ -5,33 +5,57 @@
   import type { Logo } from '$types/responseInterfaces';
 </script>
 
-<section class="relative" id="logo-carousel">
-  <div class="logos">
-    <a href="/projekte#partners">
-      <div class="logos-slide">
-        {#each logos as logo, i}
-          <div class="logo w-16 lg:w-24 h-auto">
-            <img
-              src={logo.attributes.bild.data.attributes.url}
-              alt={logo.attributes.titel}
-              class="object-contain h-full w-full"
-            />
-          </div>
-        {/each}
-      </div>
-      <div class="logos-slide">
-        {#each logos as logo, i}
-          <a href={logo.attributes.link} class="logo w-16 lg:w-24 h-auto">
-            <img
-              src={logo.attributes.bild.data.attributes.url}
-              alt={logo.attributes.titel}
-              class="object-contain h-full w-full"
-            />
-          </a>
-        {/each}
-      </div>
-    </a>
-  </div>
+<section class="relative bg-white" id="">
+  <a href="/projekte#partners" class="marquee">
+    <ul class="marquee__content">
+      {#each logos as logo}
+        <li>
+          <img
+            src={logo.attributes.bild.data.attributes.url}
+            alt={logo.attributes.titel}
+            class="marquee__img"
+          />
+        </li>
+      {/each}
+      {#each logos as logo}
+        <li>
+          <img
+            src={logo.attributes.bild.data.attributes.url}
+            alt={logo.attributes.titel}
+            class="marquee__img"
+          />
+        </li>
+      {/each}
+      <!-- {#each logos as logo}
+        <li>
+          <img
+            src={logo.attributes.bild.data.attributes.url}
+            alt={logo.attributes.titel}
+            class="marquee__img"
+          />
+        </li>
+      {/each}
+      {#each logos as logo}
+        <li>
+          <img
+            src={logo.attributes.bild.data.attributes.url}
+            alt={logo.attributes.titel}
+            class="marquee__img"
+          />
+        </li>
+      {/each} -->
+    </ul>
+  </a>
+
+  <!-- {#each logos as logo}
+    <li class="slide w-16 lg:w-24 h-auto">
+      <img
+        src={logo.attributes.bild.data.attributes.url}
+        alt={logo.attributes.titel}
+        class="object-contain"
+      />
+    </li>
+  {/each} -->
 </section>
 
 <style>
@@ -41,75 +65,140 @@
     box-sizing: border-box;
   }
 
-  @keyframes slide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+  #marquee__container {
+    background-color: #fff;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
-  a {
-    cursor: pointer;
-  }
-
-  .logos {
+  .marquee {
+    background-color: #fff;
+    color: lightgrey;
+    width: 100vw;
     overflow: hidden;
-    padding: 25px 0;
-    background: white;
-    white-space: nowrap;
-    position: relative;
-    /* width: 100%; */
-    /* display: flex; */
   }
 
-  .logos:before,
-  .logos:after {
-    position: absolute;
-    top: 0;
-    width: 2.5rem;
+  .marquee__content {
+    list-style: none;
     height: 100%;
+    display: flex;
+    animation: scrolling 10s linear infinite;
+  }
+
+  .marquee__content li {
+    width: 20vw;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .marquee__img {
+    width: 10vw;
+    padding: 1.5rem;
+  }
+
+  .marquee::before,
+  .marquee::after {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
     content: '';
+    height: 100%;
+    position: absolute;
+    width: 5em;
     z-index: 2;
   }
 
-  .logos:before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-  }
-
-  .logos:after {
+  .marquee::after {
     right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  .marquee::before {
+    left: 0;
+    top: 0;
   }
 
-  /* .logos:hover .logos-slide {
+  @keyframes scrolling {
+    0% {
+      transform: translateX(-0vw);
+    }
+    100% {
+      transform: translateX(-100vw);
+    }
+  }
+
+  /*HOVER / PAUSED STATE*/
+  /* .marquee__content:hover {
     animation-play-state: paused;
+  }
+
+  .marquee__img:hover {
+    transition: all 0.4s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #e0e0e0;
   } */
 
-  .logos-slide {
-    display: inline-flex;
-    animation: 15s slide infinite linear;
-    flex-direction: row;
-    width: 100%;
-    gap: 40px;
-    padding: 0px 20px;
+  /*///////////////////////////////////////////////////////////////////////////*/
+
+  /*TABLET VERSION*/
+  @media screen and (max-width: 1100px) {
+    .marquee__title {
+      font-size: 2.5rem;
+      padding: 0rem;
+    }
+
+    .marquee__content li {
+      width: 25vw;
+    }
+
+    .marquee {
+      width: 95vw;
+      margin: 1rem 0;
+    }
+
+    .marquee__img {
+      width: 20vw;
+    }
+
+    @keyframes scrolling {
+      0% {
+        transform: translateX(-0vw);
+      }
+      100% {
+        transform: translateX(-200vw);
+      }
+    }
   }
 
-  @media (min-width: 768px) {
-    .logos {
-      padding: 25px 50px;
+  /*MOBILE VERSION*/
+  @media screen and (max-width: 500px) {
+    .marquee__img {
+      width: 30vw;
     }
 
-    .logos-slide {
-      gap: 200px;
-      padding: 0px 100px;
+    .marquee__content {
+      animation: scrolling 10s linear infinite;
     }
 
-    .logos:before,
-    .logos:after {
-      width: 7rem;
+    .marquee__content li {
+      width: 40%;
+    }
+
+    .marquee--invisible--mobile {
+      display: none !important;
+    }
+
+    .marquee::before,
+    .marquee::after {
+      width: 1em;
     }
   }
 </style>

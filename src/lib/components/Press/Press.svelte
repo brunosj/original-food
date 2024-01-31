@@ -10,7 +10,7 @@
   import type { Press, Product } from '$types/responseInterfaces';
   import Products from '$components/Product/Products.svelte';
   import PressCard from './PressCard.svelte';
-  import Carousel from '$components/Carousel/Carousel.svelte';
+  import PressCarousel from '$components/Carousel/PressCarousel.svelte';
   import Underline from '$assets/svg/Underline.svelte';
 
   let element;
@@ -27,7 +27,7 @@
   </div>
 
   <div
-    class="pt-[0vh] lg:pt-[35vh] pb-12 lg:pb-24 text-ter w-full z-20"
+    class="pt-[0vh] lg:pt-[40vh] pb-12 lg:pb-24 text-ter w-full z-20"
     bind:this={element}
   >
     <IntersectionObserver {element} bind:intersecting once threshold={0.2}>
@@ -38,7 +38,7 @@
             <span class="relative inline-block">
               <span
                 class="absolute -bottom-6"
-                transition:fly={{
+                in:fly={{
                   x: -100,
                   y: 10,
                   duration: 750,
@@ -55,7 +55,7 @@
       {/if}
     </IntersectionObserver>
     <div class="sectionPt px-0 lg:px-24">
-      <Carousel slides={press} type="Press" />
+      <PressCarousel slides={press} />
     </div>
   </div>
 </section>

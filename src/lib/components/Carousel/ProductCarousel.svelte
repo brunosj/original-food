@@ -1,12 +1,12 @@
 <script lang="ts">
-  export let slides: Press[] | Product[];
-  export let type: 'Press' | 'Product';
+  export let slides: Product[];
 
   import emblaCarouselSvelte from 'embla-carousel-svelte';
   import type {
     EmblaCarouselType,
     EmblaOptionsType,
-  } from 'embla-carousel-svelte';
+    EmblaPluginType,
+  } from 'embla-carousel';
   import PrevButton from './PrevButton.svelte';
   import NextButton from './NextButton.svelte';
   import type { Press, Product } from '$types/responseInterfaces';
@@ -60,36 +60,17 @@
     on:emblaInit={onInit}
   >
     <ul class="embla__container">
-      {#if type === 'Press'}
-        {#each slides as slide, i (slide.id)}
-          <li class="embla__slide">
-            <div
-              class={`${i === 0 ? 'pl-6 lg:pl-0' : ''} ${
-                i === slides.length - 1 ? 'pr-6 lg:pr-0' : ''
-              }`}
-            >
-              <PressCard item={slide} />
-            </div>
-          </li>
-        {/each}
-      {/if}
-      {#if type === 'Product'}
-        {#each slides as slide, i (slide.id)}
-          <li class="embla__slide">
-            <div>
-              <ProductCard item={slide} />
-            </div>
-          </li>
-        {/each}
-      {/if}
+      {#each slides as slide, i (slide.id)}
+        <li class="embla__slide">
+          <div>
+            <ProductCard item={slide} />
+          </div>
+        </li>
+      {/each}
     </ul>
   </div>
 </div>
 <div class="flex items-center mt-3">
-  {#if type === 'Press'}
-    <h3 class="px-8 lg:px-2">In der Presse</h3>
-  {/if}
-
   {#if slides.length >= 2}
     <div class="ml-auto flex h-full items-center justify-center gap-6 lg:gap-0">
       <PrevButton {scrollPrev} enabled={prevBtnEnabled} />

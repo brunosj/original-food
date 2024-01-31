@@ -25,11 +25,11 @@
     <IntersectionObserver {element} bind:intersecting once threshold={0.5}>
       {#if intersecting}
         <div
-          class="absolute layout bottom-12 lg:bottom-[30%] lg:w-[60%] w-full"
+          class="absolute layout bottom-[50%] lg:bottom-[30%] lg:w-[60%] w-full z-10"
         >
           <h1
-            class="text-ter font-semibold"
-            transition:fade={{
+            class="text-ter font-semibold z-10"
+            in:fade={{
               duration: 500,
               delay: 250,
               easing: cubicInOut,
@@ -58,11 +58,11 @@
     height: 100%;
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0) 100%,
       rgba(0, 0, 0, 0)
     );
-    z-index: 5;
+    z-index: 1;
   }
 
   .hero__title {

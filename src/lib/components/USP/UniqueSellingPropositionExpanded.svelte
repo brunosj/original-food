@@ -11,18 +11,14 @@
   import IntersectionObserver from 'svelte-intersection-observer';
   import PillarExpanded from '$components/Pillar/PillarExpanded.svelte';
   import PillarExpandedV2 from '$components/Pillar/PillarExpandedV2.svelte';
-
-  let element;
-  let intersecting = false;
 </script>
 
 <section id="usp-expanded">
   <div
     class="layout sectionPt bg-pri text-ter flex space-y-3 lg:space-y-6 flex-col lg:text-right pb-12"
-    bind:this={element}
   >
     <h1
-      transition:fade={{
+      in:fade={{
         duration: 500,
         delay: 0,
         easing: cubicInOut,
@@ -33,7 +29,7 @@
     </h1>
     <h3
       class="ml-auto w-full lg:w-[40%]"
-      transition:fade={{
+      in:fade={{
         duration: 500,
         delay: 250,
         easing: cubicInOut,
@@ -53,7 +49,7 @@
   <div class="layout pb-0 lg:pb-64 bg-pri text-ter">
     <h3
       class="w-full lg:w-2/3 ml-auto"
-      transition:fade={{
+      in:fade={{
         duration: 500,
         delay: 250,
         easing: cubicInOut,

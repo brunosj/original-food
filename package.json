@@ -13,13 +13,13 @@
     "prepare": "svelte-kit sync"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.176",
+    "@iconify/json": "^2.2.177",
     "@sveltejs/adapter-auto": "^3.1.1",
     "@sveltejs/adapter-static": "^3.0.1",
     "@sveltejs/kit": "^2.5.0",
-    "@sveltejs/vite-plugin-svelte": "^3.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.19.1",
-    "@typescript-eslint/parser": "^6.19.1",
+    "@sveltejs/vite-plugin-svelte": "^3.0.2",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
@@ -40,7 +40,9 @@
     "@fontsource-variable/comfortaa": "^5.0.18",
     "@fontsource-variable/nunito": "^5.0.17",
     "clsx": "^2.1.0",
-    "embla-carousel-svelte": "8.0.0-rc21",
+    "embla-carousel": "8.0.0-rc22",
+    "embla-carousel-autoplay": "8.0.0-rc22",
+    "embla-carousel-svelte": "8.0.0-rc22",
     "object-hash": "^3.0.0",
     "svelte-markdown": "^0.4.1",
     "unplugin-icons": "^0.18.3"

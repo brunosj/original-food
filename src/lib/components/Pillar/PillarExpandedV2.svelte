@@ -32,7 +32,7 @@
 <li class="bg-pri layout" bind:this={element}>
   <div
     class="p-0 lg:p-12 lg:grid grid-cols-2"
-    transition:fly={{
+    in:fly={{
       y: 50,
       duration: 500,
       delay: 500,

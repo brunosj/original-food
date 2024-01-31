@@ -12,7 +12,7 @@
   import PillarExpanded from '$components/Pillar/PillarExpanded.svelte';
   import ProjectsPartnerChild from './ProjectsPartnerChild.svelte';
   import Products from '$components/Product/Products.svelte';
-  import Carousel from '$components/Carousel/Carousel.svelte';
+  import ProductCarousel from '$components/Carousel/ProductCarousel.svelte';
 
   let element;
   let intersecting = false;
@@ -22,7 +22,7 @@
   {#if displayHeader}
     <div
       class="absolute hidden lg:block -top-[15vh] z-20 w-full"
-      transition:fly={{
+      in:fly={{
         y: 50,
         duration: 500,
         delay: 250,
@@ -33,13 +33,13 @@
     </div>
 
     <div class="block lg:hidden bg-pri pt-12 pb-6">
-      <Carousel slides={products} type="Product" />
+      <ProductCarousel slides={products} />
     </div>
     <div
       class="layout sectionPy text-ter flex space-y-3 lg:space-y-6 flex-col lg:pt-[50vh]"
     >
       <h1
-        transition:fade={{
+        in:fade={{
           duration: 500,
           delay: 0,
           easing: cubicInOut,
@@ -50,7 +50,7 @@
       </h1>
       <h3
         class="lg:w-1/2 w-full"
-        transition:fade={{
+        in:fade={{
           duration: 500,
           delay: 250,
           easing: cubicInOut,

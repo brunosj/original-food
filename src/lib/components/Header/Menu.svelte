@@ -24,7 +24,7 @@
     <nav
       class="w-full lg:w-[28%] fixed bottom-0 lg:top-0 lg:bottom-[unset] lg:rounded-br-lg lg:shadow-lg text-white z-50 shadow-inner"
       style:background-color={$menuBackground}
-      transition:fly={{
+      in:fly={{
         y: -100,
         duration: 500,
         easing: cubicInOut,

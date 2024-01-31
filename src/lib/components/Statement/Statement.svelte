@@ -10,7 +10,7 @@
   import type { Product } from '$types/responseInterfaces';
   import Products from '$components/Product/Products.svelte';
   import Tree from '$assets/svg/svg_tree.svelte';
-  import Carousel from '$components/Carousel/Carousel.svelte';
+  import ProductCarousel from '$components/Carousel/ProductCarousel.svelte';
 
   let element;
   let intersecting = false;
@@ -36,7 +36,7 @@
     {#if intersecting}
       <div
         class="absolute hidden lg:block -top-[5vh] lg:-top-[10vh] z-20 w-full"
-        transition:fly={{
+        in:fly={{
           y: 50,
           duration: 500,
           delay: 500,
@@ -46,7 +46,7 @@
         <Products {items} />
       </div>
       <div class="block lg:hidden">
-        <Carousel slides={items} type="Product" />
+        <ProductCarousel slides={items} />
       </div>
     {/if}
   </IntersectionObserver>
@@ -58,7 +58,7 @@
       <h1
         class="font-bold"
         id="statement-title"
-        transition:fade={{
+        in:fade={{
           duration: 500,
           delay: 0,
           easing: cubicInOut,
@@ -67,7 +67,7 @@
         {statementTitle}
       </h1>
       <h3
-        transition:fade={{
+        in:fade={{
           duration: 500,
           delay: 250,
           easing: cubicInOut,
@@ -77,7 +77,7 @@
       </h3>
       <div
         class="absolute bottom-0 -right-0 lg:-right-24 opacity-10 overflow-hidden"
-        transition:fade={{
+        in:fade={{
           duration: 500,
           delay: 500,
           easing: cubicInOut,

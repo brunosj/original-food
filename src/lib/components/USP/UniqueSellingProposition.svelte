@@ -17,9 +17,6 @@
     expandedIndex = index;
   }
 
-  let element;
-  let intersecting = false;
-
   const titles = ['Wirtschaft', 'Ökologie', 'Soziales'];
 
   const pillarsWithIndex: Pillar[] = titles.map((title, index) => {
@@ -54,12 +51,9 @@
   style:background-color={$uspBackground}
   style:color={$font}
 >
-  <div
-    class="flex space-y-3 lg:space-y-6 flex-col lg:text-right"
-    bind:this={element}
-  >
+  <div class="flex space-y-3 lg:space-y-6 flex-col lg:text-right">
     <h1
-      transition:fade={{
+      in:fade={{
         duration: 500,
         delay: 0,
         easing: cubicInOut,
@@ -72,7 +66,7 @@
     </h1>
     <h3
       class="ml-auto w-full lg:w-[40%]"
-      transition:fade={{
+      in:fade={{
         duration: 500,
         delay: 250,
         easing: cubicInOut,

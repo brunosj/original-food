@@ -14,22 +14,10 @@
     uspBackground,
     font,
   } from '$lib/stores/store';
-  import { cubicIn, cubicOut } from 'svelte/easing';
 
   export let data;
-  $: pathname = data.pathname;
-  $: footer = data.footer;
 
-  const duration = 200;
-  const delay = duration + 100;
-  const y = 0;
-
-  const transitionIn = { easing: cubicOut, y, duration, delay };
-  const transitionOut = { easing: cubicIn, y: -20, duration, delay };
-
-  function scrollToTop() {
-    window.scrollTo({ top: 0 });
-  }
+  const footer = data.footer;
 
   if (browser) {
     const handleScroll = () => {
@@ -80,17 +68,9 @@
 </script>
 
 <Menu />
-{#key pathname}
-  <!-- <main
-  in:fly={transitionIn}
-  out:fly={transitionOut}
-  on:outroend={scrollToTop}
-  class="relative z-10"
-> -->
-  <main class="relative z-10 overflow-hidden">
-    <slot />
-  </main>
-{/key}
-<footer in:fade={{ duration: 250, delay: 1000 }}>
+<main class="relative z-10 overflow-hidden">
+  <slot />
+</main>
+<footer>
   <Footer {footer} />
 </footer>
