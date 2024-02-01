@@ -15,7 +15,7 @@
   let pageData: Homepage = data.page;
 
   const title = 'Original Food';
-  const metaDescription = '';
+  const metaDescription = 'Für 150.000 Menschen im	Südwesten Äthiopiens';
   const image = pageData.attributes.heroBild.data.attributes.url;
 
   // SEO
