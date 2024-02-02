@@ -37,7 +37,7 @@ jobs:
           CI: true
           PUBLIC_CMS_API_URL: https://cms.originalfood.de/api/
           PUBLIC_CMS_URL: https://cms.originalfood.de
-          PUBLIC_CONTACT_EMAIL: post@originalfood.de
+          PUBLIC_CONTACT_EMAIL: PUBLIC_CONTACT_EMAIL
           PUBLIC_GITHUB_PAGE: brunosj
           PUBLIC_SHOP_URL: https://shop.originalfood.de
           PUBLIC_SITE_URL: https://original-food.de
@@ -54,7 +54,7 @@ jobs:
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-eu.ionos.space
-          project-id: 3aca2aea-b263-467d-8739-2bf08d4c8f92
+          project-id: 354f331a-f07b-49fe-96f3-a2df24649d8f
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
