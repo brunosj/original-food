@@ -22,7 +22,7 @@
 <header>
   {#if animate}
     <nav
-      class="w-full lg:w-[28%] fixed bottom-0 lg:top-0 lg:bottom-[unset] lg:rounded-br-lg lg:shadow-lg text-white z-50 shadow-inner"
+      class="w-full lg:w-[28%] fixed top-0 lg:bottom-[unset] lg:rounded-br-lg shadow-lg text-white z-50"
       style:background-color={$menuBackground}
       in:fly={{
         y: -100,

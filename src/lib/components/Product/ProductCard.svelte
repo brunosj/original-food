@@ -6,8 +6,17 @@
   import { fade } from 'svelte/transition';
   import { sineInOut } from 'svelte/easing';
 
-  let { bild, hoverBild, link, titel, untertitel, preis, siegel, istNeu } =
-    item.attributes;
+  let {
+    bild,
+    hoverBild,
+    link,
+    titel,
+    untertitel,
+    beschreibung,
+    preis,
+    siegel,
+    istNeu,
+  } = item.attributes;
 
   let isHovered = false;
 
@@ -69,8 +78,11 @@
     <div
       class="p-3 lg:pt-12 lg:pb-6 lg:px-6 space-y-3 lg:space-y-3 bg-ter group-hover:bg-white duration-500 rounded-b-xl h-full flex flex-col justify-between relative"
     >
-      <h4 class="font-bold">{titel}</h4>
-      <p class=" text-sm">{untertitel}</p>
+      <div class="space-y-1">
+        <h4 class="font-bold">{titel}</h4>
+        <h4>{untertitel}</h4>
+      </div>
+      <p class=" text-sm">{beschreibung}</p>
       <div class="space-y-2">
         <p class=" text-sm font-bold">ab {preis.toFixed(2)} €</p>
         <div class="parent">

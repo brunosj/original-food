@@ -2,6 +2,7 @@
   export let image: string;
   export let height: string;
   export let headerTitle: string;
+  export let headerTitle2: string;
 
   import { fade, fly, slide } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
@@ -13,7 +14,7 @@
 
 <section class={height} id="hero" bind:this={element}>
   <div
-    class={`${height} w-full top-0 -z-10 absolute gradient-overlay min-h-[50vh]`}
+    class={`${height} w-full top-0 -z-10 absolute gradient-overlay min-h-[60vh]`}
   >
     <img
       src={image}
@@ -25,7 +26,7 @@
     <IntersectionObserver {element} bind:intersecting once threshold={0.5}>
       {#if intersecting}
         <div
-          class="absolute layout bottom-[50%] lg:bottom-[30%] lg:w-[60%] w-full z-10"
+          class="absolute layout bottom-[60%] lg:bottom-[30%] lg:w-[60%] w-full z-10 space-y-3 lg:space-y-6"
         >
           <h1
             class="text-ter font-semibold z-10"
@@ -37,6 +38,19 @@
           >
             {headerTitle}
           </h1>
+          <div
+            in:fade={{
+              duration: 500,
+              delay: 250,
+              easing: cubicInOut,
+            }}
+          >
+            <span
+              class="text-ter z-10 mt-3 text-base font-sec font-semibold md:text-3xl xl:mt-6"
+            >
+              {headerTitle2}
+            </span>
+          </div>
         </div>
       {/if}
     </IntersectionObserver>

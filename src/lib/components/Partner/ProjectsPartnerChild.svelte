@@ -17,7 +17,7 @@
     <div
       class={`h-full col-span-1  ${i % 2 === 0 ? 'order-first' : 'order-last'}`}
     >
-      <div class="relative h-full lg:bg-white w-48 m-auto flex">
+      <div class="relative h-full lg:bg-white w-32 lg:w-48 m-auto flex">
         <div class=" m-auto p-4">
           <img
             src={item.attributes.bild.data.attributes.url}

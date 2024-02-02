@@ -8,6 +8,7 @@
   import UniqueSellingPropositionExpanded from '$components/USP/UniqueSellingPropositionExpanded.svelte';
   import ProjectsBottomSection from '$components/Footer/ProjectsBottomSection.svelte';
   import ProjectsPartnerSection from '$components/Partner/ProjectsPartnerSection.svelte';
+  import ProductSection from '$components/Product/ProductSection.svelte';
 
   // Logic
   let pageData: ProjectPage = data.page;
@@ -60,11 +61,11 @@
   pillars={pageData.attributes.ziele.data}
   bottomText={pageData.attributes.zieleBottom?.untertitel}
 />
+
 <ProjectsPartnerSection
   logos={firstHalf}
   title={pageData.attributes.partnerTop.titel}
   subtitle={pageData.attributes.partnerTop.untertitel}
-  products={pageData.attributes.produkte.data}
 />
 <ImageHero
   image={pageData.attributes.partnerBild.data.attributes.url}
@@ -75,9 +76,10 @@
   title={pageData.attributes.partnerTop.titel}
   subtitle={pageData.attributes.partnerTop.untertitel}
   displayHeader={false}
-  products={pageData.attributes.produkte.data}
 />
-<ProjectsBottomSection
-  products={pageData.attributes.produkte.data}
-  image={pageData.attributes.footerBild.data.attributes.url}
+<ProductSection
+  items={pageData.attributes.produkte.data}
+  bgTop="purple"
+  bgBottom="blue"
+  padding={true}
 />

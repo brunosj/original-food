@@ -2,6 +2,7 @@
   export let press: Press[];
   export let products: Product[];
   export let pressStatement: string;
+  export let pressFooter: string;
 
   import { fade, fly, slide } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
@@ -15,23 +16,18 @@
 
   let element;
   let intersecting = false;
-
-  console.log(press);
 </script>
 
 <section
-  class="sectionPt relative"
+  class="sectionPy relative"
   id="press"
   style:background-color={$background}
 >
-  <div class="absolute hidden lg:block -top-[15vh] z-20 w-full">
+  <!-- <div class="absolute hidden lg:block -top-[15vh] z-20 w-full">
     <Products items={products.slice().reverse()} />
-  </div>
+  </div> -->
 
-  <div
-    class="pt-[0vh] lg:pt-[40vh] 2xl:pt-[30vh] pb-12 lg:pb-24 text-ter w-full z-20"
-    bind:this={element}
-  >
+  <div class=" text-ter w-full z-20" bind:this={element}>
     <IntersectionObserver {element} bind:intersecting once threshold={0.2}>
       {#if intersecting}
         <div class="layout space-y-6 w-full lg:w-[60%]">
@@ -57,7 +53,7 @@
       {/if}
     </IntersectionObserver>
     <div class="sectionPt px-0 lg:px-24">
-      <PressCarousel slides={press} />
+      <PressCarousel slides={press} {pressFooter} />
     </div>
   </div>
 </section>

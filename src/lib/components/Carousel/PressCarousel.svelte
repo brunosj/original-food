@@ -1,5 +1,6 @@
 <script lang="ts">
   export let slides: Press[];
+  export let pressFooter: string;
 
   import emblaCarouselSvelte from 'embla-carousel-svelte';
   import type {
@@ -71,7 +72,7 @@
   </div>
 </div>
 <div class="flex items-center mt-3">
-  <h3 class="px-8 lg:px-2">In der Presse</h3>
+  <h3 class="px-8 lg:px-2">{pressFooter}</h3>
 
   {#if slides.length >= 2}
     <div class="ml-auto flex h-full items-center justify-center gap-6 lg:gap-0">

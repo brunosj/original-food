@@ -10,6 +10,7 @@
   import LogoCarousel from '$components/Partner/LogoCarousel.svelte';
   import MapBanner from '$components/Map/MapBanner.svelte';
   import Press from '$components/Press/Press.svelte';
+  import ProductSection from '$components/Product/ProductSection.svelte';
 
   // Logic
   let pageData: Homepage = data.page;
@@ -39,6 +40,7 @@
   image={pageData.attributes.heroBild.data.attributes.url}
   height="h-[30svh] lg:h-[75svh]"
   headerTitle={pageData.attributes.heroText}
+  headerTitle2={pageData.attributes.heroText2}
 />
 <Statement
   items={pageData.attributes.produkte.data}
@@ -55,10 +57,16 @@
   subtitle={pageData.attributes.nachhaltigkeitSaeulenUntertitel}
   pillars={pageData.attributes.nachhaltigkeitSaeulen.data}
 />
+<ProductSection
+  items={pageData.attributes.produkte.data}
+  bgTop="blue"
+  bgBottom="purple"
+/>
 <Press
   pressStatement={pageData.attributes.presseStatement}
   press={pageData.attributes.presse.data}
   products={pageData.attributes.produkte.data}
+  pressFooter={pageData.attributes.presseFooter}
 />
 <MapBanner
   image={pageData.attributes.karteBild.data.attributes.url}

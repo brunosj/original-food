@@ -29,9 +29,9 @@
   };
 </script>
 
-<li class="bg-pri layout" bind:this={element}>
+<li class="px-0 md:px-12 xl:px-24 2xl:px-40 bg-pri" bind:this={element}>
   <div
-    class="p-0 lg:p-12 lg:grid grid-cols-2"
+    class=" lg:grid grid-cols-2"
     in:fly={{
       y: 50,
       duration: 500,
@@ -43,19 +43,15 @@
       <img
         src={item.attributes.bild2?.data.attributes.url}
         alt=""
-        class={`object-cover h-32 lg:h-full w-full  ${
-          i % 2 === 0
-            ? 'rounded-tl-xl rounded-tr-xl lg:rounded-tr-none lg:rounded-bl-xl '
-            : 'rounded-tr-xl rounded-tl-xl lg:rounded-br-xl lg:rounded-tl-none'
-        }`}
+        class={`object-cover h-32 lg:h-full w-full ${
+          i === 0 ? 'lg:rounded-tl-xl ' : ''
+        } ${i === 2 ? 'rounded-bl-xl' : ''}`}
       />
     </div>
     <div
-      class={`bg-ter h-full flex flex-col justify-center py-6 lg:py-12 px-8 lg:px-16 m-auto space-y-3 lg:space-y-6   ${
-        i % 2 === 0
-          ? 'order-last rounded-bl-xl rounded-br-xl lg:rounded-tr-xl lg:rounded-bl-none'
-          : 'order-first rounded-bl-xl rounded-br-xl lg:rounded-tl-xl lg:rounded-br-none'
-      }`}
+      class={`bg-ter h-full flex flex-col justify-center py-6 lg:py-12 px-8 lg:px-16 m-auto space-y-3 lg:space-y-6 ${
+        i === 0 ? 'lg:rounded-tr-xl' : ''
+      } ${i === 2 ? 'rounded-br-xl' : ''}`}
     >
       <h2 class="mt-3">
         {item.attributes.titel}

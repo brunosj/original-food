@@ -68,7 +68,7 @@
 </script>
 
 <Menu />
-<main class="relative z-10 overflow-hidden">
+<main class="relative z-10 overflow-hidden pt-12 lg:pt-0">
   <slot />
 </main>
 <footer>

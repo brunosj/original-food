@@ -17,6 +17,10 @@ html {
   @apply bg-ter scroll-smooth;
 }
 
+body {
+  @apply bg-pri;
+}
+
 h1 {
   @apply text-xl font-sec  md:text-5xl;
 }
@@ -34,19 +38,19 @@ h2 {
 }
 
 h3 {
-  @apply text-base font-pri  md:text-2xl;
+  @apply text-base font-pri md:text-2xl;
 }
 
 h3 {
   line-height: 1.5;
 }
 
-a {
-  @apply leading-none;
-}
-
 h4 {
   @apply text-lg font-pri  md:text-lg;
+}
+
+a {
+  @apply leading-none;
 }
 
 p {

@@ -5,10 +5,12 @@ export interface Homepage {
     titel: string;
     slug: string;
     heroText: string;
+    heroText2: string;
     heroBild: Picture;
     statementTitle: string;
     statementText: string;
     presseStatement: string;
+    presseFooter: string;
     hero2Bild: Picture;
     karteBild: Picture;
     produkte: {
@@ -163,6 +165,7 @@ export interface Product {
     link: string;
     titel: string;
     untertitel: string;
+    beschreibung: string;
     preis: number;
     istNeu: boolean;
     siegel: Picture;

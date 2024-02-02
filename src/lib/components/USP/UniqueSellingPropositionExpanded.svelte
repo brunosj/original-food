@@ -11,11 +11,12 @@
   import IntersectionObserver from 'svelte-intersection-observer';
   import PillarExpanded from '$components/Pillar/PillarExpanded.svelte';
   import PillarExpandedV2 from '$components/Pillar/PillarExpandedV2.svelte';
+  import Underline from '$assets/svg/Underline.svelte';
 </script>
 
-<section id="usp-expanded">
+<section id="usp-expanded" class=" bg-pri sectionPy">
   <div
-    class="layout sectionPt bg-pri text-ter flex space-y-3 lg:space-y-6 flex-col lg:text-right pb-12"
+    class="layout text-ter flex space-y-3 lg:space-y-6 flex-col lg:text-right"
   >
     <h1
       in:fade={{
@@ -39,14 +40,14 @@
     </h3>
   </div>
 
-  <ul class="sectionPb bg-pri space-y-6 lg:space-y-0">
+  <ul class=" bg-pri sectionPy">
     {#each pillars as item, i}
       <!-- <PillarExpanded {item} {i} /> -->
       <PillarExpandedV2 {item} {i} />
     {/each}
   </ul>
 
-  <div class="layout pb-0 lg:pb-64 2xl:pb-54 bg-pri text-ter">
+  <div class="layout bg-pri text-ter relative">
     <h3
       class="w-full lg:w-2/3 ml-auto"
       in:fade={{
@@ -57,6 +58,18 @@
     >
       {bottomText}
     </h3>
+    <span
+      class="absolute -bottom-8 right-[50%]"
+      in:fly={{
+        x: -100,
+        y: 10,
+        duration: 750,
+        delay: 1000,
+        easing: cubicInOut,
+      }}
+    >
+      <Underline width={225} color="#8a6d7c" />
+    </span>
   </div>
 </section>
 

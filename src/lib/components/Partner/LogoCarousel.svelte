@@ -26,36 +26,8 @@
           />
         </li>
       {/each}
-      <!-- {#each logos as logo}
-        <li>
-          <img
-            src={logo.attributes.bild.data.attributes.url}
-            alt={logo.attributes.titel}
-            class="marquee__img"
-          />
-        </li>
-      {/each}
-      {#each logos as logo}
-        <li>
-          <img
-            src={logo.attributes.bild.data.attributes.url}
-            alt={logo.attributes.titel}
-            class="marquee__img"
-          />
-        </li>
-      {/each} -->
     </ul>
   </a>
-
-  <!-- {#each logos as logo}
-    <li class="slide w-16 lg:w-24 h-auto">
-      <img
-        src={logo.attributes.bild.data.attributes.url}
-        alt={logo.attributes.titel}
-        class="object-contain"
-      />
-    </li>
-  {/each} -->
 </section>
 
 <style>

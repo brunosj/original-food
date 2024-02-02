@@ -3,16 +3,11 @@
   export let title: string;
   export let subtitle: string;
   export let displayHeader = true;
-  export let products: Product[];
 
   import type { Logo, Product } from '$types/responseInterfaces';
   import { fade, fly, slide } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
-  import IntersectionObserver from 'svelte-intersection-observer';
-  import PillarExpanded from '$components/Pillar/PillarExpanded.svelte';
   import ProjectsPartnerChild from './ProjectsPartnerChild.svelte';
-  import Products from '$components/Product/Products.svelte';
-  import ProductCarousel from '$components/Carousel/ProductCarousel.svelte';
 
   let element;
   let intersecting = false;
@@ -20,24 +15,7 @@
 
 <section id="partners" bind:this={element} class="relative bg-sec">
   {#if displayHeader}
-    <div
-      class="absolute hidden lg:block -top-[15vh] z-20 w-full"
-      in:fly={{
-        y: 50,
-        duration: 500,
-        delay: 250,
-        easing: cubicInOut,
-      }}
-    >
-      <Products items={products} />
-    </div>
-
-    <div class="block lg:hidden bg-pri pt-12 pb-6">
-      <ProductCarousel slides={products} />
-    </div>
-    <div
-      class="layout sectionPy text-ter flex space-y-3 lg:space-y-6 flex-col lg:pt-[50vh] 2xl:pt-[35vh]"
-    >
+    <div class="layout text-ter flex space-y-3 lg:space-y-6 flex-col sectionPy">
       <h1
         in:fade={{
           duration: 500,
@@ -65,8 +43,4 @@
       <ProjectsPartnerChild {item} i={i + (displayHeader ? 0 : 1)} />
     {/each}
   </ul>
-
-  {#if !displayHeader}
-    <div class="bg-sec sectionPy hidden lg:block"></div>
-  {/if}
 </section>

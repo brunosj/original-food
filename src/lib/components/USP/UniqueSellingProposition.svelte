@@ -78,7 +78,7 @@
   </div>
 
   <div
-    class="hidden lg:grid grid-cols-2 grid-rows-2 gap-x-4 sectionPy text-ter"
+    class="hidden lg:grid grid-cols-2 grid-rows-2 gap-x-4 sectionPt text-ter"
   >
     <!-- svelte-ignore a11y-no-static-element-interactions -->
     <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -229,8 +229,6 @@
         </h3>
       </div>
     </a>
-
-    <div class="sectionPb" />
   </div>
 
   <ul class="lg:hidden sectionPt space-y-6">

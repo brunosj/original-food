@@ -9,12 +9,10 @@
   let { anschrift, statement, copyright } = footer.attributes;
 </script>
 
-<section
-  class="hidden lg:block h-[550px] pointer-events-none box-border"
-></section>
-<section class="hidden lg:block bg-quar h-[550px] fixed bottom-0 w-full">
-  <div class="layout sectionPy lg:grid grid-cols-2">
-    <div class="space-y-12">
+<section class="block h-[575px] pointer-events-none box-border"></section>
+<section class="block bg-quar h-[575px] fixed bottom-0 w-full sectionPy">
+  <div class="layout lg:grid grid-cols-2">
+    <div class="space-y-6 lg:space-y-12">
       <Logo width="8rem" textColor="" barColor="rgb(181,83,34)" />
       <ul class="flex flex-col font-sec space-y-2">
         {#each menu as item, i}
@@ -24,7 +22,7 @@
                 href={item.slug}
                 rel={item.slug.includes('http') ? 'noopener noreferrer' : ''}
                 target={item.slug.includes('http') ? '_blank' : ''}
-                class="inline-block hover:translate-x-1 duration-300 hover:text-orange"
+                class="inline-block hover:translate-x-1 duration-300 hover:text-orange text-sm lg:text-base"
               >
                 {item.name}
               </a>
@@ -39,7 +37,7 @@
                 href={item.slug}
                 rel={item.slug.includes('http') ? 'noopener noreferrer' : ''}
                 target={item.slug.includes('http') ? '_blank' : ''}
-                class="inline-block hover:translate-x-1 duration-300 hover:text-orange"
+                class="inline-block hover:translate-x-1 duration-300 hover:text-orange text-sm lg:text-base"
               >
                 {item.name}
               </a>
@@ -48,18 +46,18 @@
         {/each}
       </ul>
     </div>
-    <div class="space-y-6">
-      <h4 class="font-sec">
+    <div class="space-y-3 lg:space-y-6 pt-6 lg:pt-0">
+      <span class="font-sec text-xs lg:text-lg">
         {statement}
-      </h4>
+      </span>
       <div class="markdown">
         <SvelteMarkdown source={copyright} />
       </div>
-      <div class="markdown">
+      <div class="markdown hidden lg:block">
         <SvelteMarkdown source={anschrift} />
       </div>
     </div>
-    <div class="col-span-2 text-xs flex text-beige-800 pt-12">
+    <div class="col-span-2 text-xs flex text-beige-800 pt-6">
       <span class="ml-auto">
         Webentwicklung von
         <a
