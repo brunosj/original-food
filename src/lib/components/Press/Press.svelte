@@ -52,7 +52,7 @@
         </div>
       {/if}
     </IntersectionObserver>
-    <div class="sectionPt px-0 lg:px-24">
+    <div class="sectionPt px-0 md:px-12 xl:px-24 2xl:px-40">
       <PressCarousel slides={press} {pressFooter} />
     </div>
   </div>

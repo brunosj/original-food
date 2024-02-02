@@ -10,7 +10,7 @@ export const website = {
   siteLanguage: 'de-DE',
   siteTitle: `Original Food`,
   siteShortTitle: 'Original Food',
-  siteDescription: `Für 150.000 Menschen im	Südwesten Äthiopiens`,
+  siteDescription: `Regenwälder schützen, Kulturen schätzen und echte Perspektiven schaffen`,
   siteImage: `https://res.cloudinary.com/dp4rdnqrh/image/upload/v1688423822/header_grand_cru_1df1886476.jpg`,
   backgroundColor: '#FDFAEC',
   themeColor: '#7D6671',
