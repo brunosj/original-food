@@ -62,7 +62,7 @@
       {/if}
       {#if siegel.data}
         <div
-          class={`hidden lg:block absolute -bottom-6 left-3 bg-white rounded-lg py-3 px-6 z-20  border-[0.5px] duration-300 ${
+          class={`hidden lg:block absolute -bottom-6 left-3 bg-white rounded-lg p-2 z-20 w-24 border-[0.5px] duration-300 ${
             isHovered ? 'border-sec' : 'border-pri'
           }`}
         >

@@ -9,13 +9,13 @@
 <section class="relative bg-white" id="">
   <a href="/projekte#partners">
     <ul class="py-3 lg:py-6">
-      <Marquee speed={50} gradient gap={'10%'}>
+      <Marquee speed={60} gradient gap={'10%'}>
         {#each logos as logo}
-          <li class="h-8 lg:h-20">
+          <li class="h-12 lg:h-16">
             <img
               src={logo.attributes.bild.data.attributes.url}
               alt={logo.attributes.titel}
-              class="object-contain h-full w-full"
+              class="object-contain h-full"
             />
           </li>
         {/each}
