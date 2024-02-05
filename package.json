@@ -44,6 +44,7 @@
     "embla-carousel-autoplay": "8.0.0-rc22",
     "embla-carousel-svelte": "8.0.0-rc22",
     "object-hash": "^3.0.0",
+    "svelte-fast-marquee": "^0.7.0",
     "svelte-markdown": "^0.4.1",
     "unplugin-icons": "^0.18.3"
   }
