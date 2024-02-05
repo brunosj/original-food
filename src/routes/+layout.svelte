@@ -71,6 +71,6 @@
 <main class="relative z-10 overflow-hidden pt-12 lg:pt-0">
   <slot />
 </main>
-<footer>
+<footer class="hidden lg:block">
   <Footer {footer} />
 </footer>
