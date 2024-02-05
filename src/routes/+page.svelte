@@ -38,7 +38,7 @@
 <SEO {...seoProps} />
 <Hero
   image={pageData.attributes.heroBild.data.attributes.url}
-  height="h-[30svh] lg:h-[75svh]"
+  height="h-[35svh] lg:h-[75svh]"
   headerTitle={pageData.attributes.heroText}
   headerTitle2={pageData.attributes.heroText2}
 />
@@ -49,7 +49,7 @@
 />
 <ImageHero
   image={pageData.attributes.hero2Bild.data.attributes.url}
-  height="h-48 lg:h-[75svh]"
+  height="h-[30svh] lg:h-[75svh]"
 />
 <LogoCarousel logos={pageData.attributes.logos.data} />
 <UniqueSellingProposition

@@ -13,9 +13,7 @@
 </script>
 
 <section class={height} id="hero" bind:this={element}>
-  <div
-    class={`${height} w-full top-0 -z-10 absolute gradient-overlay min-h-[60vh]`}
-  >
+  <div class={`${height} w-full top-0 -z-10 absolute gradient-overlay`}>
     <img
       src={image}
       alt="Entlebuch Bild"
@@ -26,30 +24,32 @@
     <IntersectionObserver {element} bind:intersecting once threshold={0.5}>
       {#if intersecting}
         <div
-          class="absolute layout bottom-[60%] lg:bottom-[30%] lg:w-[60%] w-full z-10 space-y-3 lg:space-y-6"
+          class="absolute layout bottom-[50%] lg:w-[60%] w-full z-10 space-y-3 lg:space-y-6 transform translate-y-1/2"
         >
-          <h1
-            class="text-ter font-semibold z-10"
-            in:fade={{
-              duration: 500,
-              delay: 250,
-              easing: cubicInOut,
-            }}
-          >
-            {headerTitle}
-          </h1>
-          <div
-            in:fade={{
-              duration: 500,
-              delay: 250,
-              easing: cubicInOut,
-            }}
-          >
-            <span
-              class="text-ter z-10 mt-3 text-base font-sec font-semibold md:text-3xl xl:mt-6"
+          <div class="flex flex-col justify-center h-full space-y-6">
+            <h1
+              class="text-ter font-semibold z-10"
+              in:fade={{
+                duration: 500,
+                delay: 250,
+                easing: cubicInOut,
+              }}
             >
-              {headerTitle2}
-            </span>
+              {headerTitle}
+            </h1>
+            <div
+              in:fade={{
+                duration: 500,
+                delay: 250,
+                easing: cubicInOut,
+              }}
+            >
+              <span
+                class="text-ter z-10 text-base font-sec font-semibold md:text-3xl"
+              >
+                {headerTitle2}
+              </span>
+            </div>
           </div>
         </div>
       {/if}
@@ -72,7 +72,7 @@
     height: 100%;
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0) 100%,
       rgba(0, 0, 0, 0)
     );
