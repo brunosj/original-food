@@ -8,10 +8,10 @@
 
 <section class="relative bg-white" id="">
   <a href="/projekte#partners">
-    <ul class="py-3 lg:py-6">
-      <Marquee speed={60} gradient gap={'10%'}>
+    <ul class="">
+      <Marquee speed={60} gradient gap={'2%'}>
         {#each logos as logo}
-          <li class="h-12 lg:h-16">
+          <li class="h-32 lg:h-64">
             <img
               src={logo.attributes.bild.data.attributes.url}
               alt={logo.attributes.titel}
