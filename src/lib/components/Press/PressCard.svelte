@@ -32,14 +32,14 @@
           loading="lazy"
           src={bild.data.attributes.url}
           alt={titel}
-          class="h-2/3 object-contain"
+          class="h-[25%] sm:h-1/2 lg:h-2/3 object-contain"
         />
       </div>
 
       <div class="mt-auto space-y-2 w-full lg:w-3/4 p-8">
         <h3 class="font-bold">{titel}</h3>
         {#if untertitel}
-          <p class="hidden lg:block">{untertitel}</p>
+          <p class="">{untertitel}</p>
         {/if}
       </div>
     </div>

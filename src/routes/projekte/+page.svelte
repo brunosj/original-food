@@ -43,43 +43,45 @@
 </script>
 
 <SEO {...seoProps} />
-<ImageHero
-  image={pageData.attributes.heroBild.data.attributes.url}
-  height="h-48 lg:h-[65svh]"
-/>
-<ProjectsTopSection
-  title={pageData.attributes.sektionTopTitel}
-  text={pageData.attributes.sektionTopText}
-/>
-<ImageHero
-  image={pageData.attributes.zieleBild.data.attributes.url}
-  height="h-48 lg:h-[50svh]"
-/>
-<UniqueSellingPropositionExpanded
-  title={pageData.attributes.zieleTop.titel}
-  subtitle={pageData.attributes.zieleTop.untertitel}
-  pillars={pageData.attributes.ziele.data}
-  bottomText={pageData.attributes.zieleBottom?.untertitel}
-/>
+<article class="sectionPb">
+  <ImageHero
+    image={pageData.attributes.heroBild.data.attributes.url}
+    height="h-48 lg:h-[65svh]"
+  />
+  <ProjectsTopSection
+    title={pageData.attributes.sektionTopTitel}
+    text={pageData.attributes.sektionTopText}
+  />
+  <ImageHero
+    image={pageData.attributes.zieleBild.data.attributes.url}
+    height="h-48 lg:h-[50svh]"
+  />
+  <UniqueSellingPropositionExpanded
+    title={pageData.attributes.zieleTop.titel}
+    subtitle={pageData.attributes.zieleTop.untertitel}
+    pillars={pageData.attributes.ziele.data}
+    bottomText={pageData.attributes.zieleBottom?.untertitel}
+  />
 
-<ProjectsPartnerSection
-  logos={firstHalf}
-  title={pageData.attributes.partnerTop.titel}
-  subtitle={pageData.attributes.partnerTop.untertitel}
-/>
-<ImageHero
-  image={pageData.attributes.partnerBild.data.attributes.url}
-  height="h-48 lg:h-[65svh]"
-/>
-<ProjectsPartnerSection
-  logos={secondHalf}
-  title={pageData.attributes.partnerTop.titel}
-  subtitle={pageData.attributes.partnerTop.untertitel}
-  displayHeader={false}
-/>
-<ProductSection
-  items={pageData.attributes.produkte.data}
-  bgTop="purple"
-  bgBottom="blue"
-  padding={true}
-/>
+  <ProjectsPartnerSection
+    logos={firstHalf}
+    title={pageData.attributes.partnerTop.titel}
+    subtitle={pageData.attributes.partnerTop.untertitel}
+  />
+  <ImageHero
+    image={pageData.attributes.partnerBild.data.attributes.url}
+    height="h-48 lg:h-[65svh]"
+  />
+  <ProjectsPartnerSection
+    logos={secondHalf}
+    title={pageData.attributes.partnerTop.titel}
+    subtitle={pageData.attributes.partnerTop.untertitel}
+    displayHeader={false}
+  />
+  <ProductSection
+    items={pageData.attributes.produkte.data}
+    bgTop="purple"
+    bgBottom="blue"
+    padding={true}
+  />
+</article>

@@ -10,7 +10,7 @@
 </script>
 
 <section
-  class={`relative ${bgTop === 'blue' ? 'bg-pri' : 'bg-sec'}  ${padding === true ? 'sectionPy' : ''}`}
+  class={`relative ${bgTop === 'blue' ? 'bg-pri' : 'bg-sec'}  ${padding === true ? 'lg:py-24' : ''}`}
 >
   <div
     class={`${bgBottom === 'blue' ? 'bg-pri' : 'bg-sec'} z-0 absolute bottom-0 h-1/2 w-full`}

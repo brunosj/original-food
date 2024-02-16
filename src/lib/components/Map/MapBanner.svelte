@@ -8,10 +8,10 @@
   let svgWidth: number;
 
   onMount(() => {
-    svgWidth = window.innerWidth < 640 ? 200 : 600;
+    svgWidth = window.innerWidth < 640 ? 250 : 500;
 
     window.addEventListener('resize', () => {
-      svgWidth = window.innerWidth < 640 ? 200 : 600;
+      svgWidth = window.innerWidth < 640 ? 250 : 500;
     });
   });
 </script>
@@ -23,7 +23,7 @@
     class="object-cover h-full w-full"
     loading="eager"
   />
-  <div class="absolute top-6 lg:top-12 right-6 lg:right-12">
+  <div class="absolute top-6 lg:top-12 right-0 lg:right-12">
     <Map width={svgWidth} />
   </div>
 </section>

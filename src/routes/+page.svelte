@@ -36,39 +36,42 @@
 </script>
 
 <SEO {...seoProps} />
-<Hero
-  image={pageData.attributes.heroBild.data.attributes.url}
-  height="h-[35svh] lg:h-[75svh]"
-  headerTitle={pageData.attributes.heroText}
-  headerTitle2={pageData.attributes.heroText2}
-/>
-<Statement
-  items={pageData.attributes.produkte.data}
-  statementTitle={pageData.attributes.statementTitle}
-  statementText={pageData.attributes.statementText}
-/>
-<ImageHero
-  image={pageData.attributes.hero2Bild.data.attributes.url}
-  height="h-[30svh] lg:h-[75svh]"
-/>
-<LogoCarousel logos={pageData.attributes.logos.data} />
-<UniqueSellingProposition
-  title={pageData.attributes.nachhaltigkeitSaeulenTitel}
-  subtitle={pageData.attributes.nachhaltigkeitSaeulenUntertitel}
-  pillars={pageData.attributes.nachhaltigkeitSaeulen.data}
-/>
-<ProductSection
-  items={pageData.attributes.produkte.data}
-  bgTop="blue"
-  bgBottom="purple"
-/>
-<Press
-  pressStatement={pageData.attributes.presseStatement}
-  press={pageData.attributes.presse.data}
-  products={pageData.attributes.produkte.data}
-  pressFooter={pageData.attributes.presseFooter}
-/>
-<MapBanner
-  image={pageData.attributes.karteBild.data.attributes.url}
-  height="h-[45svh] lg:h-[85svh]"
-/>
+<article>
+  <Hero
+    image={pageData.attributes.heroBild.data.attributes.url}
+    height="h-[35svh] lg:h-[75svh]"
+    headerTitle={pageData.attributes.heroText}
+    headerTitle2={pageData.attributes.heroText2}
+  />
+  <Statement
+    items={pageData.attributes.produkte.data}
+    statementTitle={pageData.attributes.statementTitle}
+    statementText={pageData.attributes.statementText}
+  />
+  <ImageHero
+    image={pageData.attributes.hero2Bild.data.attributes.url}
+    height="h-[30svh] lg:h-[75svh]"
+  />
+  <LogoCarousel logos={pageData.attributes.logos.data} />
+  <UniqueSellingProposition
+    title={pageData.attributes.nachhaltigkeitSaeulenTitel}
+    subtitle={pageData.attributes.nachhaltigkeitSaeulenUntertitel}
+    pillars={pageData.attributes.nachhaltigkeitSaeulen.data}
+  />
+  <ProductSection
+    items={pageData.attributes.produkte.data}
+    bgTop="blue"
+    padding={true}
+    bgBottom="purple"
+  />
+  <Press
+    pressStatement={pageData.attributes.presseStatement}
+    press={pageData.attributes.presse.data}
+    products={pageData.attributes.produkte.data}
+    pressFooter={pageData.attributes.presseFooter}
+  />
+  <MapBanner
+    image={pageData.attributes.karteBild.data.attributes.url}
+    height="h-[45svh] lg:h-[85svh]"
+  />
+</article>
