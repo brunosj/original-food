@@ -36,7 +36,7 @@
   on:mouseenter={handleMouseOver}
   on:mouseleave={handleMouseOut}
 >
-  <a href={link} class="flex flex-col relative card h-full">
+  <a href={link} class="flex flex-col relative card h-full" target="_blank">
     <div class="relative">
       {#if isHovered && hoverBild.data}
         <div class="h-32 lg:h-48 relative">
