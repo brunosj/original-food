@@ -39,7 +39,7 @@
 <article>
   <Hero
     image={pageData.attributes.heroBild.data.attributes.url}
-    height="h-[35svh] lg:h-[75svh]"
+    height="h-[30svh] lg:h-[75svh]"
     headerTitle={pageData.attributes.heroText}
     headerTitle2={pageData.attributes.heroText2}
   />
@@ -72,6 +72,6 @@
   />
   <MapBanner
     image={pageData.attributes.karteBild.data.attributes.url}
-    height="h-[45svh] lg:h-[85svh]"
+    height="h-[60svh] lg:h-[85svh]"
   />
 </article>

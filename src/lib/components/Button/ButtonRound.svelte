@@ -6,7 +6,7 @@
 
 <button
   class={`
-		text-ter text-xs rounded-xl button-round `}
+		text-ter text-xs rounded-xl button-round shadow-lg `}
   aria-label={`Go to ${path}`}
 >
   <div class="flex flex-row h-8 group items-center">

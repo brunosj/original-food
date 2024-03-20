@@ -8,7 +8,7 @@
 
 <div class="bg-pri rounded-xl group">
   {#if link !== null}
-    <a href={link} class=" h-80 lg:h-96 relative flex overflow-hidden">
+    <a href={link} class=" h-96 md:h-[30rem] relative flex overflow-hidden">
       <div class="absolute h-full -right-3 -rotate-[20deg] -top-6">
         <img
           loading="lazy"
@@ -26,20 +26,20 @@
       </div>
     </a>
   {:else}
-    <div class=" h-80 lg:h-96 relative flex overflow-hidden">
+    <div class=" h-96 md:h-[30rem] relative flex overflow-hidden">
       <div class="absolute h-full -right-3 -rotate-[20deg] -top-6">
         <img
           loading="lazy"
           src={bild.data.attributes.url}
           alt={titel}
-          class="h-[25%] sm:h-1/2 lg:h-2/3 object-contain"
+          class="h-[30%] lg:h-1/2 object-contain"
         />
       </div>
 
       <div class="mt-auto space-y-2 w-full lg:w-3/4 p-8">
         <h3 class="font-bold">{titel}</h3>
         {#if untertitel}
-          <p class="">{untertitel}</p>
+          <p class="text-base lg:text-lg">{untertitel}</p>
         {/if}
       </div>
     </div>

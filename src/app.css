@@ -54,7 +54,7 @@ a {
 }
 
 p {
-  @apply text-sm md:text-base font-pri;
+  @apply text-base md:text-lg font-pri;
 }
 
 .layout {
@@ -118,5 +118,5 @@ p {
 }
 
 .markdown p {
-  @apply text-sm md:text-lg mb-3 xl:mb-6 xl:last:mb-0;
+  @apply text-base md:text-lg mb-3 xl:mb-6 xl:last:mb-0;
 }

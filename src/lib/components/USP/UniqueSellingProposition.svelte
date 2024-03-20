@@ -47,7 +47,7 @@
 </script>
 
 <section
-  class="text-ter layout sectionPy"
+  class="text-ter layout sectionPt lg:pb-24"
   id="usp"
   style:background-color={$uspBackground}
   style:color={$font}
@@ -78,7 +78,7 @@
   </div>
 
   <div
-    class="hidden lg:grid grid-cols-2 grid-rows-2 gap-x-4 sectionPt text-ter"
+    class="hidden xl:grid grid-cols-2 grid-rows-2 gap-x-4 sectionPt text-ter"
   >
     <!-- svelte-ignore a11y-no-static-element-interactions -->
     <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -231,7 +231,7 @@
     </a>
   </div>
 
-  <ul class="lg:hidden sectionPt space-y-6">
+  <ul class="xl:hidden sectionPt space-y-6">
     {#each pillarsWithIndex as pillar, i}
       <PillarMobile item={pillar} />
     {/each}
