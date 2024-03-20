@@ -70,8 +70,5 @@
     products={pageData.attributes.produkte.data}
     pressFooter={pageData.attributes.presseFooter}
   />
-  <MapBanner
-    image={pageData.attributes.karteBild.data.attributes.url}
-    height="h-[60svh] lg:h-[85svh]"
-  />
+  <MapBanner image={pageData.attributes.karteBild.data.attributes.url} />
 </article>
