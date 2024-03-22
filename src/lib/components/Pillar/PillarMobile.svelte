@@ -11,7 +11,7 @@
       <img
         src={item.attributes.bild.data.attributes.url}
         alt=""
-        class="object-cover h-40 w-full rounded-t-xl"
+        class="object-cover h-56 w-full rounded-t-xl"
       />
       <div class=" bg-sec px-4 py-2 text-ter">
         <h3>

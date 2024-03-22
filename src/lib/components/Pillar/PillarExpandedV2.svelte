@@ -43,7 +43,7 @@
       <img
         src={item.attributes.bild2?.data.attributes.url}
         alt=""
-        class={`object-cover h-32 lg:h-full w-full ${
+        class={`object-cover h-56 lg:h-full w-full ${
           i === 0 ? 'lg:rounded-tl-xl ' : ''
         } ${i === 2 ? 'rounded-bl-xl' : ''}`}
       />

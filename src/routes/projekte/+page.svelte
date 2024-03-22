@@ -46,7 +46,7 @@
 <article class="sectionPb">
   <ImageHero
     image={pageData.attributes.heroBild.data.attributes.url}
-    height="h-48 lg:h-[65svh]"
+    height="h-56 lg:h-[65svh]"
   />
   <ProjectsTopSection
     title={pageData.attributes.sektionTopTitel}
@@ -54,7 +54,7 @@
   />
   <ImageHero
     image={pageData.attributes.zieleBild.data.attributes.url}
-    height="h-48 lg:h-[50svh]"
+    height="h-56 lg:h-[65svh]"
   />
   <UniqueSellingPropositionExpanded
     title={pageData.attributes.zieleTop.titel}
@@ -70,7 +70,7 @@
   />
   <ImageHero
     image={pageData.attributes.partnerBild.data.attributes.url}
-    height="h-48 lg:h-[65svh]"
+    height="h-56 lg:h-[65svh]"
   />
   <ProjectsPartnerSection
     logos={secondHalf}
