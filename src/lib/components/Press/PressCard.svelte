@@ -39,7 +39,7 @@
       <div class="mt-auto space-y-2 w-full lg:w-3/4 p-8">
         <h3 class="font-bold">{titel}</h3>
         {#if untertitel}
-          <p class="text-base lg:text-lg">{untertitel}</p>
+          <p class="text-base lg:text-lg leading-tight">{untertitel}</p>
         {/if}
       </div>
     </div>

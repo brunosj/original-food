@@ -27,6 +27,6 @@
     <ProductCarousel slides={products} />
   </div>
   <div>
-    <ImageHero {image} height="h-[40svh] lg:h-[100svh]" />
+    <ImageHero {image} height="h-[40dvh] lg:h-[100dvh]" />
   </div>
 </section>

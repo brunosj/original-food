@@ -39,7 +39,7 @@
 <article>
   <Hero
     image={pageData.attributes.heroBild.data.attributes.url}
-    height="h-[30svh] lg:h-[75svh]"
+    height="h-[30dvh] lg:h-[75dvh]"
     headerTitle={pageData.attributes.heroText}
     headerTitle2={pageData.attributes.heroText2}
   />
@@ -50,7 +50,7 @@
   />
   <ImageHero
     image={pageData.attributes.hero2Bild.data.attributes.url}
-    height="h-[30svh] lg:h-[75svh]"
+    height="h-[30dvh] lg:h-[75dvh]"
   />
   <LogoCarousel logos={pageData.attributes.logos.data} />
   <UniqueSellingProposition
