@@ -15,8 +15,9 @@
   // Logic
   let pageData: Homepage = data.page;
 
-  const title = 'Original Food';
-  const metaDescription = 'Für 150.000 Menschen im	Südwesten Äthiopiens';
+  const title = 'Der Wildkafffee und weitere Bioprodukte';
+  const metaDescription =
+    'Regenwaldschutz durch schonende Nutzung - in jedem Produkt';
   const image = pageData.attributes.heroBild.data.attributes.url;
 
   // SEO

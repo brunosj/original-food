@@ -14,7 +14,8 @@
   let pageData: ProjectPage = data.page;
 
   let title = 'Projekte';
-  let metaDescription = 'Original Food Projekte';
+  let metaDescription =
+    'Regenwaldschutz durch schonende Nutzung - in jedem Produkt';
   let image = pageData.attributes.heroBild.data.attributes.url;
 
   const logos = pageData.attributes.logos.data;
