@@ -26,9 +26,11 @@
         <div
           class="absolute layout bottom-[50%] lg:w-[60%] w-full z-10 space-y-3 lg:space-y-6 transform translate-y-1/2"
         >
-          <div class="flex flex-col justify-center h-full space-y-6">
-            <h1
-              class="text-ter font-semibold z-10"
+          <div
+            class="flex flex-col justify-center h-full space-y-3 md:space-y-6"
+          >
+            <span
+              class="text-ter font-semibold z-10 h0"
               in:fade={{
                 duration: 500,
                 delay: 250,
@@ -36,7 +38,7 @@
               }}
             >
               {headerTitle}
-            </h1>
+            </span>
             <div
               in:fade={{
                 duration: 500,
@@ -45,7 +47,7 @@
               }}
             >
               <span
-                class="text-ter z-10 text-base font-sec font-semibold md:text-3xl"
+                class="text-ter z-10 text-lg font-sec font-semibold md:text-3xl"
               >
                 {headerTitle2}
               </span>
