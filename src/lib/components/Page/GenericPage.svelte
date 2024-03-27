@@ -1,11 +1,12 @@
 <script lang="ts">
+  export let title: string;
+  export let text: String;
+  export let image: Picture;
+
   import SvelteMarkdown from 'svelte-markdown';
   import { onMount, afterUpdate } from 'svelte';
   import { processMarkdownLinks } from '$lib/utils/processMarkdownLinks';
   import type { Picture } from '$types/responseInterfaces';
-  export let title: string;
-  export let text: String;
-  export let image: Picture;
 
   let markdownRef: Element;
 

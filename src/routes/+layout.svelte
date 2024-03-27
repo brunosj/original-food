@@ -7,30 +7,20 @@
   import { browser } from '$app/environment';
   import Footer from '$components/Footer/Footer.svelte';
   import Menu from '$components/Header/Menu.svelte';
-  import { fly, fade } from 'svelte/transition';
-  import {
-    background,
-    menuBackground,
-    uspBackground,
-    font,
-  } from '$lib/stores/store';
+  import { menuBackground, uspBackground, font } from '$lib/stores/store';
 
   export let data;
 
   const footer = data.footer;
+  let showFooter = false;
 
   if (browser) {
     const handleScroll = () => {
-      const statementSection = document.getElementById('statement');
-      const statementTitle = document.getElementById('statement-title');
       const uspSection = document.getElementById('usp');
       const pressSection = document.getElementById('press');
       const projectsSection = document.getElementById('projects');
       const uspExpandedSection = document.getElementById('usp-expanded');
       const partnersSection = document.getElementById('partners');
-
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
       const isSectionAtTop = (element: HTMLElement, range = 50) => {
         const elementRect = element.getBoundingClientRect();
         const elementTop = elementRect.top;
@@ -65,12 +55,27 @@
       };
     });
   }
+
+  onMount(() => {
+    setTimeout(() => {
+      showFooter = true;
+    }, 2000);
+  });
 </script>
 
 <Menu />
 <main class="relative z-10 overflow-hidden pt-12 lg:pt-0">
   <slot />
 </main>
-<footer class="hidden lg:block">
-  <Footer {footer} />
-</footer>
+
+{#if showFooter}
+  <footer class="hidden lg:block">
+    <Footer {footer} />
+  </footer>
+{/if}
+
+<style>
+  main {
+    min-height: 100vh;
+  }
+</style>

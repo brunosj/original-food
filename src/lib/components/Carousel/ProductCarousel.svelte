@@ -2,17 +2,12 @@
   export let slides: Product[];
 
   import emblaCarouselSvelte from 'embla-carousel-svelte';
-  import type {
-    EmblaCarouselType,
-    EmblaOptionsType,
-    EmblaPluginType,
-  } from 'embla-carousel';
+  import type { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel';
   import PrevButton from './PrevButton.svelte';
   import NextButton from './NextButton.svelte';
-  import type { Press, Product } from '$types/responseInterfaces';
+  import type { Product } from '$types/responseInterfaces';
   import ProductCard from '$components/Product/ProductCard.svelte';
 
-  let emblaRef: HTMLDivElement;
   let emblaApi: EmblaCarouselType;
   let options: EmblaOptionsType = {
     slidesToScroll: 'auto',

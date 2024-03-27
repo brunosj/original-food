@@ -4,32 +4,11 @@
 
   import type { Pillar } from '$types/responseInterfaces';
   import SvelteMarkdown from 'svelte-markdown';
-  import { fade, fly, slide } from 'svelte/transition';
+  import { fly } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
-  import IntersectionObserver from 'svelte-intersection-observer';
-
-  let element;
-  let intersecting = false;
-
-  const transitionEven = {
-    easing: cubicInOut,
-    x: -200,
-    duration: 500,
-    delay: 500,
-  };
-  const transitionOdd = {
-    easing: cubicInOut,
-    x: 200,
-    duration: 500,
-    delay: 0,
-  };
-
-  const getTransition = (index: number) => {
-    return index % 2 === 0 ? transitionEven : transitionOdd;
-  };
 </script>
 
-<li class="px-0 md:px-12 xl:px-24 2xl:px-40 bg-pri" bind:this={element}>
+<li class="px-0 md:px-12 xl:px-24 2xl:px-40 bg-pri">
   <div
     class=" lg:grid grid-cols-2"
     in:fly={{

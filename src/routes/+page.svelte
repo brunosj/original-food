@@ -40,7 +40,7 @@
 <article>
   <Hero
     image={pageData.attributes.heroBild.data.attributes.url}
-    height="h-[30dvh] lg:h-[75dvh]"
+    height="h-[40dvh] lg:h-[75dvh]"
     headerTitle={pageData.attributes.heroText}
     headerTitle2={pageData.attributes.heroText2}
   />
@@ -66,9 +66,7 @@
     bgBottom="purple"
   />
   <Press
-    pressStatement={pageData.attributes.presseStatement}
     press={pageData.attributes.presse.data}
-    products={pageData.attributes.produkte.data}
     pressFooter={pageData.attributes.presseFooter}
   />
   <MapBanner image={pageData.attributes.karteBild.data.attributes.url} />

@@ -3,13 +3,11 @@
   export let subtitle: string;
   export let pillars: Pillar[];
 
-  import { uspBackground, background, font } from '$lib/stores/store';
+  import { uspBackground, font } from '$lib/stores/store';
   import type { Pillar } from '$types/responseInterfaces';
-  import { fade, fly, slide } from 'svelte/transition';
+  import { fade, fly } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
-  import IntersectionObserver from 'svelte-intersection-observer';
   import PillarMobile from '$components/Pillar/PillarMobile.svelte';
-  import ArrowRight from 'virtual:icons/mdi-light/arrow-right';
   import ButtonRound from '$components/Button/ButtonRound.svelte';
 
   let expandedIndex = -1;
@@ -231,7 +229,7 @@
     </a>
   </div>
 
-  <ul class="xl:hidden sectionPt space-y-6">
+  <ul class="xl:hidden sectionPy space-y-6">
     {#each pillarsWithIndex as pillar, i}
       <PillarMobile item={pillar} />
     {/each}

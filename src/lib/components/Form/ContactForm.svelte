@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
-
 <section class="layout -mt-12 sectionPb">
   <form
     action="#"

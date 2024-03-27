@@ -3,7 +3,6 @@
 
   import type { Page } from '$types/responseInterfaces';
   import GenericPage from '$components/Page/GenericPage.svelte';
-  import ContactForm from '$components/Form/ContactForm.svelte';
   import SEO from '$lib/components/SEO/index.svelte';
 
   // Logic

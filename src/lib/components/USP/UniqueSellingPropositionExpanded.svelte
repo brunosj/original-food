@@ -3,13 +3,10 @@
   export let subtitle: string;
   export let bottomText: string;
   export let pillars: Pillar[];
-  import Products from '$components/Product/Products.svelte';
 
-  import type { Pillar, Product } from '$types/responseInterfaces';
-  import { fade, fly, slide } from 'svelte/transition';
+  import type { Pillar } from '$types/responseInterfaces';
+  import { fade, fly } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
-  import IntersectionObserver from 'svelte-intersection-observer';
-  import PillarExpanded from '$components/Pillar/PillarExpanded.svelte';
   import PillarExpandedV2 from '$components/Pillar/PillarExpandedV2.svelte';
   import Underline from '$assets/svg/Underline.svelte';
 </script>

@@ -4,7 +4,6 @@
 
   import type { Pillar } from '$types/responseInterfaces';
   import SvelteMarkdown from 'svelte-markdown';
-  import { fade, fly, slide } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
   import IntersectionObserver from 'svelte-intersection-observer';
 

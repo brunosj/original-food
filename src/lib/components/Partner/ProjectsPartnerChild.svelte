@@ -4,16 +4,10 @@
 
   import type { Logo } from '$types/responseInterfaces';
   import SvelteMarkdown from 'svelte-markdown';
-  import { fade, fly, slide } from 'svelte/transition';
-  import { cubicInOut } from 'svelte/easing';
-  import IntersectionObserver from 'svelte-intersection-observer';
-
-  let element;
-  let intersecting = false;
 </script>
 
 <li class={i % 2 === 0 ? 'bg-ter layout' : 'bg-sec layout'}>
-  <div class="lg:grid grid-cols-3 gap-24 pt-6 lg:pt-0" bind:this={element}>
+  <div class="lg:grid grid-cols-3 gap-24 pt-6 lg:pt-0">
     <div
       class={`h-full col-span-1  ${i % 2 === 0 ? 'order-first' : 'order-last'}`}
     >

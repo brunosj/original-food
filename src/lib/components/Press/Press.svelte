@@ -1,19 +1,14 @@
 <script lang="ts">
   export let press: Press[];
-  export let products: Product[];
-  export let pressStatement: string;
   export let pressFooter: string;
 
-  import { fade, fly, slide } from 'svelte/transition';
+  import { fly } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
   import IntersectionObserver from 'svelte-intersection-observer';
-  import { background, font } from '$lib/stores/store';
-  import type { Press, Product } from '$types/responseInterfaces';
-  import Products from '$components/Product/Products.svelte';
-  import PressCard from './PressCard.svelte';
+  import { background } from '$lib/stores/store';
+  import type { Press } from '$types/responseInterfaces';
   import PressCarousel from '$components/Carousel/PressCarousel.svelte';
   import Underline from '$assets/svg/Underline.svelte';
-
   let element;
   let intersecting = false;
 </script>
@@ -23,14 +18,10 @@
   id="press"
   style:background-color={$background}
 >
-  <!-- <div class="absolute hidden lg:block -top-[15vh] z-20 w-full">
-    <Products items={products.slice().reverse()} />
-  </div> -->
-
   <div class=" text-ter w-full z-20" bind:this={element}>
-    <IntersectionObserver {element} bind:intersecting once threshold={0.2}>
-      {#if intersecting}
-        <div class="layout space-y-6 w-full lg:w-[60%]">
+    <div class="layout space-y-6 w-full lg:w-[60%]">
+      <IntersectionObserver {element} bind:intersecting once threshold={0.2}>
+        {#if intersecting}
           <h2 class="relative inline-block">
             Die Spezialität aus dem Regenwald - für Viele der
             <span class="relative inline-block">
@@ -49,9 +40,9 @@
               beste Kaffee
             </span> der Welt
           </h2>
-        </div>
-      {/if}
-    </IntersectionObserver>
+        {/if}
+      </IntersectionObserver>
+    </div>
     <div class="sectionPt px-0 md:px-12 xl:px-24 2xl:px-40">
       <PressCarousel slides={press} {pressFooter} />
     </div>

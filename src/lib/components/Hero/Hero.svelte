@@ -4,7 +4,7 @@
   export let headerTitle: string;
   export let headerTitle2: string;
 
-  import { fade, fly, slide } from 'svelte/transition';
+  import { fade } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
   import IntersectionObserver from 'svelte-intersection-observer';
 

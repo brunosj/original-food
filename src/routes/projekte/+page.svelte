@@ -6,7 +6,6 @@
   import SEO from '$lib/components/SEO/index.svelte';
   import ProjectsTopSection from '$components/Header/ProjectsTopSection.svelte';
   import UniqueSellingPropositionExpanded from '$components/USP/UniqueSellingPropositionExpanded.svelte';
-  import ProjectsBottomSection from '$components/Footer/ProjectsBottomSection.svelte';
   import ProjectsPartnerSection from '$components/Partner/ProjectsPartnerSection.svelte';
   import ProductSection from '$components/Product/ProductSection.svelte';
 

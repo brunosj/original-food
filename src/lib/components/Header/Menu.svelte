@@ -5,7 +5,7 @@
   import { menu, additionalMenu } from '$data/menu';
   import Hamburger from '$components/Header/Hamburger.svelte';
   import Logo from '$assets/svg/OF-Logo.svelte';
-  import { background, menuBackground } from '$lib/stores/store';
+  import { menuBackground } from '$lib/stores/store';
 
   let open = false;
   let animate = false;

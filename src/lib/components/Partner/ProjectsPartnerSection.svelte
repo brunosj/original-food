@@ -4,16 +4,13 @@
   export let subtitle: string;
   export let displayHeader = true;
 
-  import type { Logo, Product } from '$types/responseInterfaces';
-  import { fade, fly, slide } from 'svelte/transition';
+  import type { Logo } from '$types/responseInterfaces';
+  import { fade } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
   import ProjectsPartnerChild from './ProjectsPartnerChild.svelte';
-
-  let element;
-  let intersecting = false;
 </script>
 
-<section id="partners" bind:this={element} class="relative bg-sec">
+<section id="partners" class="relative bg-sec">
   {#if displayHeader}
     <div class="layout text-ter flex space-y-3 lg:space-y-6 flex-col sectionPy">
       <h1

@@ -6,7 +6,7 @@
   import ProductCarousel from '$components/Carousel/ProductCarousel.svelte';
   import ImageHero from '$components/Hero/ImageHero.svelte';
   import Products from '$components/Product/Products.svelte';
-  import { fade, fly, slide } from 'svelte/transition';
+  import { fly } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
 </script>
 

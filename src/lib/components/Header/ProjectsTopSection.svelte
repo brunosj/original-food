@@ -4,18 +4,17 @@
 
   import Map from '$assets/svg/kaffa_map.svelte';
   import { onMount } from 'svelte';
-  import { fade, fly, slide } from 'svelte/transition';
+  import { fade } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
-  import IntersectionObserver from 'svelte-intersection-observer';
   import SvelteMarkdown from 'svelte-markdown';
 
   let svgWidth: number;
 
   onMount(() => {
-    svgWidth = window.innerWidth < 640 ? 200 : 600;
+    svgWidth = window.innerWidth < 640 ? 200 : 550;
 
     window.addEventListener('resize', () => {
-      svgWidth = window.innerWidth < 640 ? 200 : 600;
+      svgWidth = window.innerWidth < 640 ? 200 : 550;
     });
   });
 </script>
@@ -48,9 +47,9 @@
       <SvelteMarkdown source={text} />
     </h3>
     <div
-      class="absolute bottom-12 right-12 opacity-0 lg:opacity-100 overflow-hidden"
+      class="absolute bottom-16 right-16 2xl:right-24 opacity-0 lg:opacity-100 overflow-hidden"
     >
-      <Map width={svgWidth} color="#f5f3f5" />
+      <Map width={svgWidth} />
     </div>
   </div>
 </section>

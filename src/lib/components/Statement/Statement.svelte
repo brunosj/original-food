@@ -4,7 +4,7 @@
   export let items: Product[];
 
   import { onMount } from 'svelte';
-  import { fade, fly, slide } from 'svelte/transition';
+  import { fade, fly } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
   import IntersectionObserver from 'svelte-intersection-observer';
   import type { Product } from '$types/responseInterfaces';
@@ -14,7 +14,6 @@
 
   let element;
   let intersecting = false;
-  let intersectingBottom = false;
   let svgWidth: number;
 
   onMount(() => {

@@ -14,7 +14,7 @@ const config = {
       strict: true,
     }),
     prerender: {
-      entries: ['/projekte'],
+      entries: ['/projekte', '/', '/datenschutz', '/impressum', '/kontakt'],
       handleHttpError: 'warn',
     },
     alias: {

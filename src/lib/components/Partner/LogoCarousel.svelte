@@ -1,7 +1,6 @@
 <script lang="ts">
   export let logos: Logo[];
-  import Wave from '$assets/svg/Wave.svelte';
-  import WaveSoft from '$assets/svg/WaveSoft.svelte';
+
   import type { Logo } from '$types/responseInterfaces';
   import Marquee from 'svelte-fast-marquee';
 </script>
