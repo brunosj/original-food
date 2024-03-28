@@ -7,19 +7,19 @@
 
 <section class="relative bg-white" id="">
   <a href="/projekte#partners">
-    <ul class="">
+    <div class="flex">
       <Marquee speed={60} gradient gap={'2%'}>
         {#each logos as logo}
-          <li class="h-32 lg:h-64">
+          <div class="h-32 lg:h-64">
             <img
               src={logo.attributes.bild.data.attributes.url}
               alt={logo.attributes.titel}
               class="object-contain h-full"
             />
-          </li>
+          </div>
         {/each}
       </Marquee>
-    </ul>
+    </div>
   </a>
 </section>
 
