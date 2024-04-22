@@ -51,7 +51,7 @@
   </IntersectionObserver>
 
   <div
-    class="layout pt-[5vh] lg:pt-[60vh] xl:pt-[50vh] 2xl:pt-[35vh] text-ter w-full lg:w-[55%] z-20"
+    class="layout pt-[5vh] lg:pt-[60vh] xl:pt-[50vh] 2xl:pt-[40vh] text-ter w-full lg:w-[55%] z-20"
   >
     <div class="space-y-6 lg:space-y-12">
       <h1
