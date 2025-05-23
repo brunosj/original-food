@@ -12,9 +12,9 @@
   // Logic
   let pageData: ProjectPage = data.page;
 
-  let title = 'Projekte';
-  let metaDescription =
-    'Regenwaldschutz durch schonende Nutzung - in jedem Produkt';
+  let title = pageData.attributes.SEO.Titel;
+  let metaDescription = pageData.attributes.SEO.Beschreibung;
+
   let image = pageData.attributes.heroBild.data.attributes.url;
 
   const logos = pageData.attributes.logos.data;

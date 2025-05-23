@@ -15,9 +15,9 @@
   // Logic
   let pageData: Homepage = data.page;
 
-  const title = 'Der Wildkafffee und weitere Bioprodukte';
-  const metaDescription =
-    'Regenwaldschutz durch schonende Nutzung - in jedem Produkt';
+  let title = pageData.attributes.SEO.Titel;
+  let metaDescription = pageData.attributes.SEO.Beschreibung;
+
   const image = pageData.attributes.heroBild.data.attributes.url;
 
   // SEO

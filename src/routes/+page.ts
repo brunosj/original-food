@@ -3,7 +3,7 @@ export async function load({ fetch }) {
     const res = await fetch(
       `${
         import.meta.env.VITE_CMS_API_URL
-      }of-startseite?populate[produkte][populate]=*&populate[heroBild][populate]=*&populate[hero2Bild][populate]=*&populate[logos][populate]=*&populate[nachhaltigkeitSaeulen][populate]=*&populate[presse][populate]=*&populate[karteBild][populate]=*`
+      }of-startseite?populate[produkte][populate]=*&populate[heroBild][populate]=*&populate[hero2Bild][populate]=*&populate[logos][populate]=*&populate[nachhaltigkeitSaeulen][populate]=*&populate[presse][populate]=*&populate[karteBild][populate]=*&populate[SEO][populate]=*`
     );
 
     if (!res.ok) {

@@ -28,6 +28,11 @@ export interface Homepage {
       data: Logo[];
     };
     USP: USP[];
+    SEO: {
+      id: number;
+      Titel: string;
+      Beschreibung: string;
+    };
   };
   id: number;
 }
@@ -64,6 +69,11 @@ export interface ProjectPage {
       data: Pillar[];
     };
     partnerBild: Picture;
+    SEO: {
+      id: number;
+      Titel: string;
+      Beschreibung: string;
+    };
   };
 }
 
