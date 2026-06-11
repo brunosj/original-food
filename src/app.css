@@ -1,141 +1,203 @@
 @import '@fontsource-variable/comfortaa';
 @import '@fontsource-variable/nunito';
+@import 'tailwindcss';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+	--color-pri: #467080;
+	--color-pri-pale: #dce4e7;
+	--color-sec: #8a6d7c;
+	--color-ter: #f5f3f5;
+	--color-quar: #bbc7ce;
+	--color-orange: #a9592f;
+	--color-black: #111111;
+
+	--color-beige-100: #fffefb;
+	--color-beige-200: #fffdf7;
+	--color-beige-300: #fffdf3;
+	--color-beige-400: #fffcef;
+	--color-beige-500: #fffbeb;
+	--color-beige-600: #ccc9bc;
+	--color-beige-700: #99978d;
+	--color-beige-800: #66645e;
+	--color-beige-900: #33322f;
+
+	--color-gold-100: #f2eee5;
+	--color-gold-200: #e5decb;
+	--color-gold-300: #d7cdb1;
+	--color-gold-400: #cabd97;
+	--color-gold-500: #bdac7d;
+	--color-gold-600: #978a64;
+	--color-gold-700: #71674b;
+	--color-gold-800: #4c4532;
+	--color-gold-900: #262219;
+
+	--color-green-100: #d1d5ce;
+	--color-green-200: #a3ac9d;
+	--color-green-300: #74826b;
+	--color-green-400: #46593a;
+	--color-green-500: #182f09;
+	--color-green-600: #132607;
+	--color-green-700: #0e1c05;
+	--color-green-800: #0a1304;
+	--color-green-900: #050902;
+
+	--color-purple-100: #e3dde0;
+	--color-purple-200: #c7bbc1;
+	--color-purple-300: #ab98a2;
+	--color-purple-400: #8f7683;
+	--color-purple-500: #735464;
+	--color-purple-600: #5c4350;
+	--color-purple-700: #45323c;
+	--color-purple-800: #2e2228;
+	--color-purple-900: #171114;
+
+	--color-brown-100: #ded7d4;
+	--color-brown-200: #beb0a9;
+	--color-brown-300: #9d887f;
+	--color-brown-400: #7d6154;
+	--color-brown-500: #5c3929;
+	--color-brown-600: #4a2e21;
+	--color-brown-700: #372219;
+	--color-brown-800: #251710;
+	--color-brown-900: #120b08;
+
+	--font-pri: 'Nunito Variable', sans-serif;
+	--font-sec: 'Comfortaa Variable', sans-serif;
+}
 
 :root {
-  --color-pri: #467080;
-  --color-pri-pale: #dce4e7;
-  --color-priRGB: 70, 112, 128;
-  --color-sec: #8a6d7c;
-  --color-secRGB: 138, 109, 124;
-  --color-ter: #f5f3f5;
-  --color-black: #111111;
-  --color-orange: #a9592f;
+	--color-pri: #467080;
+	--color-pri-pale: #dce4e7;
+	--color-priRGB: 70, 112, 128;
+	--color-sec: #8a6d7c;
+	--color-secRGB: 138, 109, 124;
+	--color-ter: #f5f3f5;
+	--color-black: #111111;
+	--color-orange: #a9592f;
 }
 
-html {
-  @apply bg-ter scroll-smooth;
-}
+@layer base {
+	html {
+		@apply bg-ter scroll-smooth;
+	}
 
-body {
-  @apply bg-pri;
-}
+	body {
+		@apply bg-pri;
+	}
 
-.h0 {
-  @apply text-2xl font-sec md:text-5xl;
-}
+	.h0 {
+		@apply text-2xl font-sec md:text-5xl;
+	}
 
-.h0 {
-  line-height: 1.3;
-}
+	.h0 {
+		line-height: 1.3;
+	}
 
-h1 {
-  @apply text-xl font-sec  md:text-5xl;
-}
+	h1 {
+		@apply text-xl font-sec  md:text-5xl;
+	}
 
-h1 {
-  line-height: 1.3;
-}
+	h1 {
+		line-height: 1.3;
+	}
 
-h2 {
-  @apply mt-0 text-lg font-sec font-semibold md:text-4xl xl:mt-2;
-}
+	h2 {
+		@apply mt-0 text-lg font-sec font-semibold md:text-4xl xl:mt-2;
+	}
 
-h2 {
-  line-height: 1.5;
-}
+	h2 {
+		line-height: 1.5;
+	}
 
-h3 {
-  @apply text-lg font-pri md:text-2xl;
-}
+	h3 {
+		@apply text-lg font-pri md:text-2xl;
+	}
 
-h3 {
-  line-height: 1.5;
-}
+	h3 {
+		line-height: 1.5;
+	}
 
-h4 {
-  @apply text-lg font-pri  md:text-lg;
-}
+	h4 {
+		@apply text-lg font-pri  md:text-lg;
+	}
 
-a {
-  @apply leading-none;
-}
+	a {
+		@apply leading-none;
+	}
 
-p {
-  @apply text-base md:text-lg font-pri;
-}
+	p {
+		@apply text-base md:text-lg font-pri;
+	}
 
-.layout {
-  @apply px-6 md:px-12 xl:px-24 2xl:px-40;
-}
+	.layout {
+		@apply px-6 md:px-12 xl:px-24 2xl:px-40;
+	}
 
-.layoutRight {
-  @apply pl-6 pr-6 lg:pl-6 lg:pr-24 xl:pl-20 xl:pr-48 2xl:pl-24 2xl:pr-64;
-}
+	.layoutRight {
+		@apply pl-6 pr-6 lg:pl-6 lg:pr-24 xl:pl-20 xl:pr-48 2xl:pl-24 2xl:pr-64;
+	}
 
-.layoutLeft {
-  @apply pl-6 pr-6 lg:pl-24 lg:pr-6 xl:pl-48 xl:pr-20 2xl:pl-64 2xl:pr-24;
-}
+	.layoutLeft {
+		@apply pl-6 pr-6 lg:pl-24 lg:pr-6 xl:pl-48 xl:pr-20 2xl:pl-64 2xl:pr-24;
+	}
 
-.sectionPy {
-  @apply py-12 lg:py-24;
-}
+	.sectionPy {
+		@apply py-12 lg:py-24;
+	}
 
-.sectionPySub {
-  @apply py-6 md:py-12 xl:py-24;
-}
+	.sectionPySub {
+		@apply py-6 md:py-12 xl:py-24;
+	}
 
-.sectionPt {
-  @apply pt-12 xl:pt-24;
-}
+	.sectionPt {
+		@apply pt-12 xl:pt-24;
+	}
 
-.sectionPb {
-  @apply pb-12 xl:pb-24;
-}
+	.sectionPb {
+		@apply pb-12 xl:pb-24;
+	}
 
-.sectionPl {
-  @apply pl-6 xl:pl-24;
-}
+	.sectionPl {
+		@apply pl-6 xl:pl-24;
+	}
 
-.sectionPlNone {
-  @apply pl-0 xl:pl-0;
-}
+	.sectionPlNone {
+		@apply pl-0 xl:pl-0;
+	}
 
-.sectionPr {
-  @apply pr-6 xl:pr-24;
-}
+	.sectionPr {
+		@apply pr-6 xl:pr-24;
+	}
 
-.sectionPrNone {
-  @apply pr-0 xl:pr-0;
-}
+	.sectionPrNone {
+		@apply pr-0 xl:pr-0;
+	}
 
-.textHover {
-  @apply duration-300 hover:text-beige-600;
-}
+	.textHover {
+		@apply duration-300 hover:text-beige-600;
+	}
 
-.group:hover .textHover {
-  @apply text-beige-600;
-}
+	.group:hover .textHover {
+		@apply text-beige-600;
+	}
 
-.markdownFontSec p {
-  @apply font-sec;
-}
+	.markdownFontSec p {
+		@apply font-sec;
+	}
 
-.markdown a {
-  @apply duration-300 hover:text-orange underline-offset-4 underline;
-}
+	.markdown a {
+		@apply duration-300 hover:text-orange underline-offset-4 underline;
+	}
 
-.group:hover .markdown a {
-  @apply text-orange;
-}
+	.group:hover .markdown a {
+		@apply text-orange;
+	}
 
-.projectsP p {
-  @apply text-base md:text-xl mb-3 xl:mb-6 last:mb-0;
-}
+	.projectsP p {
+		@apply text-base md:text-xl mb-3 xl:mb-6 last:mb-0;
+	}
 
-.markdown p {
-  @apply text-base md:text-lg mb-3 xl:mb-6 xl:last:mb-0;
+	.markdown p {
+		@apply text-base md:text-lg mb-3 xl:mb-6 xl:last:mb-0;
+	}
 }
