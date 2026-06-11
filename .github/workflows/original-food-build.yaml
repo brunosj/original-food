@@ -1,7 +1,7 @@
 # To better understand this file read this:
 # https://docs.ionos.space/docs/github-actions-customization/
 
-name: "Deploy Now: Execute Build"
+name: 'Deploy Now: Execute Build'
 
 on:
   workflow_call:
@@ -17,20 +17,20 @@ env:
   DEPLOYMENT_FOLDER: build
 
 jobs:
-# Please do not rename this job
+  # Please do not rename this job
   build-project:
     name: build original-food
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: 'recursive'
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: v18.x
+          node-version: 22.x
 
       - name: Build Node assets
         env:
@@ -48,7 +48,7 @@ jobs:
           pnpm install
           pnpm build
 
-# Please do not touch the following action
+      # Please do not touch the following action
       - name: Store deployment content
         uses: ionos-deploy-now/artifact-action@v1
         with:

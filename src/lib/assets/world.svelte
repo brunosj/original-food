@@ -1,6 +1,5 @@
 <script lang="ts">
-	export let height: number;
-	export let countryColor: string;
+	let { height, countryColor }: { height: number; countryColor: string } = $props();
 </script>
 
 <svg
@@ -10,7 +9,7 @@
 	stroke-linecap="round"
 	stroke-linejoin="round"
 	stroke-width=".2"
-	viewbox="0 0 2000 857"
+	viewBox="0 0 2000 857"
 	xmlns="http://www.w3.org/2000/svg"
 >
 	<path
