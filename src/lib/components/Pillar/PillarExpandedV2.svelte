@@ -6,6 +6,7 @@
   import SvelteMarkdown from 'svelte-markdown';
   import { fly } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
+  import { getMediaUrl } from '$lib/utils/media';
 </script>
 
 <li class="px-0 md:px-12 xl:px-24 2xl:px-40 bg-pri">
@@ -18,15 +19,17 @@
       easing: cubicInOut,
     }}
   >
-    <div class={`h-full ${i % 2 === 0 ? 'order-first' : 'order-last'}`}>
-      <img
-        src={item.attributes.bild2?.data.attributes.url}
-        alt=""
-        class={`object-cover h-56 lg:h-full w-full ${
-          i === 0 ? 'lg:rounded-tl-xl ' : ''
-        } ${i === 2 ? 'rounded-bl-xl' : ''}`}
-      />
-    </div>
+    {#if getMediaUrl(item.attributes.bild2)}
+      <div class={`h-full ${i % 2 === 0 ? 'order-first' : 'order-last'}`}>
+        <img
+          src={getMediaUrl(item.attributes.bild2)}
+          alt=""
+          class={`object-cover h-56 lg:h-full w-full ${
+            i === 0 ? 'lg:rounded-tl-xl ' : ''
+          } ${i === 2 ? 'rounded-bl-xl' : ''}`}
+        />
+      </div>
+    {/if}
     <div
       class={`bg-ter h-full flex flex-col justify-center py-6 lg:py-12 px-8 lg:px-16 m-auto space-y-3 lg:space-y-6 ${
         i === 0 ? 'lg:rounded-tr-xl' : ''

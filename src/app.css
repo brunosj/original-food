@@ -1,3 +1,6 @@
+@import '@fontsource-variable/comfortaa';
+@import '@fontsource-variable/nunito';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -110,7 +113,11 @@ p {
 }
 
 .textHover {
-  @apply duration-300 hover:text-beige-600 group-hover:text-beige-600;
+  @apply duration-300 hover:text-beige-600;
+}
+
+.group:hover .textHover {
+  @apply text-beige-600;
 }
 
 .markdownFontSec p {
@@ -118,7 +125,11 @@ p {
 }
 
 .markdown a {
-  @apply duration-300 hover:text-orange group-hover:text-orange underline-offset-4 underline;
+  @apply duration-300 hover:text-orange underline-offset-4 underline;
+}
+
+.group:hover .markdown a {
+  @apply text-orange;
 }
 
 .projectsP p {

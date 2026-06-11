@@ -5,6 +5,7 @@
   import ButtonRound from '$components/Button/ButtonRound.svelte';
   import { fade } from 'svelte/transition';
   import { sineInOut } from 'svelte/easing';
+  import { getMediaUrl } from '$lib/utils/media';
 
   let {
     bild,
@@ -19,6 +20,10 @@
   } = item.attributes;
 
   let isHovered = false;
+
+  const bildUrl = getMediaUrl(bild);
+  const hoverBildUrl = getMediaUrl(hoverBild);
+  const siegelUrl = getMediaUrl(siegel);
 
   function handleMouseOver() {
     isHovered = true;
@@ -38,29 +43,29 @@
 >
   <a href={link} class="flex flex-col relative card h-full" target="_blank">
     <div class="relative">
-      {#if isHovered && hoverBild.data}
+      {#if isHovered && hoverBildUrl}
         <div class="h-32 lg:h-48 relative">
           <!-- <div class="absolute bg-secondary z-50 h-full w-full top-0"></div> -->
           <img
             loading="lazy"
             in:fade={{ duration: 350, delay: 0, easing: sineInOut }}
-            src={hoverBild.data.attributes.url}
+            src={hoverBildUrl}
             alt={titel}
             class="h-full w-full object-cover"
           />
         </div>
-      {:else}
+      {:else if bildUrl}
         <div class="h-32 lg:h-48 p-3 lg:p-6">
           <img
             in:fade={{ duration: 350, delay: 0, easing: sineInOut }}
             loading="lazy"
-            src={bild.data.attributes.url}
+            src={bildUrl}
             alt={titel}
             class="h-full w-full object-contain"
           />
         </div>
       {/if}
-      {#if siegel.data}
+      {#if siegelUrl}
         <div
           class={`hidden lg:block absolute -bottom-6 left-3 bg-white rounded-lg p-2 z-20 w-24 border-[0.5px] duration-300 ${
             isHovered ? 'border-sec' : 'border-pri'
@@ -68,7 +73,7 @@
         >
           <img
             loading="lazy"
-            src={siegel.data?.attributes.url}
+            src={siegelUrl}
             alt={titel}
             class=" h-6 w-full object-contain"
           />

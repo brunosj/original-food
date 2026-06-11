@@ -6,6 +6,7 @@
   import SvelteMarkdown from 'svelte-markdown';
   import { cubicInOut } from 'svelte/easing';
   import IntersectionObserver from 'svelte-intersection-observer';
+  import { getMediaUrl } from '$lib/utils/media';
 
   let element;
   let intersecting = false;
@@ -44,13 +45,15 @@
               }}`}
             />
 
-            <div class="h-40 lg:h-full">
-              <img
-                src={item.attributes.bild2?.data.attributes.url}
-                alt=""
-                class="object-cover h-full w-full"
-              />
-            </div>
+            {#if getMediaUrl(item.attributes.bild2)}
+              <div class="h-40 lg:h-full">
+                <img
+                  src={getMediaUrl(item.attributes.bild2)}
+                  alt=""
+                  class="object-cover h-full w-full"
+                />
+              </div>
+            {/if}
           </div>
         {/if}
       </IntersectionObserver>

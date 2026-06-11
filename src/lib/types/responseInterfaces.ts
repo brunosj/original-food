@@ -154,7 +154,7 @@ export interface Picture {
     attributes: {
       url: string;
     };
-  };
+  } | null;
 }
 
 export interface Pillar {

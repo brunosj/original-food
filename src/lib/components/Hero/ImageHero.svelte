@@ -1,10 +1,12 @@
 <script lang="ts">
-  export let image: string;
+  export let image: string | undefined = undefined;
   export let height: string;
 </script>
 
 <div class={`${height} w-full top-0 -z-10  relative`} id="hero2">
-  <img src={image} alt="Entlebuch Bild" class="object-cover h-full w-full" />
+  {#if image}
+    <img src={image} alt="Entlebuch Bild" class="object-cover h-full w-full" />
+  {/if}
 </div>
 
 <style>

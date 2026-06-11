@@ -7,8 +7,10 @@
   import { onMount, afterUpdate } from 'svelte';
   import { processMarkdownLinks } from '$lib/utils/processMarkdownLinks';
   import type { Picture } from '$types/responseInterfaces';
+  import { getMediaUrl } from '$lib/utils/media';
 
   let markdownRef: Element;
+  $: imageUrl = getMediaUrl(image);
 
   onMount(() => processMarkdownLinks(markdownRef));
   afterUpdate(() => processMarkdownLinks(markdownRef));
@@ -21,15 +23,19 @@
     </h1>
   </div>
   <div class="grid grid-cols-1 lg:grid-cols-3">
-    <div class="order-2 lg:order-1">
-      <img
-        src={image.data.attributes.url}
-        alt={title}
-        class="w-full h-full object-cover"
-      />
-    </div>
+    {#if imageUrl}
+      <div class="order-2 lg:order-1">
+        <img
+          src={imageUrl}
+          alt={title}
+          class="w-full h-full object-cover"
+        />
+      </div>
+    {/if}
     <div
-      class="col-span-2 layout sectionPy markdown order-1 lg:order-2 bg-ter"
+      class="{imageUrl
+        ? 'col-span-2'
+        : 'col-span-1 lg:col-span-3'} layout sectionPy markdown order-1 lg:order-2 bg-ter"
       bind:this={markdownRef}
     >
       <SvelteMarkdown source={text} />

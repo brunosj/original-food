@@ -1,8 +1,6 @@
 <script lang="ts">
   import '../app.css';
   import '$styles/carousel.css';
-  import '@fontsource-variable/comfortaa';
-  import '@fontsource-variable/nunito';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
   import Footer from '$components/Footer/Footer.svelte';

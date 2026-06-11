@@ -3,16 +3,19 @@
 
   import type { Pillar } from '$types/responseInterfaces';
   import ButtonRound from '$components/Button/ButtonRound.svelte';
+  import { getMediaUrl } from '$lib/utils/media';
 </script>
 
 <li class="w-full lg:w-3/4 m-auto">
   <a href="/projekte" class="flex flex-col">
     <div>
-      <img
-        src={item.attributes.bild.data.attributes.url}
-        alt=""
-        class="object-cover h-56 w-full rounded-t-xl"
-      />
+      {#if getMediaUrl(item.attributes.bild)}
+        <img
+          src={getMediaUrl(item.attributes.bild)}
+          alt=""
+          class="object-cover h-56 w-full rounded-t-xl"
+        />
+      {/if}
       <div class=" bg-sec px-4 py-2 text-ter">
         <h3>
           {item.attributes.titel}

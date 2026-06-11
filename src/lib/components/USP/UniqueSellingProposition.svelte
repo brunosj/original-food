@@ -9,6 +9,7 @@
   import { cubicInOut } from 'svelte/easing';
   import PillarMobile from '$components/Pillar/PillarMobile.svelte';
   import ButtonRound from '$components/Button/ButtonRound.svelte';
+  import { getMediaUrl } from '$lib/utils/media';
 
   let expandedIndex = -1;
 
@@ -112,11 +113,13 @@
           </div>
         {/if}
       </div>
-      <img
-        src={wirtschaft.attributes.bild?.data.attributes.url}
-        alt=""
-        class="object-cover h-40 lg:h-full w-full rounded-xl"
-      />
+      {#if getMediaUrl(wirtschaft.attributes.bild)}
+        <img
+          src={getMediaUrl(wirtschaft.attributes.bild)}
+          alt=""
+          class="object-cover h-40 lg:h-full w-full rounded-xl"
+        />
+      {/if}
       <div>
         <h3
           class={`absolute bottom-0 left-0 px-8 py-4 ${
@@ -162,11 +165,13 @@
           </div>
         {/if}
       </div>
-      <img
-        src={ökologie.attributes.bild?.data.attributes.url}
-        alt=""
-        class="object-cover h-40 lg:h-full w-full rounded-xl"
-      />
+      {#if getMediaUrl(ökologie.attributes.bild)}
+        <img
+          src={getMediaUrl(ökologie.attributes.bild)}
+          alt=""
+          class="object-cover h-40 lg:h-full w-full rounded-xl"
+        />
+      {/if}
       <div>
         <h3
           class={`absolute bottom-0 left-0 px-8 py-4 duration-700 uppercase tracking-wider ${
@@ -212,11 +217,13 @@
           </div>
         {/if}
       </div>
-      <img
-        src={soziales.attributes.bild?.data.attributes.url}
-        alt=""
-        class="object-cover h-40 lg:h-full w-full rounded-xl"
-      />
+      {#if getMediaUrl(soziales.attributes.bild)}
+        <img
+          src={getMediaUrl(soziales.attributes.bild)}
+          alt=""
+          class="object-cover h-40 lg:h-full w-full rounded-xl"
+        />
+      {/if}
       <div>
         <h3
           class={`absolute bottom-0 left-0 px-8 py-4 duration-700 uppercase tracking-wider ${

@@ -4,13 +4,15 @@
   import type { Page } from '$types/responseInterfaces';
   import GenericPage from '$components/Page/GenericPage.svelte';
   import SEO from '$lib/components/SEO/index.svelte';
+  import { getMediaUrl } from '$lib/utils/media';
+  import { website } from '$lib/data/config';
 
   // Logic
-  let pageData: Page = data.page[0];
+  let pageData: Page = data.page?.[0];
 
-  const title = pageData.attributes.titel;
+  const title = pageData?.attributes.titel ?? 'Kontakt';
   const metaDescription = '';
-  const image = pageData.attributes.bild.data.attributes.url;
+  const image = getMediaUrl(pageData?.attributes.bild) || website.siteImage;
 
   // SEO
   const breadcrumbs = [
@@ -32,10 +34,12 @@
   };
 </script>
 
-<SEO {...seoProps} />
-<GenericPage
-  title={pageData.attributes.titel}
-  text={pageData.attributes.text}
-  image={pageData.attributes.bild}
-/>
+{#if pageData}
+  <SEO {...seoProps} />
+  <GenericPage
+    title={pageData.attributes.titel}
+    text={pageData.attributes.text}
+    image={pageData.attributes.bild}
+  />
+{/if}
 <!-- <ContactForm /> -->

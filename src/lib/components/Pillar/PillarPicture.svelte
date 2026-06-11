@@ -3,6 +3,7 @@
   export let animation: any;
 
   import type { Pillar } from '$types/responseInterfaces';
+  import { getMediaUrl } from '$lib/utils/media';
 </script>
 
 <div class="relative rounded-xl h-full" transition:animation>
@@ -10,13 +11,15 @@
     class="absolute inset-0 bg-gradient-to-t rounded-b-xl from-sec via-gray-900/20"
   ></div>
 
-  <div class="h-40 lg:h-full">
-    <img
-      src={item.attributes.bild2?.data.attributes.url}
-      alt=""
-      class="object-cover rounded-xl h-full w-full"
-    />
-  </div>
+  {#if getMediaUrl(item.attributes.bild2)}
+    <div class="h-40 lg:h-full">
+      <img
+        src={getMediaUrl(item.attributes.bild2)}
+        alt=""
+        class="object-cover rounded-xl h-full w-full"
+      />
+    </div>
+  {/if}
   <h3
     class={`absolute bottom-0 left-0 px-4 lg:px-8 py-2 lg:py-4 lg:uppercase tracking-wider text-ter`}
   >

@@ -8,16 +8,20 @@
   import UniqueSellingPropositionExpanded from '$components/USP/UniqueSellingPropositionExpanded.svelte';
   import ProjectsPartnerSection from '$components/Partner/ProjectsPartnerSection.svelte';
   import ProductSection from '$components/Product/ProductSection.svelte';
+  import { getMediaUrl } from '$lib/utils/media';
+  import { website } from '$lib/data/config';
 
   // Logic
   let pageData: ProjectPage = data.page;
 
-  let title = pageData.attributes.SEO.Titel;
-  let metaDescription = pageData.attributes.SEO.Beschreibung;
+  let title = pageData.attributes.SEO?.Titel ?? website.siteTitle;
+  let metaDescription =
+    pageData.attributes.SEO?.Beschreibung ?? website.siteDescription;
 
-  let image = pageData.attributes.heroBild.data.attributes.url;
+  let image =
+    getMediaUrl(pageData.attributes.heroBild) || website.siteImage;
 
-  const logos = pageData.attributes.logos.data;
+  const logos = pageData.attributes.logos?.data ?? [];
   const midpoint = Math.ceil(logos.length / 2);
   const firstHalf = logos.slice(0, midpoint);
   const secondHalf = logos.slice(midpoint);
@@ -45,7 +49,7 @@
 <SEO {...seoProps} />
 <article class="sectionPb">
   <ImageHero
-    image={pageData.attributes.heroBild.data.attributes.url}
+    image={getMediaUrl(pageData.attributes.heroBild)}
     height="h-56 lg:h-[65dvh]"
   />
   <ProjectsTopSection
@@ -53,13 +57,13 @@
     text={pageData.attributes.sektionTopText}
   />
   <ImageHero
-    image={pageData.attributes.zieleBild.data.attributes.url}
+    image={getMediaUrl(pageData.attributes.zieleBild)}
     height="h-56 lg:h-[65dvh]"
   />
   <UniqueSellingPropositionExpanded
     title={pageData.attributes.zieleTop.titel}
     subtitle={pageData.attributes.zieleTop.untertitel}
-    pillars={pageData.attributes.ziele.data}
+    pillars={pageData.attributes.ziele?.data ?? []}
     bottomText={pageData.attributes.zieleBottom?.untertitel}
   />
 
@@ -69,7 +73,7 @@
     subtitle={pageData.attributes.partnerTop.untertitel}
   />
   <ImageHero
-    image={pageData.attributes.partnerBild.data.attributes.url}
+    image={getMediaUrl(pageData.attributes.partnerBild)}
     height="h-56 lg:h-[65dvh]"
   />
   <ProjectsPartnerSection
@@ -79,7 +83,7 @@
     displayHeader={false}
   />
   <ProductSection
-    items={pageData.attributes.produkte.data}
+    items={pageData.attributes.produkte?.data ?? []}
     bgTop="purple"
     bgBottom="blue"
     padding={true}

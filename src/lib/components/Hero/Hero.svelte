@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let image: string;
+  export let image: string | undefined = undefined;
   export let height: string;
   export let headerTitle: string;
   export let headerTitle2: string;
@@ -14,12 +14,14 @@
 
 <section class={height} id="hero" bind:this={element}>
   <div class={`${height} w-full top-0 -z-10 absolute gradient-overlay`}>
-    <img
-      src={image}
-      alt="Entlebuch Bild"
-      class="object-cover h-full w-full saturate-[1]"
-      loading="eager"
-    />
+    {#if image}
+      <img
+        src={image}
+        alt="Entlebuch Bild"
+        class="object-cover h-full w-full saturate-[1]"
+        loading="eager"
+      />
+    {/if}
 
     <IntersectionObserver {element} bind:intersecting once threshold={0.5}>
       {#if intersecting}
