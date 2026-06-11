@@ -33,7 +33,7 @@
 		<IntersectionObserver {element} bind:intersecting once threshold={0.5}>
 			{#if intersecting}
 				<div
-					class="absolute layout bottom-[50%] lg:w-[60%] w-full z-10 space-y-3 lg:space-y-6 transform translate-y-1/2"
+					class="absolute layout bottom-[50%] lg:w-[70%] w-full z-10 space-y-3 lg:space-y-6 transform translate-y-1/2"
 				>
 					<div class="flex flex-col justify-center h-full space-y-3 md:space-y-6">
 						<span

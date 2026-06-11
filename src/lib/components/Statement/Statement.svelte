@@ -7,6 +7,7 @@
 	import Products from '$components/Product/Products.svelte';
 	import Tree from '$assets/svg/svg_tree.svelte';
 	import ProductCarousel from '$components/Carousel/ProductCarousel.svelte';
+	import SvelteMarkdown from '@humanspeak/svelte-markdown';
 
 	let {
 		statementTitle,
@@ -57,7 +58,7 @@
 	</IntersectionObserver>
 
 	<div
-		class="layout pt-[5vh] lg:pt-[60vh] xl:pt-[50vh] 2xl:pt-[40vh] text-ter w-full lg:w-[55%] z-20"
+		class="layout pt-[5vh] lg:pt-[60vh] xl:pt-[50vh] 2xl:pt-[40vh] text-ter w-full lg:w-[65%] z-20"
 	>
 		<div class="space-y-6 lg:space-y-12">
 			<h1
@@ -71,15 +72,16 @@
 			>
 				{statementTitle}
 			</h1>
-			<h3
+			<div
+				class="markdown text-lg font-pri md:text-2xl leading-normal [&_p]:text-lg [&_p]:md:text-2xl [&_p:last-child]:mb-0"
 				in:fade={{
 					duration: 500,
 					delay: 250,
 					easing: cubicInOut
 				}}
 			>
-				{statementText}
-			</h3>
+				<SvelteMarkdown source={statementText} />
+			</div>
 			<div
 				class="absolute bottom-0 -right-0 lg:-right-24 opacity-10 overflow-hidden"
 				in:fade={{
